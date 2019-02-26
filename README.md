@@ -1,0 +1,3 @@
+# snowflake0s.github.io
+<h1>Start of project Feb 26 2019 (KST)</h1>
+I will attempt to put my html skills to practice here...

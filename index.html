@@ -2,28 +2,52 @@
 <html>
   <head>
     <title>SnowFLakE0s's Wiki</title>
-      <style>
-        table, th, td {border: 1px solid black;}
-        th, td {padding: 15px;}
-      </style>
+    <style>
+      table, td {
+        border: 1px solid black;
+        padding: 5px;
+        border-collapse: collapse;
+        }
+      td {
+        text-align: middle;
+      }
+      .bordertextbox {
+        border-style:solid;
+        border-color:#FF0000;
+        padding: 5px;
+        }
+    </style>
   </head>
   <body>
+    <!--- Later make the navigation div a sidebar --->
     <div class="navigation">
-      <table style="width=100%">
+      <table>
         <tr>
-          <th><h5>Navigation bar</h5></th>
-          <th>==============</th>
-          <th>==============</th>
-        </tr>
-        <tr>
+          <td><h5>Navigation bar</h5></td>
           <td><h5><a href="index.html">Home</a></h5></td>
           <td><h5><a href="#main">Introduction</a></h5></td>
           <td><h5><a href="#profile">Profile</a></h5></td>
       </table>
     </div>
+    <!--- Up to here!! --->
+    <br>
+    <div class="header">
+      <h2>SnowFLakE0s</h2>
+    </div>
+    <hr>
+    <div class="subheader">
+      <p>
+        <em>From Nopepeida, the nonexistent enclycopedia</em>
+      </p>
+    </div>
     <br>
     <div class="notif">
-      <p>Note: This wiki is still under construction. Please wait until I gain enough skills to do some CSS.</p>
+      <table>
+        <!-- try to make a outline for notif box: edit: done with css-->
+        <p class="bordertextbox">
+          Note: This wiki is still under construction. Please wait until I gain enough skills to do some CSS.
+        </p>
+      </table>
     </div>
     <br>
     <div class="main">
@@ -34,6 +58,12 @@
     <div class="profile">
       <h3>Profile</h3>
         <p>I'll write an introduction about myself here</p>
+    </div>
+    <div class="dev-notes">
+      <h3>Dev Notes</h3>
+      <p>
+        okay so apparently < hr > makes a horizontal line. good to know. I need to learn CSS
+      </p>
     </div>
   </body>
 </html>

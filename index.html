@@ -16,19 +16,22 @@
         border-color:#FF0000;
         padding: 5px;
         }
+      <!-- Navigation Table Style --!>
+      table#navi td {
+        background-color: black;
+        color: white;
+      }
     </style>
   </head>
   <body>
     <!--- Later make the navigation div a sidebar --->
     <div class="navigation">
-      <table>
-        <thead>
+      <table id="navi">
         <tr>
           <td><h5>Navigation bar</h5></td>
           <td><h5><a href="index.html">Home</a></h5></td>
           <td><h5><a href="#main">Introduction</a></h5></td>
           <td><h5><a href="#profile">Profile</a></h5></td>
-        <thead>
       </table>
     </div>
     <!--- Up to here!! --->
@@ -44,10 +47,11 @@
     </div>
     <br>
     <div class="notif">
-      <table>
+      <table style="width:100%">
+      <caption>Notification</caption>
         <!-- try to make a outline for notif box: edit: done with css-->
         <p class="bordertextbox">
-          Note: This wiki is still under construction. Please wait until I gain enough skills to do some CSS.
+          This wiki is still under construction. Please wait until I gain enough skills to do some CSS.
         </p>
       </table>
     </div>

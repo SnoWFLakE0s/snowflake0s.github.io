@@ -21,7 +21,8 @@ h3 {
   top: 0;
   left: 0;
   background-color: #cccccc;
-  min-width: 20%;
+  max-width: 20%;
+  height: 100%;
 }
 .sidebar_content {
   padding: 8px;

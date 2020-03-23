@@ -1,6 +1,6 @@
 /* Header Bar Stuff */
 
-h2.header {
+.header h2 {
 	font-family: "Linux Libertine", serif;
 }
 
@@ -13,6 +13,12 @@ h2.header {
 
 h3 {
 	font-family: "Linux Libertine", serif;
+}
+/* Sidebar Navigation */
+
+/* Main Content Shifting */
+.main {
+	margin-left:20%;
 }
 
 /*Inner Text */

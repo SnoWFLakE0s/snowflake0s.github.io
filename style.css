@@ -9,11 +9,35 @@ p.subheader {
 	font-size:6pt
 }
 
+<!--Section Header-->
 h3 {
 	font-family: "Linux Libertine";
 }
 
+<!--Inner Text-->
 p {
 	font-family: "Arial", Helvetica, sans-serif;
+	font-size:12pt
+}
+
+ol {
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size:12pt
+}
+
+ul {
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size:12pt
+}
+
+table {
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size:12pt
+}
+
+code {
+	font-family: "Consolas";
+	color: black;
+	background-color: LavenderBlush;
 	font-size:12pt
 }

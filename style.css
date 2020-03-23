@@ -38,7 +38,7 @@ table {
 }
 
 code {
-	font-family: "Consolas";
+	font-family: "Consolas", Courier, monospace;
 	color: black;
 	background-color: LavenderBlush;
 	font-size:12pt

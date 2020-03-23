@@ -16,6 +16,16 @@ h3 {
 }
 /* Sidebar Navigation */
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 20%;
+}
+.sidebar_content {
+  padding: 8px;
+}
+
 /* Main Content Shifting */
 .main {
 	margin-left:20%;

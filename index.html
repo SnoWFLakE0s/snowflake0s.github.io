@@ -4,8 +4,7 @@
     <title>SnowFLakE0s's Page</title>
     <link rel="stylesheet" href="/html/style.css">
   </head>
-  
-  <body>
+<body>
     <br>
     <div class="header">
       <h2>Funky Trees Guide</h2>
@@ -18,32 +17,421 @@
     </div>
     <br>
     <div class="notif">
-      <table style="width:100%">
       <h4>Notification</h4>
         <p class="notif">
           <b>This guide assumes intermediate to near complete mastery of basic XML editing/modding in SimplePlanes. If you are not familiar with XML editing yet, proceed at your own risk.</b> The following guide is considerably long and certain sections are still under construction. 
         </p>
-      </table>
     </div>
+    
     <br>
-    <div class="intro">
+    
+    <!--Introduction-->
+    <div class="introduction">
       <h3>Introduction: What <i>is</i> Funky Trees?</h3>
-        <p>When you do things in SimplePlanes, like controlling your plane by moving the joystick or pressing the keyboard, essentially what you're doing is you're sending a signal to the various functional bits on your plane to move as you told it to. Funky Trees expands the options you can have here and allows for much more complex programming of the inputs to allow for very special input programming to allow creation of incredibly powerful and useful parts.
-        </p>
-        <p>
-        	By nature, Funky Trees is a special subfield of what's known as XML editing/modding in SimplePlanes. If you aren't familar with basic XML editing, there is absolutely no way you will understand the workings of funky trees- you must learn that first. 
-        </p>
+      <hr>
+        	<p>
+        		When you do things in SimplePlanes, like controlling your plane by moving the joystick or pressing the keyboard, essentially what you're doing is you're sending a signal to the various functional bits on your plane to move as you told it to. Funky Trees expands the options you can have here and allows for much more complex programming of the inputs to allow for very special input programming to allow creation of incredibly powerful and useful parts.
+        	</p>
+        	<p>
+        		By nature, Funky Trees is a special subfield of what's known as XML editing/modding in SimplePlanes. If you aren't familar with basic XML editing, there is absolutely no way you will understand the workings of funky trees- you must learn that first. 
+        	</p>
     </div>
+    
     <br>
-    <div class="profile">
-      <h3>Profile</h3>
-        <p>I'll write an introduction about myself here</p>
+    
+    <!--Prerequisites-->
+    <div class="prereq">
+    	<h3>Prerequisites: Things you probably should know</h3>
+    	<hr>
+    		<p>
+    			Funky Trees isn't some entirely new field of study, but given the broad expanse of what it covers, the following concepts are recommended for full mastery of Funky Trees capability. These come in no particular order, there is no need for you to master all of them, but to use <i>everything</i> in Funky Trees, you must know all of these concepts.
+    		</p>
+    		<ul>
+    			<li>XML Modding*</li>
+    			<li>Algebra*</li>
+    			<li>Calculus Concepts</li>
+    			<li>Programming/CS</li>
+    		</ul>
+    		<p>
+    			* indicates required fields of knowledge. Usage of calculus is largely limited to a couple of functions, but is still quite useful to know. Programming/CS knowledge is extremely useful to know when structuring Funky Tree inputs (FT is practically a programming language) and will help in understanding FT in general, but is not necessary.
+    		</p>
     </div>
-    <div class="dev-notes">
-      <h3>Dev Notes</h3>
-      <p>
-        okay so apparently < hr > makes a horizontal line. good to know. I need to learn CSS
-      </p>
+    
+    <br>
+    
+    <!--Basic Orientation-->
+    <div class="sectionone">
+    	<h3>Section 1: Groundwork</h3>
+    	<hr>
+    		<p>
+    			Funky Trees is a sort of like an programming language. It takes various <code>inputs</code>, processes them, and relays an <code>output</code> that is then taken by the part (whatever "part" you're putting FT inputs into) to result in some kind of of behavior by the part.
+    		</p>
+    		<p>
+    			There are largely three types of special keywords in Funky Trees. They are:
+    				<ol>
+    					<li>Variables</li>
+    					<li>Functions</li>
+    					<li>Operators</li>
+    				</ol>
+    			We will get into what these are in the next few sections, just after we quickly go over data types.
+    		</p>
     </div>
-  </body>
+    
+    <br>
+    
+    <!--Data Types Explanation-->
+    <div class="sectiontwo">
+    	<h3>Section 2: Data Types</h3>
+    	<hr>
+    		<p>
+    			To give an <code>input</code> to the part, you probably need some sort of data to work with, right? Since version 1.9.2, Funky Trees was revamped to have data type organization. 
+    			To explain, all usable data types in Funky Trees have now been organized into one of three categories- numbers, booleans, and strings. Here’s a rundown:
+    				<ul>
+    					<li>Numbers are numbers including floats (e.g. 1, 1314, 12.0003, 0.334, etc).</li>
+    					<li>Booleans are very useful for logic. They are either true, or false. If you use them in conjunction with other data types, true or false can output the numbers 1 or -1 respectively. Previously, before 1.9.2, booleans were inconsistent, this now has been fixed to be much more predictable.</li>
+    					<li>Strings are basically lines of text. They must be enclosed in quotations (“” marks) (e.g. "Text").</li>
+    				</ul>
+    			Hopefully, this made sense. If you're new to computer science, these terms may sound completely alien to you- but don't worry, it'll make sense in due time (this is the only reason why programming experience comes in handy, to help orient yourself quicker).
+    		</p>
+    </div>
+    
+    <br>
+    
+    <!--Varables Explanation-->
+    <div class="sectiontwoa">
+    	<h3>Section 2A: Variables</h3>
+    	<hr>
+    		<p>
+    			I first want to make sure that you understand what variables are in Funky Trees. <b>Variables</b> are special words that have a special value in Funky Trees. They <i>contain</i> data. The data type organization, in other words, is a way of organizing these variables into different types. The following is a list of all input variables. Don't panic, this is simply for reference.
+    			<!--Add CSS Styling to table (add borders)-->
+    				<table style="width:100%">
+    					<tr>
+    						<td>Pitch</td>
+    						<td>Roll</td>
+    						<td>Yaw</td>
+    						<td>Throttle</td>
+    						<td>Brake</td>
+    					</tr>
+    					<tr>
+    						<td>Trim</td>
+    						<td>VTOL</td>
+    						<td>LandingGear</td>
+    						<td>GearDown</td>
+    						<td>FireGuns</td>
+    					</tr>
+    					<tr>
+    						<td>FireWeapons</td>
+    						<td>LaunchCountermeasures</td>
+    						<td>Actiavte1</td>
+    						<td>Activate2</td>
+    						<td>Activate3</td>
+    					</tr>
+    					<tr>
+    						<td>Activate4</td>
+    						<td>Activate5</td>
+    						<td>Activate6</td>
+    						<td>Activate7</td>
+    						<td>Activate8</td>
+    					</tr>
+    					<tr>
+    						<td>Altitude</td>
+    						<td>AltitudeAgl</td>
+    						<td>GS</td>
+    						<td>IAS</td>
+    						<td>TAS</td>
+    					</tr>
+    					<tr>
+    						<td>Fuel</td>
+    						<td>AngleOfAttack</td>
+    						<td>AngleOfSlip</td>
+    						<td>PitchAngle</td>
+    						<td>RollAngle</td>
+    					</tr>
+    					<tr>
+    						<td>Heading</td>
+    						<td>Time</td>
+    						<td>GForce</td>
+    						<td>VerticalG</td>
+    						<td>SelectedWeapon</td>
+    					</tr>
+    					<tr>
+    						<td>Latitude</td>
+    						<td>Longitude</td>
+    						<td>PitchRate</td>
+    						<td>RollRate</td>
+    						<td>YawRate</td>
+    					</tr>
+    				</table>
+    				We can now categorize these variables based on their data category (their possible values included in parentheses).
+    		</p>
+    		
+    		<br>
+    		
+    		<ol>
+    			<li>
+    			<!--Number Variables-->
+			    <div class="numbervar">
+			    	<h3>Number-type Variables</h3>
+			    	<hr>
+			    		<p>
+			    			By far the most numerous, the numbers datatype contains variables that equate to the <code>number</code> class of variables. They’re conceptually easy to manipulate, but there are a great variety of number type variables and each has a unique range of values.
+			    			<b>TL;DR: simply numbers, but everything is unique (requiring special attention from you).</b>
+			    			The following is a list of all number type variables and their possible values.
+			    		</p>
+			    		<table style="width:100%">
+			    			<tr>
+			    				<th>Variable</th>
+			    				<th>Variable Description</th>
+			    				<th>Range of Values</th>
+			    			</tr>
+			    			<tr>
+			    				<td>Pitch</td>
+			    				<td>The amount of Pitch input as a proportion</td>
+			    				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Roll</td>
+			    				<td>The amount of Roll input as a proportion</td>
+			    				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Yaw</td>
+			    				<td>The amount of Yaw input as a proportion</td>
+			    				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Trim</td>
+			    				<td>The amount of Trim input as a proportion</td>
+			    				<td>(-1~1)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>VTOL</td>
+			    				<td>The amount of VTOL input as a proportion</td>
+			    				<td>(-1~1)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Throttle</td>
+			    				<td>The amount of Throttle input as a proportion</td>
+			    				<td>(0~1)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Altitude</td>
+			    				<td>Aircraft's altitude in meters</td>
+			    				<td>(-inf~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>AltitudeAgl</td>
+			    				<td>Aircraft's altitude above ground level in meters </td>
+			    				<td>(-inf~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>GS</td>
+			    				<td>he speed relative to the ground (m/s)</td>
+			    				<td>(0~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>IAS</td>
+			    				<td>The speed relative to the air (m/s)</td>
+			    				<td>(0~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>TAS</td>
+			    				<td>The speed relative to the air, adjusted for the density of the air (m/s)</td>
+			    				<td>(0~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Fuel</td>
+			    				<td>The amount of fuel remaining as a proportion of capacity</td>
+			    				<td>(0~1)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>AngleOfAttack</td>
+			    				<td>The angle of attack (angle airflow vertically meets the boresight) in degrees</td>
+			    				<td>(-180~180)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>AngleOfSlip</td>
+			    				<td>The horizontal equivalent of angle of attack (degrees)</td>
+			    				<td>(-180~180)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>PitchAngle</td>
+			    				<td>The pitch of the aircraft (degrees)</td>
+			    				<td>(-180~180)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>RollAngle</td>
+			    				<td>The roll of the aircraft (degrees)</td>
+			    				<td>(-180~180)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Heading</td>
+			    				<td>The heading of the aircraft (degrees)</td>
+			    				<td>(0~360)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Time</td>
+			    				<td>The time since the level loaded (seconds)</td>
+			    				<td>(0~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>GForce</td>
+			    				<td>(omnidirectional "force" acting on the pilot, in g)</td>
+			    				<td>(0~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>VerticalG</td>
+			    				<td>G-force (vertical component of G-force)</td>
+			    				<td>(0~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Latitude</td>
+			    				<td>The y-position of the craft in the sandbox map</td>
+			    				<td>(-inf~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>Longitude</td>
+			    				<td>The x-position of the craft in the sandbox map</td>
+			    				<td>(-inf~inf)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>PitchRate</td>
+			    				<td>The rate at which the aircraft pitches (deg/s)</td>
+			    				<td>(-360~360)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>RollRate</td>
+			    				<td>The rate at which the aircraft rolls (deg/s)</td>
+			    				<td>(-360~360)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>YawRate</td>
+			    				<td>The rate at which the aricraft yaws (deg/s)</td>
+			    				<td>(-360~360)</td>
+			    			</tr>
+			    			<tr>
+			    				<td>LandingGear</td>
+			    				<td>Archaic FT input type. Use <code>GearDown</code> instead when making FT inputs.</td>
+			    				<td>(0, 1)</td>
+			    			</tr>
+			    		</table>
+			    </div>
+    			</li>
+    			<li>
+    			<!--Boolean Variables-->
+    			<div class="booleanvar">
+			    	<h3>Boolean-type Variables</h3>
+			    	<hr>
+			    		<p>
+			    			Booleans were previously inconsistent in Funky Trees due to a couple errors. The system has been revamped completely, removing the root source of that error. Now, if you only use boolean statements independent of other data types, you will get the value <code>true</code> or <code>false</code>. If you use booleans in conjunction with the number data type, they will automatically convert to 1 or -1 (true or false respectively). That also means, in the table down below, all the booleans can also be considered to have a possible range of values of -1 or 1.
+			    			<b>TL;DR: All boolean data type variables return either true or false, or 1 or -1 depending on its usage. This makes these logically consistent. </b>
+			    			The following is a list of all number type variables and their possible values.
+			    		</p>
+			    		<table style="width:100%">
+			    			<tr>
+			    				<th>Variable</th>
+			    				<th>Variable Description</th>
+			    				<th>Range of Values</th>
+			    			</tr>
+			    			<tr>
+			    				<td>Brake</td>
+			    				<td>Whether or not Brake is pressed</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>GearDown</td>
+			    				<td>Whether or not landing gear is on or off</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>FireGuns</td>
+			    				<td>Whether or not guns button is pressed</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>FireWeapons</td>
+			    				<td>Whether or not fire ordnance button is pressed/td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>LaunchCountermeasures</td>
+			    				<td>Whether or not launch countermeasures button is pressed</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate1</td>
+			    				<td>Whether or not activation group 1 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate2</td>
+			    				<td>Whether or not activation group 2 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate3</td>
+			    				<td>Whether or not activation group 3 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate4</td>
+			    				<td>Whether or not activation group 1 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate5</td>
+			    				<td>Whether or not activation group 1 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate6</td>
+			    				<td>Whether or not activation group 6 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate7</td>
+			    				<td>Whether or not activation group 7 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    			<tr>
+			    				<td>Activate8</td>
+			    				<td>Whether or not activation group 8 is on</td>
+			    				<td><code>true</code> / <code>false</code></td>
+			    			</tr>
+			    		</table>
+			    </div>
+    			</li>
+    			<li>
+    			<!--String variables-->
+    			<div class="stringvar">
+    				<h3>String-type Variables</h3>
+			    	<hr>
+			    		<p>
+			    			Simply put, strings are just lines of text, like "text". The number of actual strings datatype <b>variables</b> is technically only one as of the time of writing. However, whatever you make your string- be it “this string” or “that string”- are all valid strings. Strings don't really have a large variety of applications right now, but they can be useful.
+			    		</p>
+			    		<table style="width:100%">
+			    			<tr>
+			    				<th>Variable</th>
+			    				<th>Variable Description</th>
+			    			</tr>
+			    			<tr>
+			    				<td>SelectedWeapon</td>
+			    				<td>Outputs the name of the selected weapon in the weapons drawer as a string, e.g. "Boom 50", "Cannon"</td>
+			    			</tr>
+			    		</table>
+    			</div>
+    			</li>
+    		</ol>
+    </div>
+    
+    <br>
+    
+    <div class="sectiontwob">
+    	<h3>Section 2B: Functions</h3>
+    	<hr>
+    		<p>
+    			Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and return an <code>output</code>, each depending on what the function does. Functions can only take specific datatypes as inputs (which is why I previously covered the data types). They also act in unique ways, which is how they are classified in the following few subsections.
+    		</p>
+    </div>
+</body>
 </html>

@@ -83,12 +83,14 @@ p.centeredexample {
 	color: white;
 	font-size:18pt;
 	text-align: center;
-	background-color: gray;
 }
 
 .centered {
-	margin-left: 40%;
-	margin-right: 40%
+	margin-left: 35%;
+	margin-right: 35%;
+	border-style: solid;
+	border-width: 1px;
+	background-color: gray;
 }
 
 td.functionname {

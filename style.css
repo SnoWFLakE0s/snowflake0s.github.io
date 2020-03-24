@@ -60,23 +60,23 @@ h3 {
 
 p {
 	font-family: "Arial", Helvetica, sans-serif;
-	font-size:12pt
+	font-size:12pt;
 }
 
 td, th, li, #backtotop {
 	font-family: "Arial", Helvetica, sans-serif;
-	font-size:12pt
+	font-size:12pt;
 }
 
 table {
 	font-family: "Arial", Helvetica, sans-serif;
-	font-size:12pt
+	font-size:12pt;
 }
 
 p.centeredexample {
 	font-family: "Consolas", Courier, monospace;
 	color: white;
-	font-size:16pt
+	font-size:18pt;
 	background-color: gray;
 }
 
@@ -87,7 +87,7 @@ p.centeredexample {
 td.functionname {
 	font-family: "Consolas", Courier, monospace;
 	color: white;
-	font-size:12pt
+	font-size:12pt;
 	background-color: gray;
 }
 
@@ -97,5 +97,5 @@ code {
 	font-family: "Consolas", Courier, monospace;
 	color: DarkRed;
 	background-color: pink;
-	font-size:12pt
+	font-size:12pt;
 }

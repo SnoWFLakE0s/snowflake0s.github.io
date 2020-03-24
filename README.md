@@ -16,6 +16,7 @@ https://www.simpleplanes.com/Forums/View/1043330/OUTDATED-Input-System-Explanati
 Light Theme: https://bootswatch.com/simplex/
 Dark Theme: https://bootswatch.com/slate/
 Create test page first
+Begin migration of old page to BS4 page
 
 <h2>To-Do List</h2>
 * Revisit CSS styling

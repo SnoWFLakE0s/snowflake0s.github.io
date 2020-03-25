@@ -30,9 +30,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">WIP</a>
-      </li>    
+      </li>
     </ul>
-  </div>  
+  </div>
 </nav>
 
 <!--Main Header (Jumbotron)-->
@@ -68,7 +68,7 @@
   			  <li>
           <a href="#sectionone">Section 1</a>
         </li>
-  			  <li>
+		<li>
           <a href="#sectiontwo">Section 2</a>
           <ol style="padding-left:1rem" type="A">
             <li>
@@ -85,6 +85,22 @@
                 <li><a href="#numbfunc">Number-based Functions</a></li>
                 <li><a href="#timefunc">Time-based Functions</a></li>
                 <li><a href="#stringfunc">String-based Functions</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a href="#sectionthree">Section 3</a>
+          <ol style="padding-left:1rem" type="A">
+            <li>
+              <a href="#mathop">Section 3A</a>
+            </li>
+            <li>
+              <a href="#logicop">Section 3B</a>
+              <ol style="padding-left:1rem" type="1">
+                <li><a href="#compop">Comparison Operators</a></li>
+                <li><a href="#boolop">Boolean Operators</a></li>
+                <li><a href="#selectop">Selection Operators</a></li>
               </ol>
             </li>
           </ol>
@@ -120,11 +136,17 @@
     <div id="introduction">
       <h3>Introduction: What <i>is</i> Funky Trees?</h3>
       <hr>
+            <p>
+                First implemented in game version 1.9, Funky Trees is a special subset of XML editing/modding in SimplePlanes that specifically deals with the <code>group</code>, <code>activationGroup</code>, and <code>input</code> attributes of parts. By nature, Funky Trees is a special subfield of what's known as XML editing/modding in SimplePlanes. Difficulty with basic XML editing may prove detrimental to learning the Funky Trees system.
+            </p>
         	<p>
-        		When you do things in SimplePlanes, like controlling your plane by moving the joystick or pressing the keyboard, essentially what you're doing is you're sending a signal to the various functional bits on your plane to move as you told it to. Funky Trees expands the options you can have here and allows for much more complex programming of the inputs to allow for very special input programming to allow creation of incredibly powerful and useful parts.
+        		To be more specifc, when an user does things in SimplePlanes, like controlling an aircraft by moving the joystick or pressing the keyboard, essentially what's being done is that the user is sending a signal to the various functional components on the craft to move it as the user intends it to. Funky Trees expands the options here and allows for much more complex programming of the inputs to allow for very special input programming to allow creation of incredibly powerful and useful parts.
         	</p>
         	<p>
-        		By nature, Funky Trees is a special subfield of what's known as XML editing/modding in SimplePlanes. If you aren't familar with basic XML editing, there is absolutely no way you will understand the workings of funky trees- you must learn that first. 
+        	    For example, users have created parts that carry out complex actions that weren't possible before 1.9, such as <a href="https://www.simpleplanes.com/a/9sn0hS/">functional all-altitude bombsights</a>, <a href="https://www.simpleplanes.com/a/m186lK/">the first functionally complete chronographs</a>, and <a href="https://www.simpleplanes.com/a/CRzBNA/">automatic flight control systems</a>. As it stands, Funky Trees can be considered a very specifically designed programming language- it fufills <a href="https://en.wikipedia.org/wiki/Programming_language">the definition of one.</a>
+        	</p>
+        	<p>
+        	    <strong>For a new learner, it is strongly recommended that the document be read in its full length, in chronological order.</strong> This particular guide is primarily tailored to help the learning of newer learners.
         	</p>
     </div>
     
@@ -138,8 +160,8 @@
     			Funky Trees isn't some entirely new field of study, but given the broad expanse of what it covers, the following concepts are recommended for full mastery of Funky Trees capability. These come in no particular order, there is no need for you to master all of them, but to use <i>everything</i> in Funky Trees, you must know all of these concepts.
     		</p>
     		<ul>
-    			<li>XML Modding*</li>
-    			<li>Algebra*</li>
+    			<li><mark>XML Modding*</mark></li>
+    			<li><mark>Algebra*</mark></li>
     			<li>Calculus Concepts</li>
     			<li>Programming/CS</li>
     		</ul>
@@ -152,21 +174,30 @@
     
     <!--Basic Orientation-->
     <div id="sectionone">
-    	<h3>Section 1: Groundwork</h3>
+    	<h3>Section 1: Syntax and Semantics</h3>
     	<hr>
     		<p>
-    			Funky Trees is a sort of like an programming language. It takes various <code>inputs</code>, processes them, and relays an <code>output</code> that is then taken by the part (whatever "part" you're putting FT inputs into) to result in some kind of of behavior by the part.
+    			Not unlike other conventional programming languages, Funky Trees utilizes a system of inputs and outputs. It takes various <code>inputs</code>, processes them, and relays an <code>output</code> that is then taken by the part (whatever "part" you're putting FT inputs into) to result in some kind of of behavior by the part.
     		</p>
     		<p>
-    			There are largely three types of special keywords in Funky Trees. They are:
-    </p>
+    		    By the same token, Funky Trees follows a set of predefined rules to make the system work. This is commonly known as "syntax". There aren't a large number of rules in Funky Trees- they can be generalized to the following:
+    		</p>
+    		<ul>
+    		    <li><strong>Spelling matters</strong>, including spacing (see "semantics")</li>
+    		    <li><strong>Capitalization matters:</strong> <code>Hello</code> and <code>hello</code> are two very different things</li>
+    		    <li>Mathematical operations in Funky Trees follows <strong>standard order of operations</strong> (see "operators")</li>
+    		    <li><strong>One small error leads to the entire expression not evaluating / evaluating incorrectly.</strong> Often this may be the case for complicated input expressions that yield errors.</li>
+    		</ul>
+    		<p>
+    		    Another common idea from programming comes into play in Funky Trees- when a certain, specifc order of symbols a grouped together in a very specifc way, they can hold meaning in the eyes of the system. This is commonly known as "semantics". For example, in the eyes of Funky Trees, the expression <code>altitude</code> has no meaning to the system. However, the expression <code>Altitude</code> has a very specifc value and meaning to the system, and the expression will evaluate accordingly. If these "very specifc combinations of symbols" are likened to functional "elements", it is possible to categorize these elements into to one of three categories. They are:
+    		</p>
     				<ol>
     					<li>Variables</li>
     					<li>Functions</li>
     					<li>Operators</li>
     				</ol>
-          <p>
-    			We will get into what these are in the next few sections, just after we quickly go over data types.
+    		<p>
+    			The following sections elaborate on these three categories in great detail, just after the data types section.
     		</p>
     </div>
     
@@ -177,15 +208,15 @@
     	<h3>Section 2: Data Types</h3>
     	<hr>
     		<p>
-    			To give an <code>input</code> to the part, you probably need some sort of data to work with, right? Since version 1.9.2, Funky Trees was revamped to have data type organization. 
+    			To give an <code>input</code> to the part, you probably need some sort of data to work with, right? Since version 1.9.2, Funky Trees was revamped to have data type organization.
     			To explain, all usable data types in Funky Trees have now been organized into one of three categories- numbers, booleans, and strings. Here’s a rundown:
-    </p>
+    		</p>
     				<ul>
     					<li>Numbers are numbers including floats (e.g. 1, 1314, 12.0003, 0.334, etc).</li>
     					<li>Booleans are very useful for logic. They are either true, or false. If you use them in conjunction with other data types, true or false can output the numbers 1 or -1 respectively. Previously, before 1.9.2, booleans were inconsistent, this now has been fixed to be much more predictable.</li>
     					<li>Strings are basically lines of text. They must be enclosed in quotations (“” marks) (e.g. "Text").</li>
     				</ul>
-          <p>
+    		<p>
     			Hopefully, this made sense. If you're new to computer science, these terms may sound completely alien to you- but don't worry, it'll make sense in due time (this is the only reason why programming experience comes in handy, to help orient yourself quicker).
     		</p>
     </div>
@@ -532,11 +563,11 @@
     	<h3>Section 2B: Functions</h3>
     	<hr>
     		<p>
-    			Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and return an <code>output</code>, each depending on what the function does. Functions, in Funky Trees, are designed like so: 
+    			Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and return an <code>output</code>, each depending on what the function does. Functions, in Funky Trees, are designed like so:
     		</p>
     		    <div class="text-center"><p>function(input)</p></div>
     		<p>
-    		    Functions are defined to the system by the function name- in the example, the word <code>'function'</code>. Functions also have one more crucial attribute: they also have an <code>'input'</code> within the parentheses following the function name. Some functions take more than one input, for example, the <code>clamp</code> function takes inputs in the form of <code>clamp(x, a, b)</code>. Functions can only take specific datatypes as inputs (which is why I previously covered the data types)- there are functions that only accept <code>string</code>-type data as inputs, like the <code>ammo</code> function. The following is a list of all available functions as of game version 1.9.205. This is simply for reference.
+    		    Functions are defined to the system by the function name- in the example, the word <code>'function'</code>. Functions also have one more crucial attribute: they also have an <code>'input'</code> within the parentheses following the function name. Some functions take more than one input, for example, the <code>clamp</code> function takes inputs in the form of <code>clamp(x, a, b)</code>. Functions can only take specific datatypes as inputs (which is why I previously covered the data types)- there are functions that only accept <code>string</code>-type data as inputs, like the <code>ammo</code> function. The following is a list of all available functions as of game version 1.9.205. The following is simply for reference.
     		</p>
     		    <!--Reference Functions List-->
     		    <table class="table-borderless text-center" style="width:100%">
@@ -591,11 +622,12 @@
     		   <div>
     		    <ol style="list-style-type:none;">
     		        <li>
+    		        <!--Number-based Functions-->
     		            <span id="numbfunc">
     		                <h3>1. Number-based Functions</h3>
     		                <hr>
     		                  <p>
-    		                    Number based functions are the most conceptually simple. It takes inputs that would be classified under the ‘number’ data type, and outputs a ‘number’ data type. However, if you recall Section 2A, it was mentioned that booleans can be converted to a number of 1 or -1 (true or false)- this means that number based functions <em>can</em> take boolean inputs, but note that the number function is taking not the boolean themselves as input, but only the number-converted boolean. A number function will not take a string input, like the string <code>"thisstring"</code>. They will also only ouput a number, i.e. a number function might take the value 1 and output 0.2. 
+    		                    Number based functions are the most conceptually simple. It takes inputs that would be classified under the ‘number’ data type, and outputs a ‘number’ data type. However, if you recall Section 2A, it was mentioned that booleans can be converted to a number of 1 or -1 (true or false)- this means that number based functions <em>can</em> take boolean inputs, but note that the number function is taking not the boolean themselves as input, but only the number-converted boolean. A number function will not take a string input, like the string <code>"thisstring"</code>. They will also only ouput a number, i.e. a number function might take the value 1 and output 0.2.
     		                  </p>
     		                  <p>
     		                    The following table organizes all the number based functions, their input syntax, and their usage.
@@ -721,11 +753,13 @@
     		            </span>
     		        </li>
     		        <li>
+    		        
+    		        <!--Time-based Functions-->
     		            <span id="timefunc">
     		                <h3>2. Time-based Functions</h3>
     		                <hr>
     		                  <p>
-    		                    These functions were added in game version 1.9.2. These are functions that measure things with respect to time. In particular, the rate and sum functions are the FT equivalent of derivatives (d/dx) and integrals (&#8747;dx), which enables the creation of far advanced inputs. These functions can be greatly useful but most things can be done without them, so do not fret- if your math is on the level to understand derivatives and integrals, then you don’t really need much explanation on what these will do. We're not working with variable expressions, so more of the academic calculus like the power rule is pretty much useless- you will really only be utilizing the practical application of them. 
+    		                    These functions were added in game version 1.9.2. These are functions that measure things with respect to time. In particular, the rate and sum functions are the FT equivalent of derivatives (d/dx) and integrals (&#8747;dx), which enables the creation of far advanced inputs. These functions can be greatly useful but most things can be done without them, so do not fret- if your math is on the level to understand derivatives and integrals, then you don’t really need much explanation on what these will do. We're not working with variable expressions, so more of the academic calculus like the power rule is pretty much useless- you will really only be utilizing the practical application of them.
     		                  </p>
     		                  <table class="table" id="timefunctionstable" style="width:100%">
     		                    <tr>
@@ -759,7 +793,7 @@
     		                <h3>3. String-based Functions</h3>
     		                <hr>
     		                  <p>
-    		                    There’s currently only one string-based function as of version 1.9.205- it’s the <code>ammo()</code> function. Since it takes a string as input, that also means that the input the ammo function can be a string-type variable- i.e. the <code>SelectedWeapon</code> variable. 
+    		                    There’s currently only one string-based function as of version 1.9.205- it’s the <code>ammo()</code> function. Since it takes a string as input, that also means that the input the ammo function can be a string-type variable- i.e. the <code>SelectedWeapon</code> variable.
     		                  </p>
     		                  <table class="table" id="stringfunctionstable">
     		                    <tr>
@@ -777,6 +811,201 @@
     		    <div>
     </div>
 
+<!--End of Section Two-->
+
+    <div id="sectionthree">
+        <h3>Section 3: Operators</h3>
+        <hr>
+            <p>
+                The Funky Trees system offers a variety of operators to use within input expressions. Simply put, operators are symbols indicating a mathematical operation. There are two types of operators in Funky Trees:
+            </p>
+            <ol>
+                <li>Math Operators</li>
+                <li>Logic Operators</li>
+            </ol>
+            <p>Refer to the following two sections for information on each.</p>
+            <br>
+            
+            <!--Section List-->
+        <ul style="list-style-type:none;">
+
+            <!--Math Operators-->
+            <li>
+                <span id="mathop">
+                    <h3>A. Math Operators</h3>
+                    <hr>
+                    <p>Math operators are conceptually very simple. They perform basic algebraic calculations. The following table lists all available math operators, their usage, and examples. Take <code>a, b, c</code> as other expressions or constants.</p>
+                        <table class="table">
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Usage</th>
+                                <th>Example</th>
+                                <th>Explanation</th>
+                            </tr>
+                            <tr>
+                                <td><code>+</code></td>
+                                <td>Addition</td>
+                                <td><code>a + b</code></td>
+                                <td>Yields the value <code>a + b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                            </tr>
+                            <tr>
+                                <td><code>-</code></td>
+                                <td>Subtraction or Negative sign</td>
+                                <td><code>a - b</code> or <code>-c</code></td>
+                                <td>Yields the value <code>a - b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                            </tr>
+                            <tr>
+                                <td><code>*</code></td>
+                                <td>Multiplication</td>
+                                <td><code>a * b</code></td>
+                                <td>Yield the value <code>a * b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/</code></td>
+                                <td>Division</td>
+                                <td><code>a / b</code></td>
+                                <td>Yield the value <code>a / b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                            </tr>
+                            <tr>
+                                <td><code>()</code></td>
+                                <td>Parentheses to group statements</td>
+                                <td><code>(a + b) * c</code></td>
+                                <td>Groups statements. In this example, the operation <code>a + b</code> is done <b>before</b> <code>c</code> is multiplied. Note: implied multiplication, like in the form of <code>(a)(b)</code>, is <b>not supported</b>. To do this, you must use the multiplication operator.</td>
+                            </tr>
+                        </table>
+                    <p>
+                        To illustrate the math operators in context, here's an example: assume that the value of the variable, <code>Roll</code>, is set to 1 because the positive roll button is pressed. If a final value of 5 is desired, adding 4 to the current Roll value will yield 5. Therefore the expression <code>Roll + 4</code> would evaluate (result) in: <code>(+1) + (+4) == (+5)</code>. All of the math operators are used in similar fashion to the example illustrated.
+                    </p>
+                </span>
+            </li>
+            <br>
+            
+            <!--Logic Operators-->
+            <li>
+                <span id="logicop">
+                    <h3>B. Logic Operators</h3>
+                    <hr>
+                    <p>Logic operators are conceptually more abstract, as they rely on boolean logic instead of simple algebra. They always output a boolean value as the ouput- either <code>true</code> or <code>false</code>. There are three types of operators- comparison, boolean, and selection operators. Each is explained below. For some operators, a <a href="https://en.wikipedia.org/wiki/Truth_table">truth table</a> is also included for reference.</p>
+                    <br>
+                    
+                    <!--Subcategory List-->
+                    
+                    <ul style="list-style-type:none;">
+                    
+                    <!--Comparison Operators-->
+                    <li id="compop">
+                    <h4>1. Comparison Operators</h4>
+                    <hr>
+                        <p>
+                            Comparison operators are very conceptually simple. They compare the two values on each side of the operator and output the result as a boolean.
+                        </p>
+                        <h5>Comparison Operators List</h5>
+                        <table class="table">
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Usage</th>
+                                <th>Example</th>
+                                <th>Explanation</th>
+                            </tr>
+                            <tr>
+                                <td><code>=</code></td>
+                                <td>Equality</td>
+                                <td><code>a = b</code></td>
+                                <td>Checks if <code>a = b</code>. If <code>a</code> is equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>></code></td>
+                                <td>Greater than</td>
+                                <td><code>a > b</code></td>
+                                <td>Checks if <code>a > b</code>. If <code>a</code> is greater than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code><</code></td>
+                                <td>Less than</td>
+                                <td><code>a < b</code></td>
+                                <td>Checks if <code>a < b</code>. If <code>a</code> is less than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>></code></td>
+                                <td>Greater than or equal to</td>
+                                <td><code>a >= b</code></td>
+                                <td>Checks if <code>a >= b</code>. If <code>a</code> is greater than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code><=</code></td>
+                                <td>Less than or equal to</td>
+                                <td><code>a <= b</code></td>
+                                <td>Checks if <code>a <= b</code>. If <code>a</code> is less than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <br>
+                    
+                    <!--Boolean Operators-->
+                    <li id="boolop">
+                    <h4>2. Boolean Operators</h4>
+                    <hr>
+                        <p>
+                            Boolean operators operate based on whether the operands (expressions on each side of the operator) are <code>true</code> or <code>false</code>. This means <b>they only take boolean</b> operands.
+                        </p>
+                        <h5>Boolean Operators List</h5>
+                        <table class="table">
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Usage</th>
+                                <th>Example</th>
+                                <th>Explanation</th>
+                            </tr>
+                            <tr>
+                                <td><code>&</code></td>
+                                <td>Boolean AND</td>
+                                <td><code>a & b</code></td>
+                                <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>false</code></b>, the operator will output <code>false</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>|</code></td>
+                                <td>Boolean OR</td>
+                                <td><code>a | b</code></td>
+                                <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>true</code></b>, the operator will output <code>true</code>. This operator only ouputs <code>false</code> if both operands are <code>false</code>.</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <br>
+                    
+                    <!--Selection Operators-->
+                    <li id="selectop">
+                    <h4>3. Selection Operators</h4>
+                    <hr>
+                        <p>
+                            Selection operators output one of the two expressions as output depending on the value of the initial condition.
+                        </p>
+                        <h5>Selection Operators List</h5>
+                        <table class="table">
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Usage</th>
+                                <th>Example</th>
+                                <th>Explanation</th>
+                            </tr>
+                            <tr>
+                                <td><code>? :</code></td>
+                                <td>IF (ternary selection)</td>
+                                <td><code>a ? b : c</code></td>
+                                <td>Checks if <code>a</code> is <code>true</code> or <code>false</code>. If <code>a</code> is <code>true</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>false</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
+                            </tr>
+                        </table>
+                    </li>
+                    </ul>
+                    
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <h5>Notes</h5>
+                            <p>Once again, it is worth noting that <b>the boolean operators take only boolean operands.</b> To generate a boolean, the standard comparison operators must be utliized.</p>
+                    </div>
+                </span>
+            </li>
+        </ul>
+    </div>
 
 <!--End of Main Body Text-->
 

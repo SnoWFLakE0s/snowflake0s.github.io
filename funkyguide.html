@@ -35,7 +35,7 @@
 
 <!--Main Header (Jumbotron)-->
 
-<div class="jumbotron">
+<div id="header" class="jumbotron">
 	<h3>Funky Trees Guide</h3>
 	    <hr>
     	<p><i>
@@ -47,10 +47,13 @@
 
 <div class="container-fluid">
 <div class="row">
+
 	<!--Table of Contents (Fixed)-->
 
-	<div class="col-sm-3 ml-3 fixed-left border">
-		<h5>Contents</h5>
+	<div class="col-sm-3 ml-3">
+    <!--TABLE OF CONTENTS WILL NOT FOLLOW-->
+		<span class="position-sticky">
+        <h5>Contents</h5>
         <!--Table of Contents Links-->
         <ol style="padding-left:1rem">
         <li>
@@ -85,13 +88,14 @@
         </li>
       </ol>
         <a id="backtotop" href="#header">Back to Top</a>
+    </span>
 	</div>
 
 <!--End of Table of Contents-->
 
 <!--Main Body Text-->
 
-<div class="col border">
+<div class="col mr-3">
 	
     <!--Notification Section-->
     
@@ -211,7 +215,7 @@
     					<tr>
     						<td>FireWeapons</td>
     						<td>LaunchCountermeasures</td>
-    						<td>Actiavte1</td>
+    						<td>Activate1</td>
     						<td>Activate2</td>
     						<td>Activate3</td>
     					</tr>
@@ -257,18 +261,19 @@
     		
     		<br>
     		
-    		<ol>
+            <!--Variables Explanation List-->
+    		<ol style="list-style-type:none;">
     			<li>
     			<!--Number Variables-->
-          <div id="numbvar" class="numbvar">
-          	<h3>Number-type Variables</h3>
+          <div id="numbvar">
+          	<h3>1. Number-type Variables</h3>
           	<hr>
           		<p>
           			By far the most numerous, the numbers datatype contains variables that equate to the <code>number</code> class of variables. They’re conceptually easy to manipulate, but there are a great variety of number type variables and each has a unique range of values.
           			<b>TL;DR: simply numbers, but everything is unique (requiring special attention from you).</b>
           			The following is a list of all number type variables and their possible values.
           		</p>
-          		<table style="width:100%">
+          		<table class="table" style="width:100%">
           			<tr>
           				<th>Variable</th>
           				<th>Variable Description</th>
@@ -407,17 +412,20 @@
           		</table>
           </div>
     			</li>
-    			<li>
-    			<!--Boolean Variables-->
-    			<div id="boolvar" class="booleanvar">
-          	<h3>Boolean-type Variables</h3>
+                
+                <br>
+    			
+                <!--Boolean Variables-->
+                <li>
+    			<div id="boolvar">
+          	<h3>2. Boolean-type Variables</h3>
           	<hr>
           		<p>
           			Booleans were previously inconsistent in Funky Trees due to a couple errors. The system has been revamped completely, removing the root source of that error. Now, if you only use boolean statements independent of other data types, you will get the value <code>true</code> or <code>false</code>. If you use booleans in conjunction with the number data type, they will automatically convert to 1 or -1 (true or false respectively). That also means, in the table down below, all the booleans can also be considered to have a possible range of values of -1 or 1.
           			<b>TL;DR: All boolean data type variables return either true or false, or 1 or -1 depending on its usage. This makes these logically consistent. </b>
           			The following is a list of all number type variables and their possible values.
           		</p>
-          		<table style="width:100%">
+          		<table class="table" style="width:100%">
           			<tr>
           				<th>Variable</th>
           				<th>Variable Description</th>
@@ -493,13 +501,13 @@
     			</li>
     			<li>
     			<!--String variables-->
-    			<div id="stringvar" class="stringvar">
-    				<h3>String-type Variables</h3>
+    			<div id="stringvar">
+    				<h3>3. String-type Variables</h3>
           	<hr>
           		<p>
           			Simply put, strings are just lines of text, like "text". The number of actual strings datatype <b>variables</b> is technically only one as of the time of writing. However, whatever you make your string- be it “this string” or “that string”- are all valid strings. Strings don't really have a large variety of applications right now, but they can be useful.
           		</p>
-          		<table style="width:100%">
+          		<table class="table" style="width:100%">
           			<tr>
           				<th>Variable</th>
           				<th>Variable Description</th>
@@ -523,12 +531,12 @@
     		<p>
     			Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and return an <code>output</code>, each depending on what the function does. Functions, in Funky Trees, are designed like so: 
     		</p>
-    		    <div class="centered"><p class="centeredexample">function(input)</p></div>
+    		    <div class="text-center"><p>function(input)</p></div>
     		<p>
     		    Functions are defined to the system by the function name- in the example, the word <code>'function'</code>. Functions also have one more crucial attribute: they also have an <code>'input'</code> within the parentheses following the function name. Some functions take more than one input, for example, the <code>clamp</code> function takes inputs in the form of <code>clamp(x, a, b)</code>. Functions can only take specific datatypes as inputs (which is why I previously covered the data types)- there are functions that only accept <code>string</code>-type data as inputs, like the <code>ammo</code> function. The following is a list of all available functions as of game version 1.9.205. This is simply for reference.
     		</p>
     		    <!--Reference Functions List-->
-    		    <table style="width:100%">
+    		    <table class="table-borderless text-center" style="width:100%">
     		        <tr>
     		          <td>abs()</td>
     		          <td>ceil()</td>
@@ -570,15 +578,18 @@
     		          <td>ammo()</td>
     		        </tr>
     		    </table>
+                <br>
     		<p>
     		    Moreover, each function acts in unique ways, which is how they are classified in the following few subsections.
     		</p>
+            <br>
+            
     		    <!--Function Subsections-->
-    		   <div class="subsection">
-    		    <ol>
+    		   <div>
+    		    <ol style="list-style-type:none;">
     		        <li>
-    		            <span id="numbfunc" class="subsectionitem">
-    		                <h3>Number-based Functions</h3>
+    		            <span id="numbfunc">
+    		                <h3>1. Number-based Functions</h3>
     		                <hr>
     		                  <p>
     		                    Number based functions are the most conceptually simple. It takes inputs that would be classified under the ‘number’ data type, and outputs a ‘number’ data type. However, if you recall Section 2A, it was mentioned that booleans can be converted to a number of 1 or -1 (true or false)- this means that number based functions <em>can</em> take boolean inputs, but note that the number function is taking not the boolean themselves as input, but only the number-converted boolean. A number function will not take a string input, like the string <code>"thisstring"</code>. They will also only ouput a number, i.e. a number function might take the value 1 and output 0.2. 
@@ -586,171 +597,174 @@
     		                  <p>
     		                    The following table organizes all the number based functions, their input syntax, and their usage.
     		                  </p>
-    		                  <table id="numberfunctionstable" style="width:100%">
+    		                  <table class="table" id="numberfunctionstable" style="width:100%">
     		                    <tr>
     		                      <th>Function Name/Syntax</th>
     		                      <th>Usage</th>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">abs(x)</td>
+    		                      <td>abs(x)</td>
     		                      <td>The absolute (positive) value of x.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">ceil(x)</td>
+    		                      <td>ceil(x)</td>
     		                      <td>x rounded up to an integer.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">clamp(x, min, max)</td>
+    		                      <td>clamp(x, min, max)</td>
     		                      <td>x clamped between min and max.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">clamp01(x)</td>
+    		                      <td>clamp01(x)</td>
     		                      <td>x clamped between 0 and 1. Equivalent to clamp(x, 0, 1)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">deltaangle(a, b)</td>
+    		                      <td>deltaangle(a, b)</td>
     		                      <td>The smallest angle delta between angles a and b in degrees.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">exp(x)</td>
+    		                      <td>exp(x)</td>
     		                      <td>Returns e raised to the power of x.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">floor(x)</td>
+    		                      <td>floor(x)</td>
     		                      <td>x rounded down to an integer.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">inverselerp(a, b, x)</td>
+    		                      <td>inverselerp(a, b, x)</td>
     		                      <td>Calculates the linear parameter t that produces the interpolant value within the range [a, b].</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">lerp(a, b, t)</td>
+    		                      <td>lerp(a, b, t)</td>
     		                      <td>Linearly interpolates between a and b, by a proportion of t.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">lerpangle(a, b, t)</td>
+    		                      <td>lerpangle(a, b, t)</td>
     		                      <td>Similar to lerp, but interpolates correctly when values pass 360 degrees.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">lerpunclamped(a, b, t)</td>
+    		                      <td>lerpunclamped(a, b, t)</td>
     		                      <td>Similar to lerp, but doesn't clamp the value between a and b.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">log(x, p)</td>
+    		                      <td>log(x, p)</td>
     		                      <td>The logarithm of x in base p.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">log10(x)</td>
+    		                      <td>log10(x)</td>
     		                      <td>Equivalent to log(x, 10).</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">pingpong(x, l)</td>
+    		                      <td>pingpong(x, l)</td>
     		                      <td>"Ping-pongs" the value x so it is never larger than l and never less than 0.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">max(a, b)</td>
+    		                      <td>max(a, b)</td>
     		                      <td>The largest value between a and b.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">min(a, b)</td>
+    		                      <td>min(a, b)</td>
     		                      <td>The smallest value between a and b.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">pow(x, p)</td>
+    		                      <td>pow(x, p)</td>
     		                      <td>x raised to the power of p.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">repeat(x, l)</td>
+    		                      <td>repeat(x, l)</td>
     		                      <td>Loops the value x so it is never larger than l and never less than 0.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">round(x)</td>
+    		                      <td>round(x)</td>
     		                      <td>Rounds x to the nearest integer.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">sign(x)</td>
+    		                      <td>sign(x)</td>
     		                      <td>The sign of x (1 if x positive, -1 if x negative)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">smoothstep(a, b, t)</td>
+    		                      <td>smoothstep(a, b, t)</td>
     		                      <td>Similar to lerp, but with smoothing at the ends.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">sqrt(x)</td>
+    		                      <td>sqrt(x)</td>
     		                      <td>The square root of x.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">sin(x)</td>
+    		                      <td>sin(x)</td>
     		                      <td>The sine of x (degrees)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">cos(x)</td>
+    		                      <td>cos(x)</td>
     		                      <td>The cosine of x (degrees)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">tan(x)</td>
+    		                      <td>tan(x)</td>
     		                      <td>The tangent of x (degrees)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">asin(x)</td>
+    		                      <td>asin(x)</td>
     		                      <td>The arc-sine of x (degrees)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">acos(x)</td>
+    		                      <td>acos(x)</td>
     		                      <td>The arc-cosine of x (degrees)</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">atan(x)</td>
+    		                      <td>atan(x)</td>
     		                      <td>The arc-tangent of x (degrees)</td>
     		                    </tr>
     		                  </table>
     		            </span>
     		        </li>
     		        <li>
-    		            <span id="timefunc" class="subsectionitem">
-    		                <h3>Time-based Functions</h3>
+    		            <span id="timefunc">
+    		                <h3>2. Time-based Functions</h3>
     		                <hr>
     		                  <p>
     		                    These functions were added in game version 1.9.2. These are functions that measure things with respect to time. In particular, the rate and sum functions are the FT equivalent of derivatives (d/dx) and integrals (&#8747;dx), which enables the creation of far advanced inputs. These functions can be greatly useful but most things can be done without them, so do not fret- if your math is on the level to understand derivatives and integrals, then you don’t really need much explanation on what these will do. We're not working with variable expressions, so more of the academic calculus like the power rule is pretty much useless- you will really only be utilizing the practical application of them. 
     		                  </p>
-    		                  <table id="timefunctionstable" style="width:100%">
+    		                  <table class="table" id="timefunctionstable" style="width:100%">
     		                    <tr>
     		                      <th>Function Name/Syntax</th>
     		                      <th>Usage</th>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">rate(x)</td>
+    		                      <td>rate(x)</td>
     		                      <td>The rate of change of x.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">sum(x)</td>
+    		                      <td>sum(x)</td>
     		                      <td>The integration of x over time. Time starts from level load (no integration bounds can be specified).</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">smooth(x, rate)</td>
+    		                      <td>smooth(x, rate)</td>
     		                      <td>The output follows x, but only at a maximum speed of <code>rate</code> units per second.</td>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">PID(target, current, p, i, d)</td>
+    		                      <td>PID(target, current, p, i, d)</td>
     		                      <td>A PID controller with the parameters p, i and d. <a href="https://en.wikipedia.org/wiki/PID_controller">Read more about PID controllers on Wikipedia.</a></td>
     		                    </tr>
     		                  </table>
     		            </span>
     		        </li>
+                    <br>
+                    
+                    <!--String Functions-->
     		        <li>
-    		            <span id="stringfunc" class="subsectionitem">
-    		                <h3>String-based Functions</h3>
+    		            <span id="stringfunc">
+    		                <h3>3. String-based Functions</h3>
     		                <hr>
     		                  <p>
     		                    There’s currently only one string-based function as of version 1.9.205- it’s the <code>ammo()</code> function. Since it takes a string as input, that also means that the input the ammo function can be a string-type variable- i.e. the <code>SelectedWeapon</code> variable. 
     		                  </p>
-    		                  <table id="stringfunctionstable">
+    		                  <table class="table" id="stringfunctionstable">
     		                    <tr>
     		                      <th>Function Name/Syntax</th>
     		                      <th>Usage</th>
     		                    </tr>
     		                    <tr>
-    		                      <td class="functionname">ammo("string")</td>
+    		                      <td>ammo("string")</td>
     		                      <td>The amount of ammo left for the weapon “someweaponname”. That is, whatever the name of your weapon is, is the string you want to input into “string”, to which the function will return the amount of remaining ammo.</td>
     		                    </tr>
     		                  </table>

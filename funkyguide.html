@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </head>
-
 <body>
 
 <!--Navbar-->
@@ -37,8 +37,9 @@
 
 <div class="jumbotron">
 	<h3>Funky Trees Guide</h3>
+	    <hr>
     	<p><i>
-        	Funky trees man. You know, them inputs and stuff.
+        	Funky Trees Guide, by SnoWFLakE0s
        	</i></p>
 </div>
 
@@ -48,10 +49,10 @@
 <div class="row">
 	<!--Table of Contents (Fixed)-->
 
-	<div class="col-sm-3 fixed-left">
+	<div class="col-sm-3 ml-3 fixed-left border">
 		<h5>Contents</h5>
         <!--Table of Contents Links-->
-        <ol>
+        <ol style="padding-left:1rem">
         <li>
           <a href="#introduction">Introduction</a>
         </li>
@@ -63,10 +64,10 @@
         </li>
   			  <li>
           <a href="#sectiontwo">Section 2</a>
-          <ol style="padding-left:5px" type="A">
+          <ol style="padding-left:1rem" type="A">
             <li>
               <a href="#sectiontwoa">Section 2A</a>
-              <ol style="padding-left:5px" type="1">
+              <ol style="padding-left:1rem" type="1">
                 <li><a href="#numbvar">Number-type Variables</a></li>
                 <li><a href="#boolvar">Boolean-type Variables</a></li>
                 <li><a href="#stringvar">String-type Variables</a></li>
@@ -74,7 +75,7 @@
             </li>
             <li>
               <a href="#sectiontwob">Section 2B</a>
-              <ol style="padding-left:5px" type="1">
+              <ol style="padding-left:1rem" type="1">
                 <li><a href="#numbfunc">Number-based Functions</a></li>
                 <li><a href="#timefunc">Time-based Functions</a></li>
                 <li><a href="#stringfunc">String-based Functions</a></li>
@@ -86,11 +87,685 @@
         <a id="backtotop" href="#header">Back to Top</a>
 	</div>
 
+<!--End of Table of Contents-->
+
 <!--Main Body Text-->
 
-<div class="col-sm-9">
-	<p>Test test asdfasdfasdpfoiqwegpqoiwehgpqowiehgqpwoeighqweg</p>
+<div class="col border">
+	
+    <!--Notification Section-->
+    
+    <br>
+    
+    <div class="alert alert-danger alert-dismissible">
+    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4>Warning:</h4>
+        <strong>This guide assumes intermediate to near complete mastery of basic XML editing/modding in SimplePlanes. If you are not familiar with XML editing yet, proceed at your own risk.</strong> The following guide is considerably long and certain sections are still under construction.
+    </div>
+    
+    <br>
+    
+    <!--End of Notif Button-->
+    
+    <!--Start of Guide Content-->
+    
+    <!--Introduction-->
+    <div id="introduction">
+      <h3>Introduction: What <i>is</i> Funky Trees?</h3>
+      <hr>
+        	<p>
+        		When you do things in SimplePlanes, like controlling your plane by moving the joystick or pressing the keyboard, essentially what you're doing is you're sending a signal to the various functional bits on your plane to move as you told it to. Funky Trees expands the options you can have here and allows for much more complex programming of the inputs to allow for very special input programming to allow creation of incredibly powerful and useful parts.
+        	</p>
+        	<p>
+        		By nature, Funky Trees is a special subfield of what's known as XML editing/modding in SimplePlanes. If you aren't familar with basic XML editing, there is absolutely no way you will understand the workings of funky trees- you must learn that first. 
+        	</p>
+    </div>
+    
+    <br>
+    
+    <!--Prerequisites-->
+    <div id="prereq">
+    	<h3>Prerequisites: Things you probably should know</h3>
+    	<hr>
+    		<p>
+    			Funky Trees isn't some entirely new field of study, but given the broad expanse of what it covers, the following concepts are recommended for full mastery of Funky Trees capability. These come in no particular order, there is no need for you to master all of them, but to use <i>everything</i> in Funky Trees, you must know all of these concepts.
+    		</p>
+    		<ul>
+    			<li>XML Modding*</li>
+    			<li>Algebra*</li>
+    			<li>Calculus Concepts</li>
+    			<li>Programming/CS</li>
+    		</ul>
+    		<p>
+    			* indicates required fields of knowledge. Usage of calculus is largely limited to a couple of functions, but is still quite useful to know. Programming/CS knowledge is extremely useful to know when structuring Funky Tree inputs (FT is practically a programming language) and will help in understanding FT in general, but is not necessary.
+    		</p>
+    </div>
+    
+    <br>
+    
+    <!--Basic Orientation-->
+    <div id="sectionone">
+    	<h3>Section 1: Groundwork</h3>
+    	<hr>
+    		<p>
+    			Funky Trees is a sort of like an programming language. It takes various <code>inputs</code>, processes them, and relays an <code>output</code> that is then taken by the part (whatever "part" you're putting FT inputs into) to result in some kind of of behavior by the part.
+    		</p>
+    		<p>
+    			There are largely three types of special keywords in Funky Trees. They are:
+    </p>
+    				<ol>
+    					<li>Variables</li>
+    					<li>Functions</li>
+    					<li>Operators</li>
+    				</ol>
+          <p>
+    			We will get into what these are in the next few sections, just after we quickly go over data types.
+    		</p>
+    </div>
+    
+    <br>
+    
+    <!--Data Types Explanation-->
+    <div id="sectiontwo">
+    	<h3>Section 2: Data Types</h3>
+    	<hr>
+    		<p>
+    			To give an <code>input</code> to the part, you probably need some sort of data to work with, right? Since version 1.9.2, Funky Trees was revamped to have data type organization. 
+    			To explain, all usable data types in Funky Trees have now been organized into one of three categories- numbers, booleans, and strings. Here’s a rundown:
+    </p>
+    				<ul>
+    					<li>Numbers are numbers including floats (e.g. 1, 1314, 12.0003, 0.334, etc).</li>
+    					<li>Booleans are very useful for logic. They are either true, or false. If you use them in conjunction with other data types, true or false can output the numbers 1 or -1 respectively. Previously, before 1.9.2, booleans were inconsistent, this now has been fixed to be much more predictable.</li>
+    					<li>Strings are basically lines of text. They must be enclosed in quotations (“” marks) (e.g. "Text").</li>
+    				</ul>
+          <p>
+    			Hopefully, this made sense. If you're new to computer science, these terms may sound completely alien to you- but don't worry, it'll make sense in due time (this is the only reason why programming experience comes in handy, to help orient yourself quicker).
+    		</p>
+    </div>
+    
+    <br>
+
+<!--Varables Explanation-->
+    <div id="sectiontwoa">
+    	<h3>Section 2A: Variables</h3>
+    	<hr>
+    		<p>
+    			I first want to make sure that you understand what variables are in Funky Trees. <b>Variables</b> are special words that have a special value in Funky Trees. They <i>contain</i> data. The data type organization, in other words, is a way of organizing these variables into different types. The following is a list of all input variables. Don't panic, this is simply for reference.
+    </p>
+    			<!--Add CSS Styling to table (add borders)-->
+    				<table style="width:100%">
+    					<tr>
+    						<td>Pitch</td>
+    						<td>Roll</td>
+    						<td>Yaw</td>
+    						<td>Throttle</td>
+    						<td>Brake</td>
+    					</tr>
+    					<tr>
+    						<td>Trim</td>
+    						<td>VTOL</td>
+    						<td>LandingGear</td>
+    						<td>GearDown</td>
+    						<td>FireGuns</td>
+    					</tr>
+    					<tr>
+    						<td>FireWeapons</td>
+    						<td>LaunchCountermeasures</td>
+    						<td>Actiavte1</td>
+    						<td>Activate2</td>
+    						<td>Activate3</td>
+    					</tr>
+    					<tr>
+    						<td>Activate4</td>
+    						<td>Activate5</td>
+    						<td>Activate6</td>
+    						<td>Activate7</td>
+    						<td>Activate8</td>
+    					</tr>
+    					<tr>
+    						<td>Altitude</td>
+    						<td>AltitudeAgl</td>
+    						<td>GS</td>
+    						<td>IAS</td>
+    						<td>TAS</td>
+    					</tr>
+    					<tr>
+    						<td>Fuel</td>
+    						<td>AngleOfAttack</td>
+    						<td>AngleOfSlip</td>
+    						<td>PitchAngle</td>
+    						<td>RollAngle</td>
+    					</tr>
+    					<tr>
+    						<td>Heading</td>
+    						<td>Time</td>
+    						<td>GForce</td>
+    						<td>VerticalG</td>
+    						<td>SelectedWeapon</td>
+    					</tr>
+    					<tr>
+    						<td>Latitude</td>
+    						<td>Longitude</td>
+    						<td>PitchRate</td>
+    						<td>RollRate</td>
+    						<td>YawRate</td>
+    					</tr>
+    				</table>
+          <p>
+    				We can now categorize these variables based on their data category (their possible values included in parentheses).
+    		</p>
+    		
+    		<br>
+    		
+    		<ol>
+    			<li>
+    			<!--Number Variables-->
+          <div id="numbvar" class="numbvar">
+          	<h3>Number-type Variables</h3>
+          	<hr>
+          		<p>
+          			By far the most numerous, the numbers datatype contains variables that equate to the <code>number</code> class of variables. They’re conceptually easy to manipulate, but there are a great variety of number type variables and each has a unique range of values.
+          			<b>TL;DR: simply numbers, but everything is unique (requiring special attention from you).</b>
+          			The following is a list of all number type variables and their possible values.
+          		</p>
+          		<table style="width:100%">
+          			<tr>
+          				<th>Variable</th>
+          				<th>Variable Description</th>
+          				<th>Range of Values</th>
+          			</tr>
+          			<tr>
+          				<td>Pitch</td>
+          				<td>The amount of Pitch input as a proportion</td>
+          				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+          			</tr>
+          			<tr>
+          				<td>Roll</td>
+          				<td>The amount of Roll input as a proportion</td>
+          				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+          			</tr>
+          			<tr>
+          				<td>Yaw</td>
+          				<td>The amount of Yaw input as a proportion</td>
+          				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+          			</tr>
+          			<tr>
+          				<td>Trim</td>
+          				<td>The amount of Trim input as a proportion</td>
+          				<td>(-1~1)</td>
+          			</tr>
+          			<tr>
+          				<td>VTOL</td>
+          				<td>The amount of VTOL input as a proportion</td>
+          				<td>(-1~1)</td>
+          			</tr>
+          			<tr>
+          				<td>Throttle</td>
+          				<td>The amount of Throttle input as a proportion</td>
+          				<td>(0~1)</td>
+          			</tr>
+          			<tr>
+          				<td>Altitude</td>
+          				<td>Aircraft's altitude in meters</td>
+          				<td>(-inf~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>AltitudeAgl</td>
+          				<td>Aircraft's altitude above ground level in meters </td>
+          				<td>(-inf~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>GS</td>
+          				<td>he speed relative to the ground (m/s)</td>
+          				<td>(0~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>IAS</td>
+          				<td>The speed relative to the air (m/s)</td>
+          				<td>(0~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>TAS</td>
+          				<td>The speed relative to the air, adjusted for the density of the air (m/s)</td>
+          				<td>(0~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>Fuel</td>
+          				<td>The amount of fuel remaining as a proportion of capacity</td>
+          				<td>(0~1)</td>
+          			</tr>
+          			<tr>
+          				<td>AngleOfAttack</td>
+          				<td>The angle of attack (angle airflow vertically meets the boresight) in degrees</td>
+          				<td>(-180~180)</td>
+          			</tr>
+          			<tr>
+          				<td>AngleOfSlip</td>
+          				<td>The horizontal equivalent of angle of attack (degrees)</td>
+          				<td>(-180~180)</td>
+          			</tr>
+          			<tr>
+          				<td>PitchAngle</td>
+          				<td>The pitch of the aircraft (degrees)</td>
+          				<td>(-90~90)</td>
+          			</tr>
+          			<tr>
+          				<td>RollAngle</td>
+          				<td>The roll of the aircraft (degrees)</td>
+          				<td>(-180~180)</td>
+          			</tr>
+          			<tr>
+          				<td>Heading</td>
+          				<td>The heading of the aircraft (degrees)</td>
+          				<td>(0~360)</td>
+          			</tr>
+          			<tr>
+          				<td>Time</td>
+          				<td>The time since the level loaded (seconds)</td>
+          				<td>(0~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>GForce</td>
+          				<td>(omnidirectional "force" acting on the pilot, in g)</td>
+          				<td>(0~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>VerticalG</td>
+          				<td>G-force (vertical component of G-force)</td>
+          				<td>(0~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>Latitude</td>
+          				<td>The y-position of the craft in the sandbox map</td>
+          				<td>(-inf~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>Longitude</td>
+          				<td>The x-position of the craft in the sandbox map</td>
+          				<td>(-inf~inf)</td>
+          			</tr>
+          			<tr>
+          				<td>PitchRate</td>
+          				<td>The rate at which the aircraft pitches (deg/s)</td>
+          				<td>(-360~360)</td>
+          			</tr>
+          			<tr>
+          				<td>RollRate</td>
+          				<td>The rate at which the aircraft rolls (deg/s)</td>
+          				<td>(-360~360)</td>
+          			</tr>
+          			<tr>
+          				<td>YawRate</td>
+          				<td>The rate at which the aricraft yaws (deg/s)</td>
+          				<td>(-360~360)</td>
+          			</tr>
+          			<tr>
+          				<td>LandingGear</td>
+          				<td>Archaic FT input type. Use <code>GearDown</code> instead when making FT inputs.</td>
+          				<td>(0, 1)</td>
+          			</tr>
+          		</table>
+          </div>
+    			</li>
+    			<li>
+    			<!--Boolean Variables-->
+    			<div id="boolvar" class="booleanvar">
+          	<h3>Boolean-type Variables</h3>
+          	<hr>
+          		<p>
+          			Booleans were previously inconsistent in Funky Trees due to a couple errors. The system has been revamped completely, removing the root source of that error. Now, if you only use boolean statements independent of other data types, you will get the value <code>true</code> or <code>false</code>. If you use booleans in conjunction with the number data type, they will automatically convert to 1 or -1 (true or false respectively). That also means, in the table down below, all the booleans can also be considered to have a possible range of values of -1 or 1.
+          			<b>TL;DR: All boolean data type variables return either true or false, or 1 or -1 depending on its usage. This makes these logically consistent. </b>
+          			The following is a list of all number type variables and their possible values.
+          		</p>
+          		<table style="width:100%">
+          			<tr>
+          				<th>Variable</th>
+          				<th>Variable Description</th>
+          				<th>Range of Values</th>
+          			</tr>
+          			<tr>
+          				<td>Brake</td>
+          				<td>Whether or not Brake is pressed</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>GearDown</td>
+          				<td>Whether or not landing gear is on or off</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>FireGuns</td>
+          				<td>Whether or not guns button is pressed</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>FireWeapons</td>
+          				<td>Whether or not fire ordnance button is pressed</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>LaunchCountermeasures</td>
+          				<td>Whether or not launch countermeasures button is pressed</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate1</td>
+          				<td>Whether or not activation group 1 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate2</td>
+          				<td>Whether or not activation group 2 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate3</td>
+          				<td>Whether or not activation group 3 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate4</td>
+          				<td>Whether or not activation group 4 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate5</td>
+          				<td>Whether or not activation group 5 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate6</td>
+          				<td>Whether or not activation group 6 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate7</td>
+          				<td>Whether or not activation group 7 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          			<tr>
+          				<td>Activate8</td>
+          				<td>Whether or not activation group 8 is on</td>
+          				<td><code>true</code> / <code>false</code></td>
+          			</tr>
+          		</table>
+          </div>
+    			</li>
+    			<li>
+    			<!--String variables-->
+    			<div id="stringvar" class="stringvar">
+    				<h3>String-type Variables</h3>
+          	<hr>
+          		<p>
+          			Simply put, strings are just lines of text, like "text". The number of actual strings datatype <b>variables</b> is technically only one as of the time of writing. However, whatever you make your string- be it “this string” or “that string”- are all valid strings. Strings don't really have a large variety of applications right now, but they can be useful.
+          		</p>
+          		<table style="width:100%">
+          			<tr>
+          				<th>Variable</th>
+          				<th>Variable Description</th>
+          			</tr>
+          			<tr>
+          				<td>SelectedWeapon</td>
+          				<td>Outputs the name of the selected weapon in the weapons drawer as a string, e.g. "Boom 50", "Cannon"</td>
+          			</tr>
+          		</table>
+    			</div>
+    			</li>
+    		</ol>
+    </div>
+    
+    <br>
+    
+    <!--Functions Explanation-->
+    <div id="sectiontwob">
+    	<h3>Section 2B: Functions</h3>
+    	<hr>
+    		<p>
+    			Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and return an <code>output</code>, each depending on what the function does. Functions, in Funky Trees, are designed like so: 
+    		</p>
+    		    <div class="centered"><p class="centeredexample">function(input)</p></div>
+    		<p>
+    		    Functions are defined to the system by the function name- in the example, the word <code>'function'</code>. Functions also have one more crucial attribute: they also have an <code>'input'</code> within the parentheses following the function name. Some functions take more than one input, for example, the <code>clamp</code> function takes inputs in the form of <code>clamp(x, a, b)</code>. Functions can only take specific datatypes as inputs (which is why I previously covered the data types)- there are functions that only accept <code>string</code>-type data as inputs, like the <code>ammo</code> function. The following is a list of all available functions as of game version 1.9.205. This is simply for reference.
+    		</p>
+    		    <!--Reference Functions List-->
+    		    <table style="width:100%">
+    		        <tr>
+    		          <td>abs()</td>
+    		          <td>ceil()</td>
+    		          <td>clamp()</td>
+    		          <td>deltaangle()</td>
+    		          <td>exp()</td>
+    		          <td>floor()</td>
+    		          <td>inverselerp()</td>
+    		          <td>lerp()</td>
+    		          <td>lerpangle()</td>
+    		          <td>lerpunclamped()</td>
+    		        </tr>
+    		        <tr>
+    		          <td>log()</td>
+    		          <td>log10()</td>
+    		          <td>pingpong()</td>
+    		          <td>max()</td>
+    		          <td>min()</td>
+    		          <td>pow()</td>
+    		          <td>repeat()</td>
+    		          <td>round()</td>
+    		          <td>sign()</td>
+    		          <td>smoothstep()</td>
+    		        </tr>
+    		        <tr>
+    		          <td>sqrt()</td>
+    		          <td>sin()</td>
+    		          <td>cos()</td>
+    		          <td>tan()</td>
+    		          <td>asin()</td>
+    		          <td>acos()</td>
+    		          <td>atan()</td>
+    		          <td>rate()</td>
+    		          <td>sum()</td>
+    		          <td>smooth()</td>
+    		        </tr>
+    		        <tr>
+    		          <td>PID()</td>
+    		          <td>ammo()</td>
+    		        </tr>
+    		    </table>
+    		<p>
+    		    Moreover, each function acts in unique ways, which is how they are classified in the following few subsections.
+    		</p>
+    		    <!--Function Subsections-->
+    		   <div class="subsection">
+    		    <ol>
+    		        <li>
+    		            <span id="numbfunc" class="subsectionitem">
+    		                <h3>Number-based Functions</h3>
+    		                <hr>
+    		                  <p>
+    		                    Number based functions are the most conceptually simple. It takes inputs that would be classified under the ‘number’ data type, and outputs a ‘number’ data type. However, if you recall Section 2A, it was mentioned that booleans can be converted to a number of 1 or -1 (true or false)- this means that number based functions <em>can</em> take boolean inputs, but note that the number function is taking not the boolean themselves as input, but only the number-converted boolean. A number function will not take a string input, like the string <code>"thisstring"</code>. They will also only ouput a number, i.e. a number function might take the value 1 and output 0.2. 
+    		                  </p>
+    		                  <p>
+    		                    The following table organizes all the number based functions, their input syntax, and their usage.
+    		                  </p>
+    		                  <table id="numberfunctionstable" style="width:100%">
+    		                    <tr>
+    		                      <th>Function Name/Syntax</th>
+    		                      <th>Usage</th>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">abs(x)</td>
+    		                      <td>The absolute (positive) value of x.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">ceil(x)</td>
+    		                      <td>x rounded up to an integer.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">clamp(x, min, max)</td>
+    		                      <td>x clamped between min and max.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">clamp01(x)</td>
+    		                      <td>x clamped between 0 and 1. Equivalent to clamp(x, 0, 1)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">deltaangle(a, b)</td>
+    		                      <td>The smallest angle delta between angles a and b in degrees.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">exp(x)</td>
+    		                      <td>Returns e raised to the power of x.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">floor(x)</td>
+    		                      <td>x rounded down to an integer.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">inverselerp(a, b, x)</td>
+    		                      <td>Calculates the linear parameter t that produces the interpolant value within the range [a, b].</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">lerp(a, b, t)</td>
+    		                      <td>Linearly interpolates between a and b, by a proportion of t.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">lerpangle(a, b, t)</td>
+    		                      <td>Similar to lerp, but interpolates correctly when values pass 360 degrees.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">lerpunclamped(a, b, t)</td>
+    		                      <td>Similar to lerp, but doesn't clamp the value between a and b.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">log(x, p)</td>
+    		                      <td>The logarithm of x in base p.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">log10(x)</td>
+    		                      <td>Equivalent to log(x, 10).</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">pingpong(x, l)</td>
+    		                      <td>"Ping-pongs" the value x so it is never larger than l and never less than 0.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">max(a, b)</td>
+    		                      <td>The largest value between a and b.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">min(a, b)</td>
+    		                      <td>The smallest value between a and b.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">pow(x, p)</td>
+    		                      <td>x raised to the power of p.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">repeat(x, l)</td>
+    		                      <td>Loops the value x so it is never larger than l and never less than 0.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">round(x)</td>
+    		                      <td>Rounds x to the nearest integer.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">sign(x)</td>
+    		                      <td>The sign of x (1 if x positive, -1 if x negative)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">smoothstep(a, b, t)</td>
+    		                      <td>Similar to lerp, but with smoothing at the ends.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">sqrt(x)</td>
+    		                      <td>The square root of x.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">sin(x)</td>
+    		                      <td>The sine of x (degrees)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">cos(x)</td>
+    		                      <td>The cosine of x (degrees)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">tan(x)</td>
+    		                      <td>The tangent of x (degrees)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">asin(x)</td>
+    		                      <td>The arc-sine of x (degrees)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">acos(x)</td>
+    		                      <td>The arc-cosine of x (degrees)</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">atan(x)</td>
+    		                      <td>The arc-tangent of x (degrees)</td>
+    		                    </tr>
+    		                  </table>
+    		            </span>
+    		        </li>
+    		        <li>
+    		            <span id="timefunc" class="subsectionitem">
+    		                <h3>Time-based Functions</h3>
+    		                <hr>
+    		                  <p>
+    		                    These functions were added in game version 1.9.2. These are functions that measure things with respect to time. In particular, the rate and sum functions are the FT equivalent of derivatives (d/dx) and integrals (&#8747;dx), which enables the creation of far advanced inputs. These functions can be greatly useful but most things can be done without them, so do not fret- if your math is on the level to understand derivatives and integrals, then you don’t really need much explanation on what these will do. We're not working with variable expressions, so more of the academic calculus like the power rule is pretty much useless- you will really only be utilizing the practical application of them. 
+    		                  </p>
+    		                  <table id="timefunctionstable" style="width:100%">
+    		                    <tr>
+    		                      <th>Function Name/Syntax</th>
+    		                      <th>Usage</th>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">rate(x)</td>
+    		                      <td>The rate of change of x.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">sum(x)</td>
+    		                      <td>The integration of x over time. Time starts from level load (no integration bounds can be specified).</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">smooth(x, rate)</td>
+    		                      <td>The output follows x, but only at a maximum speed of <code>rate</code> units per second.</td>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">PID(target, current, p, i, d)</td>
+    		                      <td>A PID controller with the parameters p, i and d. <a href="https://en.wikipedia.org/wiki/PID_controller">Read more about PID controllers on Wikipedia.</a></td>
+    		                    </tr>
+    		                  </table>
+    		            </span>
+    		        </li>
+    		        <li>
+    		            <span id="stringfunc" class="subsectionitem">
+    		                <h3>String-based Functions</h3>
+    		                <hr>
+    		                  <p>
+    		                    There’s currently only one string-based function as of version 1.9.205- it’s the <code>ammo()</code> function. Since it takes a string as input, that also means that the input the ammo function can be a string-type variable- i.e. the <code>SelectedWeapon</code> variable. 
+    		                  </p>
+    		                  <table id="stringfunctionstable">
+    		                    <tr>
+    		                      <th>Function Name/Syntax</th>
+    		                      <th>Usage</th>
+    		                    </tr>
+    		                    <tr>
+    		                      <td class="functionname">ammo("string")</td>
+    		                      <td>The amount of ammo left for the weapon “someweaponname”. That is, whatever the name of your weapon is, is the string you want to input into “string”, to which the function will return the amount of remaining ammo.</td>
+    		                    </tr>
+    		                  </table>
+    		            </span>
+    		        </li>
+    		    </ol>
+    		    <div>
+    </div>
+
+
+<!--End of Main Body Text-->
+
 </div>
+
+<!--End of Body Content-->
 
 </div>
 </div>

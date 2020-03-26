@@ -162,7 +162,7 @@ sup {
 }
 
 a {
-  color: #00bc8c;
+  color: blue;
   text-decoration: none;
   background-color: transparent;
 }
@@ -188,6 +188,7 @@ kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
+  color: lightblue;
 }
 
 pre {

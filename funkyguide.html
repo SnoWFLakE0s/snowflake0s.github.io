@@ -1065,12 +1065,42 @@
                                 Note the highlighted sections. For the example, under the <code>Detacher</code> class (a part-specifc class), the <code>group</code> attribute is visible, with the value of the <code>group</code> attribute on the side. In the example, the value is <code>1</code>. A Funky Trees expression can be entered here.
                             </p>
                             <p>
-                                <strong>The difference in response to Funky Trees defines the difference between <code>input</code> attributes and <code>activationGroup</code> / <code>group</code> attributes.</strong> For <code>input</code> attributes, the behavior of parts simply depends on the numerical value of the input. However, for <code>activationGroup</code> and <code>group</code> attributes, the behavior is a boolean (<code>true / false</code>, <code>on / off</code>), defined by the value of the FT expression being larger than 0. For example, for a detacher with some FT expression, the detacher will activate / fire the moment the FT expression in it returns a value larger than 0. For this reason, it may be largely preferable to have FT expressions for the <code>activationGroup</code> and <code>group</code> attributes be based on booleans instead of mathematical systems.
+                                <strong>The difference in response to Funky Trees defines the difference between <code>input</code> attributes and <code>activationGroup</code> / <code>group</code> attributes.</strong> For <code>input</code> attributes, the behavior of parts simply depends on the numerical value of the input. However, <b>for <code>activationGroup</code> and <code>group</code> attributes, the behavior is a boolean (<code>true / false</code>, <code>on / off</code>), defined by the value of the FT expression being larger than 0.</b> For example, for a detacher with some FT expression, the detacher will activate / fire the moment the FT expression in it returns a value larger than 0. For this reason, it may be largely preferable to have FT expressions for the <code>activationGroup</code> and <code>group</code> attributes be based on booleans instead of mathematical systems.
                             </p>
                     </li>
                 </ul>
     </div>
     <!--End of Section Four-->
+    <br>
+    <!--Section Five-->
+    <div id="sectionfive">
+        <h3>Section 5: Miscellaneous & Tools</h3>
+        <hr>
+            <p>
+                Sections 1 to 4 cover practically all that can be taught in the realm of the Funky Trees system. The actual formulation of actual Funky Trees expressions largely depend on the creator's own ability to manipulate these features included in the Funky Trees package- studying expressions by other creators may help apply the same style of patterns to one's own. Additionally, there also exist standardized/generalized FT expression for specifc purposes, which may be helpful to the common creator. A full index of commonly used general Funky Trees expressions can be found in the <a href="#">commonly used FT expressions</a> page (currently under construction). This final fifth section covers other tools that can assist in forming FT programs.
+            </p>
+            <!--Subsections List-->
+            <ol style="list-style-type:none;">
+                <li>
+                    <h4>A. Console Debugger</h4>
+                    <hr>
+                        <p>
+                            Whilst creating FT expressions, especially for longer, more complicated expressions, it may be desirable to be able to obtain an live readout of the actual values of expressions. Using the inbuilt game console, accessed using the <kbd>`</kbd> key on PC platforms and three finger taps on mobile platforms, a debugger console is available to debugging FT expressions. Type the following command into the console:
+                        </p>
+                        <kbd>DebugExpression "expression"</kbd>
+                        <p>
+                            Where <strong><kbd>expression</kbd> is the FT expression you are attempting to debug.</strong> This can be used with any FT expression- <strong>however, for FT expressions that contain quotation marks (<kbd>""</kbd>) (for string values), the quotation marks inside the FT expression must be replaced with sharp marks (<kbd>##</kbd>).</strong> This is to avoid issues with confusing the console. 
+                        </p>
+                        <p>
+                            Once the <kbd>DebugExpression</kbd> command is used, a small window will appear on the top left corner of the screen displaying your entered expression, and also the value of the expression aside a colon mark <kbd>:</kbd>. 
+                        </p>
+                        <p>
+                            To clear the debugger console, enter the command <kbd>ClearDebugExpressions</kbd> into the console.
+                        </p>
+                </li>
+            </ol>
+    </div>
+    <!--End of Section 5-->
     
 <!--End of Main Body Text-->
 

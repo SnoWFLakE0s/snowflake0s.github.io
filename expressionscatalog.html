@@ -68,21 +68,59 @@
 
           <h3>Common Expressions List</h3>
           <p>
-            This list is will be categorized as the number of general FT expressions increase. Currently it sits as a simple table list.
+            This list is will be categorized as the number of general FT expressions increase. Currently it sits as a simple table list. In the table, <code>x</code> indicates some variable that you can manipulate and set.
           </p>
           <br>
-          <table class="table">
-            <tr>
-              <th>Purpose</th>
-              <th>General Form</th>
-              <th>Explanation</th>
-            </tr>
-            <tr>
-              <td>Activates a part when Altitude is higher than some value</td>
-              <td>clamp01(Altitude > x)</td>
-              <td>This expression will return <code>1</code> when <code>Altitude</code> is larger than <code>x</code>.</td>
-            </tr>
-          </table>
+          <span id="simpleforms">
+            <h4>Simple Activation Formulas (General Purpose)</h4>
+            <table class="table">
+              <tr>
+                <th>Purpose</th>
+                <th>General Form</th>
+                <th>Explanation</th>
+              </tr>
+              <!--<tr>
+                <td>Purpose</td>
+                <td>Expression General Form</td>
+                <td>Explanation</td>
+              </tr>-->
+              <tr>
+                <td>Activates a part when Altitude is higher than some value</td>
+                <td>Math-safe form: <code>clamp01(Altitude > x)</code> / Simplified Boolean Form: <code>Altitude > x</code></td>
+                <td>Math-safe form: will return <code>1</code> when <code>Altitude</code> is larger than <code>x</code>, <code>0</code> otherwise. <br> Boolean expression: will return <code>true</code> when <code>Altitude</code> is larger than <code>x</code>, <code>false</code> otherwise.</td>
+              </tr>
+              <tr>
+                <td>Activates a part when Altitude is lower than some value</td>
+                <td>Math-safe form: <code>clamp01(Altitude < x)</code> / Simplified Boolean Form: <code>Altitude < x</code></td>
+                <td>Math-safe form: will return <code>1</code> when <code>Altitude</code> is lower than <code>x</code>, <code>0</code> otherwise. <br> Boolean expression: will return <code>true</code> when <code>Altitude</code> is lower than <code>x</code>, <code>false</code> otherwise.</td>
+              </tr>
+              <tr>
+                <td>Activates a part when speed is higher than some value</td>
+                <td>Math-safe form: <code>clamp01(TAS > x)</code> / Simplified Boolean Form: <code>TAS > x</code></td>
+                <td>Math-safe form: will return <code>1</code> when <code>TAS</code>, or speed, in meters per second is lower than <code>x</code>, <code>0</code> otherwise. <br> Boolean expression: will return <code>true</code> when <code>TAS</code> (speed in m/s) is larger than <code>x</code>, <code>false</code> otherwise.</td>
+              </tr>
+              <tr>
+                <td>Activates a part when speed is slower than some value</td>
+                <td>Math-safe form: <code>clamp01(TAS < x)</code> / Simplified Boolean Form: <code>TAS < x</code></td>
+                <td>Math-safe form: will return <code>1</code> when <code>TAS</code>, or speed, in meters per second is lower than <code>x</code>, <code>0</code> otherwise. <br> Boolean expression: will return <code>true</code> when <code>TAS</code> (speed in m/s) is slower than <code>x</code>, <code>false</code> otherwise.</td>
+              </tr>
+            </table>
+          </span>
+          <span id="specificform">
+            <h4>Specific-Purpose Formulas (Utility)</h4>
+            <table class="table">
+              <tr>
+                <th>Purpose</th>
+                <th>General Form</th>
+                <th>Explanation</th>
+              </tr>
+              <tr>
+                <td>Purpose</td>
+                <td>Expression General Form</td>
+                <td>Explanation</td>
+              </tr>
+            </table>
+          </span>
         </div>
 
       </div>

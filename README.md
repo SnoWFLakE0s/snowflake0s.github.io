@@ -27,3 +27,8 @@ Dark Theme: https://bootswatch.com/slate/
  <br>
   * Add: Syntax System Explanation
 </ul>
+
+<h2>Others</h2>
+<ul>
+ <li>Added a site tracker script with Clicky.</li>
+ </ul>

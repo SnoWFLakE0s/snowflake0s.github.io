@@ -309,6 +309,12 @@
               						<td>RollRate</td>
               						<td>YawRate</td>
               					</tr>
+                        <tr>
+                          <td>TargetSelected</td>
+                          <td>TargetHeading</td>
+                          <td>TargetElevation</td>
+                          <td>TargetDistance</td>
+                        </tr>
               				</table>
                     <p>
               				We can now categorize these variables based on their data category (their possible values included in parentheses).
@@ -447,7 +453,7 @@
                     			<tr>
                     				<td>PitchRate</td>
                     				<td>The rate at which the aircraft pitches (deg/s)</td>
-                    				<td>(-360~360)</td>
+                    				<td>(-inf~inf)</td>
                     			</tr>
                     			<tr>
                     				<td>RollRate</td>
@@ -463,6 +469,21 @@
                     				<td>LandingGear</td>
                     				<td>Archaic FT input type. Use <code>GearDown</code> instead when making FT inputs.</td>
                     				<td>(0, 1)</td>
+                    			</tr>
+                          <tr>
+                    				<td>TargetHeading</td>
+                    				<td>Returns the heading of the selected target, relative to the position of your cockpit, in bearing (degrees). Note that this is <b>global</b>, meaning that it is not relative to your current heading.</td>
+                    				<td>(0~360)</td>
+                    			</tr>
+                          <tr>
+                    				<td>TargetElevation</td>
+                    				<td>Returns the line-of-sight angle to the selected target, relative to the position of your cockpit, in degrees. Note that this is <b>global</b>, meaning that it is not relative to your PitchAngle.</td>
+                    				<td>(-90~90)</td>
+                    			</tr>
+                          <tr>
+                    				<td>TargetDistance</td>
+                    				<td>Returns the line-of-sight distance to the selected target, relative to the position of your cockpit, in meters.</td>
+                    				<td>(0~inf)</td>
                     			</tr>
                     		</table>
                     </div>
@@ -551,6 +572,11 @@
                     				<td>Whether or not activation group 8 is on</td>
                     				<td><code>true</code> / <code>false</code></td>
                     			</tr>
+                          <tr>
+                            <td>TargetSelected</td>
+                            <td>Whether or not a target is selected</td>
+                            <td><code>true</code> / <code>false</code></td>
+                          </tr>
                     		</table>
                     </div>
               			</li>

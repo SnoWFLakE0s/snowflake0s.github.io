@@ -21,12 +21,7 @@ Dark Theme: https://bootswatch.com/slate/
 
 <h2>To-Do List</h2>
 <ul>
-<li>Add tutorial text for other sections<li>
- <br>
-  * Add: Mathematical Operators Explanation
- <br>
-  * Add: Syntax System Explanation
-</ul>
+<li>Add problem set page<li>
 
 <h2>Others</h2>
 <ul>

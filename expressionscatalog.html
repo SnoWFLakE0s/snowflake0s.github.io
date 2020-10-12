@@ -4,7 +4,7 @@
     <title>Common Funky Trees Expressions</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SnoWFLakE0s' Page">
+    <meta name="description" content="Expressions Catalog">
     <link rel="icon" href="/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/darkstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -118,6 +118,16 @@
                 <td>Linearly decreasing wheel rotation</td>
                 <td><code>Ctrl * clamp01(-a*GS + b)</code></td>
                 <td><code>Ctrl</code> is any control input you want to use for wheel rotation, for example Yaw. <code>a</code> is the linear slope parameter, determining the rate at which you lose control over the wheels. <code>b</code> is the offset parameter, used to change the point at which wheel rotation angle begins to get reduced.</td>
+              </tr>
+              <tr>
+                <td>Weapon Reload Timer</td>
+                <td><code>(1 - smooth(clamp01(-rate(ammo("x"))), clamp01(-rate(ammo("x")))*pow(10, 4) + y))</code></td>
+                <td>This script returns 0 when the weapon <code>x</code> is fired, and linearly progresses to the value 1 at a fixed limit of <code>y</code> amount per second. That is, for the entire progression to last x seconds, the <code>y</code> should be 1/x. The frontal segment of "1 - " can be removed to have a 1 to 0 progression, but this is arguably less useful.</td>
+              </tr>
+              <tr>
+                <td>Change Count Observer</td>
+                <td><code>sum(abs(rate(x)))</code></td>
+                <td>This script returns the number of times a change in the variable <code>x</code> has occurred (best fit for boolean or stepped-change variables). For example, ammo("Cannon") can be substituted for <code>x</code> to count the number of shots fired (with some adjustment), or the variable LandingGear to count the number of times the LandingGear button was pressed.</td>
               </tr>
             </table>
           </span>

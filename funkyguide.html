@@ -152,6 +152,7 @@
             <!--End of Notif Button-->
 
             <!--Start of Guide Content-->
+            <!--Formatting should be: div, h3 header, hr, p-->
 
             <!--Introduction-->
             <div id="introduction">
@@ -829,7 +830,7 @@
               		                    </tr>
               		                    <tr>
               		                      <td>PID(target, current, p, i, d)</td>
-              		                      <td>A PID controller with the parameters p, i and d. <a href="https://en.wikipedia.org/wiki/PID_controller">Read more about PID controllers on Wikipedia.</a></td>
+              		                      <td>A PID controller with the parameters p, i and d. <a href="https://en.wikipedia.org/wiki/PID_controller">Read more about PID controllers on Wikipedia.</a> <a href="/pidtuning.html">Learn a quick beginner's guide on tuning PIDs.</a> </td>
               		                    </tr>
               		                  </table>
               		            </span>
@@ -842,7 +843,7 @@
               		                <h3>3. String-based Functions</h3>
               		                <hr>
               		                  <p>
-              		                    There’s currently only one string-based function as of version 1.9.205- it’s the <code>ammo()</code> function. Since it takes a string as input, that also means that the input the ammo function can be a string-type variable- i.e. the <code>SelectedWeapon</code> variable.
+              		                    There’s currently only one string-based function as of version 1.1.104- it’s the <code>ammo()</code> function. Since it takes a string as input, that also means that the input the ammo function can be a string-type variable- i.e. the <code>SelectedWeapon</code> variable.
               		                  </p>
               		                  <table class="table" id="stringfunctionstable">
               		                    <tr>
@@ -895,7 +896,7 @@
                                         <td><code>+</code></td>
                                         <td>Addition</td>
                                         <td><code>a + b</code></td>
-                                        <td>Yields the value <code>a + b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                                        <td>Yields the value <code>a + b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator. Additionally, <strong>strings can be concatenated through the addition operator.</strong> For example, the statement <code>"He" + "llo"</code> will yield the resulting string <code>"Hello"</code>.</td>
                                     </tr>
                                     <tr>
                                         <td><code>-</code></td>

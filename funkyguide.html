@@ -1031,6 +1031,19 @@
                                         <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
                                     </tr>
                                 </table>
+                              <div class="container">
+                                <a href="#specialnoteboolop" class="btn-primary" data-toggle="collapse">Special Note on Boolean Operators</a>
+                                <div id="specialnoteboolop" class="collapse">
+                                  <h6>Boolean Operator Evaluation Behavior</h6>
+                                  <p>
+                                    For boolean operators, if the first argument of the operator is terminal, that is, it immediately dictates the output of the evaluation, it will not check the second argument at all. This applies for both the OR and AND operator.
+                                  </p>
+                                  <p>
+                                    <b>Example</b>
+                                    In <code>sum(Time) > 1 | sum(2*Time) > 1</code>, while <code>sum(Time) > 1</code>, <code>sum(2*Time)</code> will not update (i.e. not change, making it stay at 0 until the first condition is no longer true). If you need to use these operators in conjunction with update-sensitive time-based functions, try to use boolean algebra instead, that is, try to figure a numerical comparison method instead of logic-based.
+                                  </p>
+                                </div>
+                              </div>
                             </li>
                             <br>
 

@@ -37,7 +37,7 @@
     </nav>
     <!--End of Navbar-->
 
-    <!--Main Header-->
+    <!--Main Header (Jumbotron)-->
     <div id="header" class="jumbotron">
     	<h3>Quick PID Start-Up Guide</h3>
         <br>
@@ -48,61 +48,60 @@
     </div>
     <!--End of Main Header-->
 
-    <!--Main Content-->
+    <!--Main Body Container-->
     <div class="container-fluid">
 
+      <!--Row Class-->
       <div class="row">
 
-        <div class="col container">
+        <!--Table of Contents (Fixed)-->
+        <div class="col-sm-3 ml-3">
+            <!--Sticky ToC div-->
+        		<div class="border p-3 sticky-top">
+              <h5>Contents</h5>
+              <!--Table of Contents-->
+              <ol style="padding-left:1rem">
+                <li>
+                  <a href="#section1">Introduction</a>
+                </li>
+          			<li>
+                  <a href="#section2">Usage Situations</a>
+                </li>
+          			<li>
+                  <a href="#section3">Concept & Structure</a>
+                  <ol style="padding-left:1rem" type="1">
+                    <li>
+                      <a href="#funcform">Function Structure</a>
+                    </li>
+                    <li>
+                      <a href="#target">Target</a>
+                    </li>
+                    <li>
+                      <a href="#current">Current</a>
+                    </li>
+                    <li>
+                      <a href="#proportional">Proportional</a>
+                    </li>
+                    <li>
+                      <a href="#integral">Integral</a>
+                    </li>
+                    <li>
+                      <a href="#derivative">Derivative</a>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#section4">PID Tuning</a>
+                </li>
+              <a id="backtotop" href="#header">Back to Top</a>
+              <br>
+              <a id="bugreport" href="mailto:inventor1234567890@gmail.com">Bug/Typo Reports (E-Mail)</a>
+            </div>
+        </div>
+        <!--End of Table of Contents-->
 
-          <!--Table of Contents (Fixed)-->
-          <div class="col-sm-3 ml-3">
-              <!--Sticky ToC div-->
-          		<div class="border p-3 sticky-top">
-                <h5>Contents</h5>
-                <!--Table of Contents-->
-                <ol style="padding-left:1rem">
-                  <li>
-                    <a href="#section1">Introduction</a>
-                  </li>
-            			<li>
-                    <a href="#section2">Usage Situations</a>
-                  </li>
-            			<li>
-                    <a href="#section3">Concept & Structure</a>
-                    <ol style="padding-left:1rem" type="1">
-                      <li>
-                        <a href="#funcform">Function Structure</a>
-                      </li>
-                      <li>
-                        <a href="#target">Target</a>
-                      </li>
-                      <li>
-                        <a href="#current">Current</a>
-                      </li>
-                      <li>
-                        <a href="#proportional">Proportional</a>
-                      </li>
-                      <li>
-                        <a href="#integral">Integral</a>
-                      </li>
-                      <li>
-                        <a href="#derivative">Derivative</a>
-                      </li>
-                    </ol>
-                  </li>
-                  <li>
-                    <a href="#section4">PID Tuning</a>
-                  </li>
-                <a id="backtotop" href="#header">Back to Top</a>
-                <br>
-                <a id="bugreport" href="mailto:inventor1234567890@gmail.com">Bug/Typo Reports (E-Mail)</a>
-              </div>
-          </div>
-          <!--End of Table of Contents-->
-
-          <!--Main Body Text-->
-          <div class="col mr-3">
+        <!--Main Body Text-->
+        <div class="col mr-3">
 
             <!--Notification Section-->
             <br>
@@ -124,6 +123,7 @@
                 <p>That probably doesn’t help, so in simpler terms, a PID controller is a system that calculates an output to match certain requirements. It’s especially useful when you have fluctuating variables, because unlike fixed algorithms, a PID is very flexible and automatically adjusts to get the desired result quickly and accurately.</p>
 
             </div>
+            <br>
 
             <div id=“section2”>
 
@@ -134,6 +134,7 @@
                 <p>For example, a situation in which a PID would be desirable is when making a hovering system to maintain a constant aircraft altitude. An example where you would not need one is when creating a system to simply apply a suicide burn while falling below a certain altitude.</p>
 
             </div>
+            <br>
 
             <div id=“section3”>
 
@@ -157,6 +158,8 @@
                 <p>Everything about a PID controller is incredibly case-specific, so it's difficult to give an example, but if we were to take the example of the hovering system earlier, we might set <code>target</code> to 5 and <code>current</code> to AltitudeAgl, which would mean that the PID would attempt to keep your craft at 5 meters above ground level.</p>
 
             </div>
+            <br>
+
             <div class="section4">
 
               <h3>4. Tuning a PID controller</h3>
@@ -183,10 +186,10 @@
                 </li>
               </ol>
             </div>
+            <br>
 
           </div>
           <!--End of Main Body Text-->
-        </div>
 
       </div>
 
@@ -198,7 +201,7 @@
       <!-- Footer -->
       <footer class="page-footer font-small">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
           <p> Joshua Eah "SnoWFLakE0s"</p>
         </div>
         <!-- End of Copyright -->

@@ -63,74 +63,37 @@
                 <!--Table of Contents-->
                 <ol style="padding-left:1rem">
                   <li>
-                    <a href="#introduction">Introduction</a>
+                    <a href="#section1">Introduction</a>
                   </li>
             			<li>
-                    <a href="#prereq">Prerequisites</a>
+                    <a href="#section2">Usage Situations</a>
                   </li>
             			<li>
-                    <a href="#sectionone">Section 1</a>
-                  </li>
-          		    <li>
-                    <a href="#sectiontwo">Section 2</a>
-                    <ol style="padding-left:1rem" type="A">
+                    <a href="#section3">Concept & Structure</a>
+                    <ol style="padding-left:1rem" type="1">
                       <li>
-                        <a href="#sectiontwoa">Section 2A</a>
-                        <ol style="padding-left:1rem" type="1">
-                          <li><a href="#numbvar">Number-type Variables</a></li>
-                          <li><a href="#boolvar">Boolean-type Variables</a></li>
-                          <li><a href="#stringvar">String-type Variables</a></li>
-                        </ol>
+                        <a href="#funcform">Function Structure</a>
                       </li>
                       <li>
-                        <a href="#sectiontwob">Section 2B</a>
-                        <ol style="padding-left:1rem" type="1">
-                          <li><a href="#numbfunc">Number-based Functions</a></li>
-                          <li><a href="#timefunc">Time-based Functions</a></li>
-                          <li><a href="#stringfunc">String-based Functions</a></li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li>
-                    <a href="#sectionthree">Section 3</a>
-                    <ol style="padding-left:1rem" type="A">
-                      <li>
-                        <a href="#mathop">Section 3A</a>
+                        <a href="#target">Target</a>
                       </li>
                       <li>
-                        <a href="#logicop">Section 3B</a>
-                        <ol style="padding-left:1rem" type="1">
-                          <li><a href="#compop">Comparison Operators</a></li>
-                          <li><a href="#boolop">Boolean Operators</a></li>
-                          <li><a href="#selectop">Selection Operators</a></li>
-                        </ol>
+                        <a href="#current">Current</a>
+                      </li>
+                      <li>
+                        <a href="#proportional">Proportional</a>
+                      </li>
+                      <li>
+                        <a href="#integral">Integral</a>
+                      </li>
+                      <li>
+                        <a href="#derivative">Derivative</a>
                       </li>
                     </ol>
                   </li>
                   <li>
-                    <a href="#sectionfour">Section 4</a>
-                    <ol style="padding-left:1rem" type="A">
-                      <li>
-                        <a href="#inputattr">Section 4A</a>
-                      </li>
-                      <li>
-                        <a href="#groupattr">Section 4B</a>
-                      </li>
-                    </ol>
+                    <a href="#section4">PID Tuning</a>
                   </li>
-                  <li>
-                    <a href="#sectionfive">Section 5</a>
-                    <ol style="padding-left:1rem" type="A">
-                      <li>
-                        <a href="#debugger">Section 5A</a>
-                      </li>
-                      <li>
-                        <a href="#atom">Section 5B</a>
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
                 <a id="backtotop" href="#header">Back to Top</a>
                 <br>
                 <a id="bugreport" href="mailto:inventor1234567890@gmail.com">Bug/Typo Reports (E-Mail)</a>
@@ -152,11 +115,73 @@
             <!--End of Notif Button-->
 
             <!--Formatting should be: div, h3 header, hr, p-->
-            <div id="introduction">
-              <h3>Introduction to PID</h3>
-              <p>
-                What are PIDs? blah blah blah
-              </p>
+            <div id=“section1”>
+
+              <h3>1. Introduction</h3>
+
+                <p>“A proportional–integral–derivative controller (PID controller or three-term controller) is a control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control. (<a href=“https://en.wikipedia.org/wiki/PID_controller”>Wikipedia</a>)”</p>
+
+                <p>That probably doesn’t help, so in simpler terms, a PID controller is a system that calculates an output to match certain requirements. It’s especially useful when you have fluctuating variables, because unlike fixed algorithms, a PID is very flexible and automatically adjusts to get the desired result quickly and accurately.</p>
+
+            </div>
+
+            <div id=“section2”>
+
+              <h3>2. When should I use a PID controller?</h3>
+
+                <p>If you’re just starting out with this stuff, chances are you aren’t quite sure if you have to use a PID or not. To put simply, if the system you’re trying to use the PID on has a constantly changing environment and there isn’t a specific or exact method to program the system available, you should use a PID.</p>
+
+                <p>For example, a situation in which a PID would be desirable is when making a hovering system to maintain a constant aircraft altitude. An example where you would not need one is when creating a system to simply apply a suicide burn while falling below a certain altitude.</p>
+
+            </div>
+
+            <div id=“section3”>
+
+              <h3>3. Understanding the PID controller</h3>
+
+                <p>A PID controller is one of the more complex tools you have access to in the Funky Trees system. As with any other function offered in FT, one must first understand how the function is structured and what each parameter signifies. The PID function is structured as follows:</p>
+
+                <code id="funcform">PID(target, current, p, i, d)</code>
+
+                <p>Conceptually, there’s <a href=“https://en.wikipedia.org/wiki/PID_controller#Mathematical_form”>a complex mathematical equation that’s supposed to do this</a>, but for the purposes of SimplePlanes there is no real need to understand this form.</p>
+
+                <p>Back to the FT form of PID, here’s an explanation of each variable:</p>
+                <ul>
+                  <li id=“target”><b>Target:</b> The target variable is the end goal. This value is what you want your current variable to be equal to.</li>
+                  <li id=“current”><b>Current:</b> The current variable is the observed status, which is compared to the target variable in order to match the current as best as possible to the target.</li>
+                  <li id=“proportional”><b>P:</b> Proportional. This is a constant variable that determines how <em>much</em> the PID should output in order to match the current to the target.</li>
+                  <li id=“integral”><b>I:</b> Integral. This is a constant variable that determines how <em>quickly</em> the PID should attempt to match the target.</li>
+                  <li id=“derivative”><b>D:</b> Derivative. This is a constant variable that determines how <em>careful</em> the PID should be, that is, to not overcorrect and end up overshooting the target.</li>
+                </ul>
+
+                <p>Everything about a PID controller is incredibly case-specific, so it's difficult to give an example, but if we were to take the example of the hovering system earlier, we might set <code>target</code> to 5 and <code>current</code> to AltitudeAgl, which would mean that the PID would attempt to keep your craft at 5 meters above ground level.</p>
+
+            </div>
+            <div class="section4">
+
+              <h3>4. Tuning a PID controller</h3>
+
+                <p>
+                  Now for tuning your PID controller. Tuning a PID is a skill that requires some practice, and even with experience it will take a good chunk of time to get good parameters. Just keep this in mind!
+
+                  There's largely two methods to tuning a PID controller in SimplePlanes. One is taking a guess at what the parameters might need to be, putting them in the PID function, and trying it out in the sandbox. Unless you have an otherworldly sense of what PID parameters need to be, this is impractical and will consume a lot of time. The second method is an express tuning method that allows you to adjust PID's while on the fly in the sandbox, making tuning flexible and quicker.
+                </p>
+
+              <ol style="list-style-type:none;">
+                <li>
+                  <h4>Snow's Express PID Tuning Method</h4>
+
+                    <p>First, identify your target and current variables. If you've understood how a PID works from the above sections, you should be identify these with ease. Then, set up your PID as follows:</p>
+
+                    <code>PID(yourtarget, yourcurrent, sum(Pitch/250), sum(Roll/250), sum(Yaw/250))</code>
+
+                    <p>
+                      Obviously, <code>yourtarget</code> and <code>yourcurrent</code> should have been replaced by whatever your target and current variables are. Now, once this inside the inputController of the part you need the PID for, you can now load in the craft to the sandbox.
+
+                      When you've loaded in, set up debug consoles--<code>DebugExpression</code>--for each of <code>sum(Pitch/250)</code>, <code>sum(Roll/250)</code>, and <code>sum(Yaw/250)</code>. You should a total of three items for your debug console.
+                    </p>
+                </li>
+              </ol>
             </div>
 
           </div>

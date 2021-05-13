@@ -114,18 +114,18 @@
             <!--End of Notif Button-->
 
             <!--Formatting should be: div, h3 header, hr, p-->
-            <div id=“sectionone”>
+            <div id="sectionone">
 
               <h3>1. Introduction</h3>
 
-                <p>“A proportional–integral–derivative controller (PID controller or three-term controller) is a control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control. (<a href=“https://en.wikipedia.org/wiki/PID_controller”>Wikipedia</a>)”</p>
+                <p>"A proportional–integral–derivative controller (PID controller or three-term controller) is a control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control. (<a href="https://en.wikipedia.org/wiki/PID_controller">Wikipedia</a>)"</p>
 
                 <p>That probably doesn’t help, so in simpler terms, a PID controller is a system that calculates an output to match certain requirements. It’s especially useful when you have fluctuating variables, because unlike fixed algorithms, a PID is very flexible and automatically adjusts to get the desired result quickly and accurately.</p>
 
             </div>
             <br>
 
-            <div id=“sectiontwo”>
+            <div id="sectiontwo">
 
               <h3>2. When should I use a PID controller?</h3>
 
@@ -136,7 +136,7 @@
             </div>
             <br>
 
-            <div id=“sectionthree”>
+            <div id="sectionthree">
 
               <h3>3. Understanding the PID controller</h3>
 
@@ -144,15 +144,15 @@
 
                 <code id="funcform">PID(target, current, p, i, d)</code>
 
-                <p>Conceptually, there’s <a href=“https://en.wikipedia.org/wiki/PID_controller#Mathematical_form”>a complex mathematical equation that’s supposed to do this</a>, but for the purposes of SimplePlanes there is no real need to understand this form.</p>
+                <p>Conceptually, there’s <a href="https://en.wikipedia.org/wiki/PID_controller#Mathematical_form">a complex mathematical equation that’s supposed to do this</a>, but for the purposes of SimplePlanes there is no real need to understand this form.</p>
 
                 <p>Back to the FT form of PID, here’s an explanation of each variable:</p>
                 <ul>
-                  <li id=“target”><b>Target:</b> The target variable is the end goal. This value is what you want your current variable to be equal to.</li>
-                  <li id=“current”><b>Current:</b> The current variable is the observed status, which is compared to the target variable in order to match the current as best as possible to the target.</li>
-                  <li id=“proportional”><b>P:</b> Proportional. This is a constant variable that determines how <em>much</em> the PID should output in order to match the current to the target.</li>
-                  <li id=“integral”><b>I:</b> Integral. This is a constant variable that determines how <em>quickly</em> the PID should attempt to match the target.</li>
-                  <li id=“derivative”><b>D:</b> Derivative. This is a constant variable that determines how <em>careful</em> the PID should be, that is, to not overcorrect and end up overshooting the target.</li>
+                  <li id="target"><b>Target:</b> The target variable is the end goal. This value is what you want your current variable to be equal to.</li>
+                  <li id="current"><b>Current:</b> The current variable is the observed status, which is compared to the target variable in order to match the current as best as possible to the target.</li>
+                  <li id="proportional"><b>P:</b> Proportional. This is a constant variable that determines how <em>much</em> the PID should output in order to match the current to the target.</li>
+                  <li id="integral"><b>I:</b> Integral. This is a constant variable that determines how <em>quickly</em> the PID should attempt to match the target.</li>
+                  <li id="derivative"><b>D:</b> Derivative. This is a constant variable that determines how <em>careful</em> the PID should be, that is, to not overcorrect and end up overshooting the target.</li>
                 </ul>
 
                 <p>Everything about a PID controller is incredibly case-specific, so it's difficult to give an example, but if we were to take the example of the hovering system earlier, we might set <code>target</code> to 5 and <code>current</code> to AltitudeAgl, which would mean that the PID would attempt to keep your craft at 5 meters above ground level.</p>

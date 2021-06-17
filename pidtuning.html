@@ -165,7 +165,7 @@
               <h3>4. Tuning a PID controller</h3>
 
                 <p>
-                  Now for tuning your PID controller. Tuning a PID is a skill that requires some practice, and even with experience it will take a good chunk of time to get good parameters. Just keep this in mind!
+                  Now for tuning your PID controller. Tuning a PID is a skill that requires some practice, and even with experience it will take a good chunk of time to get good parameters. Just keep this in mind! It's also exceedingly difficult to get parameters that are optimal, so what we're looking for here is a set of numbers that will get the job done well enough.
 
                   There's largely two methods to tuning a PID controller in SimplePlanes. One is taking a guess at what the parameters might need to be, putting them in the PID function, and trying it out in the sandbox. Unless you have an otherworldly sense of what PID parameters need to be, this is impractical and will consume a lot of time. The second method is an express tuning method that allows you to adjust PID's while on the fly in the sandbox, making tuning flexible and quicker.
                 </p>
@@ -174,15 +174,56 @@
                 <li>
                   <h4>Snow's Express PID Tuning Method</h4>
 
+                  <h5>1. Setup</h5>
                     <p>First, identify your target and current variables. If you've understood how a PID works from the above sections, you should be identify these with ease. Then, set up your PID as follows:</p>
 
                     <code>PID(yourtarget, yourcurrent, sum(Pitch/250), sum(Roll/250), sum(Yaw/250))</code>
 
                     <p>
-                      Obviously, <code>yourtarget</code> and <code>yourcurrent</code> should have been replaced by whatever your target and current variables are. Now, once this inside the inputController of the part you need the PID for, you can now load in the craft to the sandbox.
+                      Obviously, <code>yourtarget</code> and <code>yourcurrent</code> should have been replaced by whatever your target and current variables are. Now, once this is inside the inputController of the part you need the PID for, you can now load in the craft to the sandbox.
 
-                      When you've loaded in, set up debug consoles--<code>DebugExpression</code>--for each of <code>sum(Pitch/250)</code>, <code>sum(Roll/250)</code>, and <code>sum(Yaw/250)</code>. You should a total of three items for your debug console.
+                      When you've loaded in, set up debug consoles--<code>DebugExpression</code>--for each of the following code snippets: <code>sum(Pitch/250)</code>, <code>sum(Roll/250)</code>, and <code>sum(Yaw/250)</code>. You should a total of three items for your debug console.
                     </p>
+
+                  <h5>2. Tuning Methods</h5>
+                    <p>The two methods I will outline in this article are both experimental methods. They depend on <em>your sense</em> for observing the situation at hand. Anyhow, below are the outlines of the two methods.</p>
+                    <table class="table" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>Method 1</th>
+                          <th>Method 2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Begin by making sure all values in the Debug Console are set to 0.</th>
+                          <th>Begin by making sure all values in the Debug Console are set to 0.</th>
+                        </tr>
+                        <tr>
+                          <th>Slowly manipulate Pitch in order to increase the P gain. Repeat until the response to disturbances are steady oscillations.</th>
+                          <th>Slowly manipulate Pitch in order to increase the P gain. Repeat until the response to disturbances are steady oscillations.</th>
+                        </tr>
+                        <tr>
+                          <th>Slowly increase D (by manipulating Yaw) until the oscillations cease.</th>
+                          <th>Halve your current P value.</th>
+                        </tr>
+                        <tr>
+                          <th>Repeat the process of increasing P and D until increases in D cannot fix the oscillations of the system.</th>
+                          <th>Increase I (by manipulating Roll) until your system is responding quickly enough for your needs.</th>
+                        </tr>
+                        <tr>
+                          <th>Return the P and D values to the last values used before the previous step. The I gain can be increased for your needs but typically is zero for this method.</th>
+                          <th>Some overshoot will occur, so increase D until the amount of overshoot is acceptable.</th>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  <h5>3. Clarification & Details</h5>
+                    <h6>Disturbances</h6>
+                    <p>The methodology of both methods are very straightforward and requires simply observing your system. To clarify with an example however, if we were to build a hover-engine system as we discussed earlier in this article, giving a slight change to the height of the craft would be a "disturbance". In such a case, I would likely do something like set the target--the altitude of the craft--to something like 10 meters above ground, and create a location that is 5 meters above ground to see how the PID responds to the change. What the "disturbance" is will very much depend on the usage scenario, so you need to fundamentally understand what you will use the PID for in order to effectivley tune one.</p>
+                    <hr>
+                    <h6>Usage Needs</h6>
+                    <p>Unless you're a professional, trying to obtain <em>optimal</em> parameters is extremely difficult. As a result, your results will always be a result of various trade offs. Typically, by increasing system stability you increase response time and vice versa. As a result, the questions to ask are, "Do I need my system to respond quickly with less emphasis on precision", or "Do I need my system to be extremely accurate, albeit slightly slow?" In totality, PID tuning is quite an expansive process, and experience is key when trying to obtain best results. I hope this article helps you get started on PID tuning in SimplePlanes. Good luck, and if you need any other clarifications forward them to me so I can add an extra paragraph or two to cover your concerns.</p>
                 </li>
               </ol>
             </div>

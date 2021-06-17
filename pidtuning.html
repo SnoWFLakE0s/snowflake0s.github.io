@@ -198,33 +198,33 @@
                           <th>Method 2</th>
                         </tr>
                         <tr>
-                          <th>Begin by making sure all values in the Debug Console are set to 0.</th>
-                          <th>Begin by making sure all values in the Debug Console are set to 0.</th>
+                          <td>Begin by making sure all values in the Debug Console are set to 0.</td>
+                          <td>Begin by making sure all values in the Debug Console are set to 0.</td>
                         </tr>
                         <tr>
-                          <th>Slowly manipulate Pitch in order to increase the P gain. Repeat until the response to disturbances are steady oscillations.</th>
-                          <th>Slowly manipulate Pitch in order to increase the P gain. Repeat until the response to disturbances are steady oscillations.</th>
+                          <td>Slowly manipulate Pitch in order to increase the P gain. Repeat until the response to disturbances are steady oscillations.</td>
+                          <td>Slowly manipulate Pitch in order to increase the P gain. Repeat until the response to disturbances are steady oscillations.</td>
                         </tr>
                         <tr>
-                          <th>Slowly increase D (by manipulating Yaw) until the oscillations cease.</th>
-                          <th>Halve your current P value.</th>
+                          <td>Slowly increase D (by manipulating Yaw) until the oscillations cease.</td>
+                          <td>Halve your current P value.</td>
                         </tr>
                         <tr>
-                          <th>Repeat the process of increasing P and D until increases in D cannot fix the oscillations of the system.</th>
-                          <th>Increase I (by manipulating Roll) until your system is responding quickly enough for your needs.</th>
+                          <td>Repeat the process of increasing P and D until increases in D cannot fix the oscillations of the system.</td>
+                          <td>Increase I (by manipulating Roll) until your system is responding quickly enough for your needs.</td>
                         </tr>
                         <tr>
-                          <th>Return the P and D values to the last values used before the previous step. The I gain can be increased for your needs but typically is zero for this method.</th>
-                          <th>Some overshoot will occur, so increase D until the amount of overshoot is acceptable.</th>
+                          <td>Return the P and D values to the last values used before the previous step. The I gain can be increased for your needs but typically is zero for this method.</td>
+                          <td>Some overshoot will occur, so increase D until the amount of overshoot is acceptable.</td>
                         </tr>
                     </table>
 
                   <h5>3. Clarification & Details</h5>
                   <hr>
-                    <h6>Disturbances</h6>
+                    <b>Disturbances</b>
                     <p>The methodology of both methods are very straightforward and requires simply observing your system. To clarify with an example however, if we were to build a hover-engine system as we discussed earlier in this article, giving a slight change to the height of the craft would be a "disturbance". In such a case, I would likely do something like set the target--the altitude of the craft--to something like 10 meters above ground, and create a location that is 5 meters above ground to see how the PID responds to the change. What the "disturbance" is will very much depend on the usage scenario, so you need to fundamentally understand what you will use the PID for in order to effectivley tune one.</p>
 
-                    <h6>Usage Needs</h6>
+                    <b>Usage Needs</b>
                     <p>Unless you're a professional, trying to obtain <em>optimal</em> parameters is extremely difficult. As a result, your results will always be a result of various trade offs. Typically, by increasing system stability you increase response time and vice versa. As a result, the questions to ask are, "Do I need my system to respond quickly with less emphasis on precision", or "Do I need my system to be extremely accurate, albeit slightly slow?" In totality, PID tuning is quite an expansive process, and experience is key when trying to obtain best results. I hope this article helps you get started on PID tuning in SimplePlanes. Good luck, and if you need any other clarifications forward them to me so I can add an extra paragraph or two to cover your concerns.</p>
                 </li>
               </ol>

@@ -13,6 +13,24 @@
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101244125);</script>
     <script async src="//static.getclicky.com/js"></script>
     <script data-ad-client="ca-pub-7192130816208439" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Font Awesome Stuff-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--Styling Unique to this page-->
+    <style>
+    	#unlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      .collapsing {
+      	transition: none;
+      }
+      [data-toggle="collapse"] .fa:before {
+        content: "\f068";
+      }
+      [data-toggle="collapse"].collapsed .fa:before {
+        content: "\f067";
+      }
+    </style>
   </head>
   <body>
 
@@ -70,48 +88,50 @@
           <br>
           <!--End of Notif Button-->
 
-          <div id="accordion">
-            <!--Card Unit-->
-            <div class="card">
-              <div class="card-header">
-                <a class="card-link" data-toggle="collapse" href="#collapseGeneral">
-                  General Data Organization
-                </a>
-              </div>
-              <div id="collapseGeneral" class="collapse show" data-parent="#accordion">
-                <div class="card-body">
-                  General body...
-                </div>
-              </div>
+          <a id="unlink" href="#collapseOne" data-toggle="collapse" aria-expanded="true">
+            <div id="header">
+              <h5>
+                <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Header
+              </h5>
             </div>
-            <!--Card Unit-->
-            <div class="card">
-              <div class="card-header">
-                <a class="card-link" data-toggle="collapse" href="#collapseVisualFX">
-                  Visual FX
-                </a>
-              </div>
-              <div id="collapseVisualFX" class="collapse show" data-parent="#accordion">
-                <div class="card-body">
-                  General body...
-                </div>
-              </div>
-            </div>
-            <!--Card Unit-->
-            <div class="card">
-              <div class="card-header">
-                <a class="card-link" data-toggle="collapse" href="#collapseFlight">
-                  Flight Performance Simulation
-                </a>
-              </div>
-              <div id="collapseFlight" class="collapse show" data-parent="#accordion">
-                <div class="card-body">
-                  General body...
-                </div>
-              </div>
-            </div>
+            <hr>
+          </a>
+          <div id="collapseOne" class="collapse show">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
 
+          <br>
+
+          <a id="unlink" href="#collapseTwo" data-toggle="collapse" aria-expanded="true">
+            <div id="header">
+              <h5>
+                <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Header
+              </h5>
+            </div>
+            <hr>
+          </a>
+          <div id="collapseTwo" class="collapse show">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+
+          <br>
+
+          <a id="unlink" href="#collapseThree" data-toggle="collapse" aria-expanded="true">
+            <div id="header">
+              <h5>
+                <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Header
+              </h5>
+            </div>
+            <hr>
+          </a>
+          <div id="collapseThree" class="collapse show">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+
+        <!--End of col container-->
         </div>
 
       </div>

@@ -13,11 +13,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!--Font Awesome Stuff-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--Styling for the navbar logo-->
     <style>
      	#snowpage {
       	align-items: center;
       	display: flex;
+      }
+      #unlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      .collapsing {
+      	transition: none;
+      }
+      [data-toggle="collapse"] .fa:before {
+        content: "\f068";
+      }
+      [data-toggle="collapse"].collapsed .fa:before {
+        content: "\f067";
       }
     </style>
     <!--Google Adsense stuff-->
@@ -177,8 +192,16 @@
 
             <!--Introduction-->
             <div id="introduction">
-              <h3>Introduction: What <i>is</i> Funky Trees?</h3>
-              <hr>
+              <a id="unlink" href="#introductioncollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Introduction: What <i>is</i> Funky Trees?
+                  </h5>
+                </div>
+                <hr>
+              </a>
+                <div id="introductioncollapse" class="collapse show">
                     <p>
                         First implemented in game version 1.9, Funky Trees is a special subset of XML editing/modding in SimplePlanes that specifically deals with the <code>group</code>, <code>activationGroup</code>, and <code>input</code> attributes of parts. By nature, Funky Trees is a special subfield of what's known as XML editing/modding in SimplePlanes. Difficulty with basic XML editing may prove detrimental to learning the Funky Trees system.
                     </p>
@@ -197,14 +220,23 @@
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/_pCZHNFNDps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
+                </div>
             </div>
             <br>
 
             <!--Prerequisites-->
             <div id="prereq">
-            	<h3>Prerequisites: Things you probably should know</h3>
-            	<hr>
-            		<p>
+              <a id="unlink" href="#prereqcollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Prerequisites: Things you probably should know
+                  </h5>
+                </div>
+                <hr>
+              </a>
+              <div id="prereqcollapse" class="collapse show">
+                <p>
             			Funky Trees isn't some entirely new field of study, but given the broad expanse of what it covers, the following concepts are recommended for full mastery of Funky Trees capability. These come in no particular order, there is no need for you to master all of them, but to use <i>everything</i> in Funky Trees, you must know all of these concepts.
             		</p>
             		<ul>
@@ -216,14 +248,23 @@
             		<p>
             			* indicates required fields of knowledge. Usage of calculus is largely limited to a couple of functions, but is still quite useful to know. Programming/CS knowledge is extremely useful to know when structuring Funky Tree inputs (FT is practically a programming language) and will help in understanding FT in general, but is not necessary.
             		</p>
+              </div>
             </div>
             <br>
 
             <!--Section One-->
             <div id="sectionone">
-            	<h3>Section 1: Syntax and Semantics</h3>
-            	<hr>
-            		<p>
+              <a id="unlink" href="#sectiononecollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Section 1: Syntax and Semantics
+                  </h5>
+                </div>
+                <hr>
+              </a>
+              <div id="sectiononecollapse" class="collapse show">
+                <p>
             			Not unlike other conventional programming languages, Funky Trees utilizes a system of inputs and outputs. It takes various <code>inputs</code>, processes them, and relays an <code>output</code> that is then taken by the part (whatever "part" you're putting FT inputs into) to result in some kind of of behavior by the part.
             		</p>
             		<p>
@@ -246,15 +287,24 @@
             		<p>
             			The following sections elaborate on these three categories in great detail, just after the data types section.
             		</p>
+              </div>
             </div>
             <br>
             <!--End of Section One-->
 
             <!--Section Two-->
             <div id="sectiontwo">
-            	<h3>Section 2: Data Types</h3>
-            	<hr>
-            		<p>
+              <a id="unlink" href="#sectiontwocollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Section 2: Data Types
+                  </h5>
+                </div>
+                <hr>
+              </a>
+              <div id="sectiontwocollapse" class="collapse show">
+                <p>
             			To give an <code>input</code> to the part, you probably need some sort of data to work with, right? Since version 1.9.2, Funky Trees was revamped to have data type organization.
             			To explain, all usable data types in Funky Trees have now been organized into one of three categories- numbers, booleans, and strings. Here’s a rundown:
             		</p>
@@ -266,13 +316,14 @@
             		<p>
             			Hopefully, this made sense. If you're new to computer science, these terms may sound completely alien to you- but don't worry, it'll make sense in due time (this is the only reason why programming experience comes in handy, to help orient yourself quicker).
             		</p>
+              </div>
             </div>
             <br>
             <!--End of Section Two-->
 
               <!--Varables Explanation-->
               <div id="sectiontwoa">
-              	<h3>Section 2A: Variables</h3>
+              	<h5>Section 2A: Variables</h5>
               	<hr>
               		<p>
               			I first want to make sure that you understand what variables are in Funky Trees. <b>Variables</b> are special words that have a special value in Funky Trees. They <i>contain</i> data. The data type organization, in other words, is a way of organizing these variables into different types. The following is a list of all input variables. Don't panic, this is simply for reference.
@@ -631,7 +682,7 @@
 
               <!--Functions Explanation-->
               <div id="sectiontwob">
-              	<h3>Section 2B: Functions</h3>
+              	<h5>Section 2B: Functions</h5>
               	<hr>
               		<p>
               			Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and return an <code>output</code>, each depending on what the function does. Functions, in Funky Trees, are designed like so:
@@ -885,17 +936,25 @@
 
             <!--Section Three-->
             <div id="sectionthree">
-                <h3>Section 3: Operators</h3>
+              <a id="unlink" href="#sectionthreecollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Section 3: Operators
+                  </h5>
+                </div>
                 <hr>
-                    <p>
-                        The Funky Trees system offers a variety of operators to use within input expressions. Simply put, operators are symbols indicating a mathematical operation. There are two types of operators in Funky Trees:
-                    </p>
-                    <ol>
-                        <li>Math Operators</li>
-                        <li>Logic Operators</li>
-                    </ol>
-                    <p>Refer to the following two sections for information on each.</p>
-                    <br>
+              </a>
+              <div id="sectionthreecollapse" class="collapse show">
+                <p>
+                    The Funky Trees system offers a variety of operators to use within input expressions. Simply put, operators are symbols indicating a mathematical operation. There are two types of operators in Funky Trees:
+                </p>
+                <ol>
+                    <li>Math Operators</li>
+                    <li>Logic Operators</li>
+                </ol>
+                <p>Refer to the following two sections for information on each.</p>
+                <br>
 
                     <!--Section List-->
                 <ul style="list-style-type:none;">
@@ -1102,108 +1161,128 @@
                         </span>
                     </li>
                 </ul>
+              </div>
             </div>
             <br>
             <!--End of Section Three-->
 
             <!--Section Four-->
             <div id="sectionfour">
-                <h3>Section 4: Practical Input</h3>
+              <a id="unlink" href="#sectionfourcollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Section 4: Practical Input
+                  </h5>
+                </div>
                 <hr>
-                    <p>
-                        The first three sections of this guide provides apt commentary / explanation on the theoretical aspect of Funky Trees. However, the practical aspect of designing and programming a Funky Trees input has yet to be discussed; as such, this section will discuss practical implementation of Funky Trees inputs. Specifcally, this section deals with actual <i>writing</i> of inputs, as many struggle with this. As with any other XML editing, there are two approaches to editing the XML file of a creation. One is using inbuilt Overload XML editor (cross-platform) or using a text editor to directly edit XML files. Either approach allows for the same kind of editing, although for mass edits a search-replace function that comes inbuilt with most text editors may be far more preferable.
-                    </p>
-                    <br>
-                    <h4>Compatability</h4>
-                    <p>
-                        Funky Trees inputs are compatible with three types of attributes within XML editing: the <code>input</code> attribute within the <code>inputController</code> class of attributes, and the <code>activationGroup</code> and <code>group</code> attributes for certain parts. The behavior of Funky Trees in each of these is different, which warrants an explanation.
-                    </p>
-                    <!--Input-Compatible Sections-->
-                        <ul style="list-style-type:none;">
-                            <li>
-                                <h4 id="inputattr">A. input Attribute</h4>
+              </a>
+              <div id="sectionfourcollapse" class="collapse show">
+                <p>
+                    The first three sections of this guide provides apt commentary / explanation on the theoretical aspect of Funky Trees. However, the practical aspect of designing and programming a Funky Trees input has yet to be discussed; as such, this section will discuss practical implementation of Funky Trees inputs. Specifcally, this section deals with actual <i>writing</i> of inputs, as many struggle with this. As with any other XML editing, there are two approaches to editing the XML file of a creation. One is using inbuilt Overload XML editor (cross-platform) or using a text editor to directly edit XML files. Either approach allows for the same kind of editing, although for mass edits a search-replace function that comes inbuilt with most text editors may be far more preferable.
+                </p>
+                <br>
+                <h4>Compatability</h4>
+                <p>
+                    Funky Trees inputs are compatible with three types of attributes within XML editing: the <code>input</code> attribute within the <code>inputController</code> class of attributes, and the <code>activationGroup</code> and <code>group</code> attributes for certain parts. The behavior of Funky Trees in each of these is different, which warrants an explanation.
+                </p>
+                <!--Input-Compatible Sections-->
+                    <ul style="list-style-type:none;">
+                        <li>
+                            <h4 id="inputattr">A. input Attribute</h4>
+                            <hr>
+                                <p>
+                                    The <code>input</code> attribute is usually the primary application of Funky Trees. Most gizmo-type parts and propulsion-type parts contain an <code>inputController</code> class of attributes that contains the <code>input</code> attribute. The following image is an example of an <code>input</code> attribute Overload window.
+                                </p>
+                                <img class="img-fluid" src="https://i.imgur.com/wmBjXlt.png">
                                 <hr>
-                                    <p>
-                                        The <code>input</code> attribute is usually the primary application of Funky Trees. Most gizmo-type parts and propulsion-type parts contain an <code>inputController</code> class of attributes that contains the <code>input</code> attribute. The following image is an example of an <code>input</code> attribute Overload window.
-                                    </p>
-                                    <img class="img-fluid" src="https://i.imgur.com/wmBjXlt.png">
-                                    <hr>
-                                    <p>
-                                        Note the highlighted sections. The under the <code>inputController</code> class, the <code>input</code> attribute is visible, with the value of the <code>input</code> attribute on the side. In the example, the input is <code>Throttle</code>. A Funky Trees expression can be entered here. The behavior of parts is unique for each part- an input will simply determine the degree to which an part responds. It is the fine-tuning and programming of these "degree of response" that Funky Trees is concerned with, producing very useful and special behavior.
-                                    </p>
-                            </li>
-                            <li>
-                                <h4 id="groupattr">B. activationGroup / group Attributes</h4>
+                                <p>
+                                    Note the highlighted sections. The under the <code>inputController</code> class, the <code>input</code> attribute is visible, with the value of the <code>input</code> attribute on the side. In the example, the input is <code>Throttle</code>. A Funky Trees expression can be entered here. The behavior of parts is unique for each part- an input will simply determine the degree to which an part responds. It is the fine-tuning and programming of these "degree of response" that Funky Trees is concerned with, producing very useful and special behavior.
+                                </p>
+                        </li>
+                        <li>
+                            <h4 id="groupattr">B. activationGroup / group Attributes</h4>
+                            <hr>
+                                <p>
+                                    The <code>activationGroup</code> attributes are usually of lesser importance for Funky Trees (but can prove to be useful). Practially all parts, aside from structural parts like fuselage blocks, contain an <code>activationGroup</code> attribute, typcially contained under <code>inputController</code> classes or part-specifc classes. The following image is an example of an <code>activationGroup</code> attribute Overload window.
+                                </p>
+                                <img class="img-fluid" src="https://i.imgur.com/pnHzSYs.png">
                                 <hr>
-                                    <p>
-                                        The <code>activationGroup</code> attributes are usually of lesser importance for Funky Trees (but can prove to be useful). Practially all parts, aside from structural parts like fuselage blocks, contain an <code>activationGroup</code> attribute, typcially contained under <code>inputController</code> classes or part-specifc classes. The following image is an example of an <code>activationGroup</code> attribute Overload window.
-                                    </p>
-                                    <img class="img-fluid" src="https://i.imgur.com/pnHzSYs.png">
-                                    <hr>
-                                    <p>
-                                        Note the highlighted sections. For the example, under the <code>Magnet</code> class (a part-specifc class), the <code>activationGroup</code> attribute is visible, with the value of the <code>activationGroup</code> attribute on the side. In the example, the value is <code>1</code>. A Funky Trees expression can be entered here.
-                                    </p>
-                                    <p>
-                                        The <code>group</code> attribute is practically the same as <code>activationGroup</code>, but only applies for certain types of types like detachers. The following image is an example of an <code>activationGroup</code> attribute Overload window.
-                                    </p>
-                                    <img class="img-fluid" src="https://i.imgur.com/A7qhmWe.png">
-                                    <hr>
-                                    <p>
-                                        Note the highlighted sections. For the example, under the <code>Detacher</code> class (a part-specifc class), the <code>group</code> attribute is visible, with the value of the <code>group</code> attribute on the side. In the example, the value is <code>1</code>. A Funky Trees expression can be entered here.
-                                    </p>
-                                    <p>
-                                        <strong>The difference in response to Funky Trees defines the difference between <code>input</code> attributes and <code>activationGroup</code> / <code>group</code> attributes.</strong> For <code>input</code> attributes, the behavior of parts simply depends on the numerical value of the input. However, <b>for <code>activationGroup</code> and <code>group</code> attributes, the behavior is a boolean (<code>true / false</code>, <code>on / off</code>), defined by the value of the FT expression being larger than 0.</b> For example, for a detacher with some FT expression, the detacher will activate / fire the moment the FT expression in it returns a value larger than 0. For this reason, it may be largely preferable to have FT expressions for the <code>activationGroup</code> and <code>group</code> attributes be based on booleans instead of mathematical systems.
-                                    </p>
-                            </li>
-                        </ul>
+                                <p>
+                                    Note the highlighted sections. For the example, under the <code>Magnet</code> class (a part-specifc class), the <code>activationGroup</code> attribute is visible, with the value of the <code>activationGroup</code> attribute on the side. In the example, the value is <code>1</code>. A Funky Trees expression can be entered here.
+                                </p>
+                                <p>
+                                    The <code>group</code> attribute is practically the same as <code>activationGroup</code>, but only applies for certain types of types like detachers. The following image is an example of an <code>activationGroup</code> attribute Overload window.
+                                </p>
+                                <img class="img-fluid" src="https://i.imgur.com/A7qhmWe.png">
+                                <hr>
+                                <p>
+                                    Note the highlighted sections. For the example, under the <code>Detacher</code> class (a part-specifc class), the <code>group</code> attribute is visible, with the value of the <code>group</code> attribute on the side. In the example, the value is <code>1</code>. A Funky Trees expression can be entered here.
+                                </p>
+                                <p>
+                                    <strong>The difference in response to Funky Trees defines the difference between <code>input</code> attributes and <code>activationGroup</code> / <code>group</code> attributes.</strong> For <code>input</code> attributes, the behavior of parts simply depends on the numerical value of the input. However, <b>for <code>activationGroup</code> and <code>group</code> attributes, the behavior is a boolean (<code>true / false</code>, <code>on / off</code>), defined by the value of the FT expression being larger than 0.</b> For example, for a detacher with some FT expression, the detacher will activate / fire the moment the FT expression in it returns a value larger than 0. For this reason, it may be largely preferable to have FT expressions for the <code>activationGroup</code> and <code>group</code> attributes be based on booleans instead of mathematical systems.
+                                </p>
+                        </li>
+                    </ul>
+              </div>
             </div>
             <br>
             <!--End of Section Four-->
 
             <!--Section Five-->
             <div id="sectionfive">
-                <h3>Section 5: Miscellaneous & Tools</h3>
+              <a id="unlink" href="#sectionfivecollapse" data-toggle="collapse" aria-expanded="true">
+                <div>
+                  <h5>
+                    <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Section 5: Miscellaneous & Tools
+                  </h5>
+                </div>
                 <hr>
-                    <p>
-                        Sections 1 to 4 cover practically all that can be taught in the realm of the Funky Trees system. The actual formulation of actual Funky Trees expressions largely depend on the creator's own ability to manipulate these features included in the Funky Trees package- studying expressions by other creators may help apply the same style of patterns to one's own. Additionally, there also exist standardized/generalized FT expression for specifc purposes, which may be helpful to the common creator. A full index of commonly used general Funky Trees expressions can be found in the <a href="/expressionscatalog.html">commonly used FT expressions</a> page (currently under construction). This final fifth section covers other tools that can assist in forming FT programs.
-                    </p>
-                    <!--Subsections List-->
-                    <ol style="list-style-type:none;">
-                        <li>
-                            <h4 id="debugger">A. Console Debugger</h4>
-                            <hr>
-                                <p>
-                                    Whilst creating FT expressions, especially for longer, more complicated expressions, it may be desirable to be able to obtain an live readout of the actual values of expressions. Using the inbuilt game console, accessed using the <kbd>`</kbd> key on PC platforms and three finger taps on mobile platforms, a debugger console is available to debugging FT expressions. Type the following command into the console:
-                                </p>
-                                <kbd>DebugExpression "expression"</kbd>
-                                <p>
-                                    Where <strong><kbd>expression</kbd> is the FT expression you are attempting to debug.</strong> This can be used with any FT expression- <strong>however, for FT expressions that contain quotation marks (<kbd>""</kbd>) (for string values), the quotation marks inside the FT expression must be replaced with sharp marks (<kbd>##</kbd>).</strong> This is to avoid issues with confusing the console.
-                                </p>
-                                <p>
-                                    Once the <kbd>DebugExpression</kbd> command is used, a small window will appear on the top left corner of the screen displaying your entered expression, and also the value of the expression aside a colon mark <kbd>:</kbd>.
-                                </p>
-                                <p>
-                                    To clear the debugger console, enter the command <kbd>ClearDebugExpressions</kbd> into the console.
-                                </p>
-                        </li>
-                        <li>
-                            <h4 id="atom">B. Code Editor</h4>
-                            <hr>
-                                <p>
-                                  When writing Funky Trees code, you may find that it is quite difficult to actually make sense of what you're writing, especially in terms of code structure and trying to figure out if you have the right number of parentheses in the expression. Sometimes you want to stop writing the same variable name over and over again. Or you just might want a good text editor, especially for programming.
-                                </p>
-                                <p>
-                                  <a href="https://atom.io">Atom</a> is a great open source software that does everything you really need for funky trees. It has a parentheses highlighting function that helps you figure out pairings, word autofill for variables that you are repeatedly using, and a lot more that can help you do funky trees easier. Of course, Notepad or TextEdit is fine, but Atom is a great software that just makes life easier. You can also custom-code extensions that do things for you.
-                                </p>
-                                <br>
-                                <div class="container">
-                                  <a href="https://atom.io" class="btn btn-primary">Download Atom!</a>
-                                </div>
-                        </li>
-                    </ol>
+              </a>
+              <div id="sectionfivecollapse" class="collapse show">
+                <p>
+                    Sections 1 to 4 cover practically all that can be taught in the realm of the Funky Trees system. The actual formulation of actual Funky Trees expressions largely depend on the creator's own ability to manipulate these features included in the Funky Trees package- studying expressions by other creators may help apply the same style of patterns to one's own. Additionally, there also exist standardized/generalized FT expression for specifc purposes, which may be helpful to the common creator. A full index of commonly used general Funky Trees expressions can be found in the <a href="/expressionscatalog.html">commonly used FT expressions</a> page (currently under construction). This final fifth section covers other tools that can assist in forming FT programs.
+                </p>
+                <!--Subsections List-->
+                <ol style="list-style-type:none;">
+                    <li>
+                        <h4 id="debugger">A. Console Debugger</h4>
+                        <hr>
+                            <p>
+                                Whilst creating FT expressions, especially for longer, more complicated expressions, it may be desirable to be able to obtain an live readout of the actual values of expressions. Using the inbuilt game console, accessed using the <kbd>`</kbd> key on PC platforms and three finger taps on mobile platforms, a debugger console is available to debugging FT expressions. Type the following command into the console:
+                            </p>
+                            <kbd>DebugExpression "expression"</kbd>
+                            <p>
+                                Where <strong><kbd>expression</kbd> is the FT expression you are attempting to debug.</strong> This can be used with any FT expression- <strong>however, for FT expressions that contain quotation marks (<kbd>""</kbd>) (for string values), the quotation marks inside the FT expression must be replaced with sharp marks (<kbd>##</kbd>).</strong> This is to avoid issues with confusing the console.
+                            </p>
+                            <p>
+                                Once the <kbd>DebugExpression</kbd> command is used, a small window will appear on the top left corner of the screen displaying your entered expression, and also the value of the expression aside a colon mark <kbd>:</kbd>.
+                            </p>
+                            <p>
+                                To clear the debugger console, enter the command <kbd>ClearDebugExpressions</kbd> into the console.
+                            </p>
+                    </li>
+                    <li>
+                        <h4 id="atom">B. Code Editor</h4>
+                        <hr>
+                            <p>
+                              When writing Funky Trees code, you may find that it is quite difficult to actually make sense of what you're writing, especially in terms of code structure and trying to figure out if you have the right number of parentheses in the expression. Sometimes you want to stop writing the same variable name over and over again. Or you just might want a good text editor, especially for programming.
+                            </p>
+                            <p>
+                              <a href="https://atom.io">Atom</a> is a great open source software that does everything you really need for funky trees. It has a parentheses highlighting function that helps you figure out pairings, word autofill for variables that you are repeatedly using, and a lot more that can help you do funky trees easier. Of course, Notepad or TextEdit is fine, but Atom is a great software that just makes life easier. You can also custom-code extensions that do things for you.
+                            </p>
+                            <br>
+                            <div class="container">
+                              <a href="https://atom.io" class="btn btn-primary">Download Atom!</a>
+                            </div>
+                    </li>
+                </ol>
+              </div>
             </div>
             <br>
             <!--End of Section 5-->
+            
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
                 style="display:block; text-align:center;"

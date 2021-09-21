@@ -111,11 +111,33 @@
           </a>
           <div id="collapseOne" class="collapse show">
             <div class="container-fluid" id="sidebarOne">
-              <div class="navbar col-3">
-                Sidebar
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-header" id="itemOne">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#libOne" aria-expanded="true" aria-controls="libOne">
+                      <h5 class="mb-0">
+                        Library Item 1
+                      </h5>
+                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="itemTwo">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#libTwo" aria-expanded="false" aria-controls="libTwo">
+                      <h5 class="mb-0">
+                        Library Item 2
+                      </h5>
+                    </button>
+                  </div>
+                </div>
               </div>
               <div class="col-9">
-                Content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <div class="collapse show" id="libOne">
+                  Content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+                <div class="collapse" id="libTwo">
+                  Content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
               </div>
             </div>
           </div>

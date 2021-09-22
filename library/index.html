@@ -101,6 +101,7 @@
           <br>
           <!--End of Notif Button-->
 
+          <!--Collapsible header with tree layout icon-->
           <a id="unlink" href="#collapseOne" data-toggle="collapse" aria-expanded="true">
             <div id="header">
               <h5>
@@ -110,34 +111,36 @@
             </div>
             <hr>
           </a>
+
+          <!--Collapsible content-->
           <div id="collapseOne" class="collapse show">
             <div class="row">
 
               <!--Item Selector Side Panel-->
               <div class="col-sm-3">
                 <div class="card">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#libOne" data-parent="#collapseOne" aria-expanded="true" aria-controls="#libOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib1.1" aria-expanded="true" aria-controls="#lib1.1">
                     <div class="card-header">
                       <h5 class="mb-0">
-                        Library Item 1
+                        Library Item 1.1
                       </h5>
                     </div>
                   </button>
                 </div>
                 <div class="card">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#libTwo" data-parent="#collapseOne" aria-expanded="false" aria-controls="#libTwo">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib1.2" aria-expanded="false" aria-controls="#lib1.2">
                     <div class="card-header">
                       <h5 class="mb-0">
-                        Library Item 2
+                        Library Item 1.2
                       </h5>
                     </div>
                   </button>
                 </div>
                 <div class="card">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#libThree" data-parent="#collapseOne" aria-expanded="false" aria-controls="#libThree">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib1.3" aria-expanded="false" aria-controls="#lib1.3">
                     <div class="card-header">
                       <h5 class="mb-0">
-                        Library Item 3
+                        Library Item 1.3
                       </h5>
                     </div>
                   </button>
@@ -145,17 +148,17 @@
               </div>
 
               <!--Actual Content of Library-->
-              <div id="groupOne" class="col-sm-9">
+              <div class="col-sm-9">
 
-                <div id="libOne" class="collapse show" data-parent="#collapseOne">
+                <div id="lib1.1" class="collapse show" data-parent="#collapseOne">
                   Content 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 
-                <div id="libTwo" class="collapse" data-parent="#collapseOne">
+                <div id="lib1.2" class="collapse" data-parent="#collapseOne">
                   Content 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 
-                <div id="libThree" class="collapse" data-parent="#collapseOne">
+                <div id="lib1.3" class="collapse" data-parent="#collapseOne">
                   Content 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 
@@ -165,6 +168,7 @@
 
           <br>
 
+          <!--Second collapsible header with tree layout icon-->
           <a id="unlink" href="#collapseTwo" data-toggle="collapse" aria-expanded="true">
             <div id="header">
               <h5>
@@ -174,12 +178,64 @@
             </div>
             <hr>
           </a>
+
+          <!--Collapsible Content-->
           <div id="collapseTwo" class="collapse show">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <div class="row">
+
+              <!--Item Selector Side Panel-->
+              <div class="col-sm-3">
+                <div class="card">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib2.1" aria-expanded="true" aria-controls="#lib2.1">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                        Library Item 2.1
+                      </h5>
+                    </div>
+                  </button>
+                </div>
+                <div class="card">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib2.2" aria-expanded="false" aria-controls="#lib2.2">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                        Library Item 2.2
+                      </h5>
+                    </div>
+                  </button>
+                </div>
+                <div class="card">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib2.3" aria-expanded="false" aria-controls="#lib2.3">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                        Library Item 2.3
+                      </h5>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!--Actual Content of Library-->
+              <div class="col-sm-9">
+
+                <div id="lib2.1" class="collapse show" data-parent="#collapseTwo">
+                  Content 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+                <div id="lib2.2" class="collapse" data-parent="#collapseTwo">
+                  Content 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+                <div id="lib2.3" class="collapse" data-parent="#collapseTwo">
+                  Content 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+              </div>
+            </div>
           </div>
 
           <br>
 
+          <!--Third collapsible header-->
           <a id="unlink" href="#collapseThree" data-toggle="collapse" aria-expanded="true">
             <div id="header">
               <h5>
@@ -189,8 +245,59 @@
             </div>
             <hr>
           </a>
+
+          <!--Collapsible Content-->
           <div id="collapseThree" class="collapse show">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <div class="row">
+
+              <!--Item Selector Side Panel-->
+              <div class="col-sm-3">
+                <div class="card">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib3.1" aria-expanded="true" aria-controls="#lib3.1">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                        Library Item 3.1
+                      </h5>
+                    </div>
+                  </button>
+                </div>
+                <div class="card">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib3.2" aria-expanded="false" aria-controls="#lib3.2">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                        Library Item 3.2
+                      </h5>
+                    </div>
+                  </button>
+                </div>
+                <div class="card">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#lib3.3" aria-expanded="false" aria-controls="#lib3.3">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                        Library Item 3.3
+                      </h5>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!--Actual Content of Library-->
+              <div class="col-sm-9">
+
+                <div id="lib3.1" class="collapse show" data-parent="#collapseThree">
+                  Content 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+                <div id="lib3.2" class="collapse" data-parent="#collapseThree">
+                  Content 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+                <div id="lib3.3" class="collapse" data-parent="#collapseThree">
+                  Content 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+              </div>
+            </div>
           </div>
 
         <!--End of col container-->

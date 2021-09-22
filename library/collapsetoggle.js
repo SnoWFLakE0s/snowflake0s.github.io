@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  jQuery('button').click( function(e) {
-      jQuery('.collapse').collapse('hide');
+  var $groupOne = $('#myGroup');
+    $groupOne.on('show.bs.collapse','.collapse', function() {
+    $groupOne.find('.collapse.show').collapse('hide');
   });
 });

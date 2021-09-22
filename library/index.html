@@ -116,7 +116,7 @@
               <!--Item Selector Side Panel-->
               <div class="col-sm-3">
                 <div class="card">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#libOne" data-parent="#groupOne" aria-expanded="true" aria-controls="libOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#libOne" data-parent="#collapseOne" aria-expanded="true" aria-controls="#libOne">
                     <div class="card-header">
                       <h5 class="mb-0">
                         Library Item 1
@@ -125,7 +125,7 @@
                   </button>
                 </div>
                 <div class="card">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#libTwo" data-parent="#groupOne" aria-expanded="false" aria-controls="libTwo">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#libTwo" data-parent="#collapseOne" aria-expanded="false" aria-controls="#libTwo">
                     <div class="card-header">
                       <h5 class="mb-0">
                         Library Item 2
@@ -134,7 +134,7 @@
                   </button>
                 </div>
                 <div class="card">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#libThree" data-parent="#groupOne" aria-expanded="false" aria-controls="libThree">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#libThree" data-parent="#collapseOne" aria-expanded="false" aria-controls="#libThree">
                     <div class="card-header">
                       <h5 class="mb-0">
                         Library Item 3
@@ -147,15 +147,15 @@
               <!--Actual Content of Library-->
               <div id="groupOne" class="col-sm-9">
 
-                <div id="libOne" class="collapse show">
+                <div id="libOne" class="collapse show" data-parent="#collapseOne">
                   Content 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 
-                <div id="libTwo" class="collapse">
+                <div id="libTwo" class="collapse" data-parent="#collapseOne">
                   Content 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 
-                <div id="libThree" class="collapse">
+                <div id="libThree" class="collapse" data-parent="#collapseOne">
                   Content 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 

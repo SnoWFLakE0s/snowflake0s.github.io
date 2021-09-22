@@ -110,10 +110,12 @@
             <hr>
           </a>
           <div id="collapseOne" class="collapse show">
-            <div class="row">
+            <div id="groupOne" class="row">
+
+              <!--Item Selector Side Panel-->
               <div class="col-sm-3">
                 <div class="card">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#libOne" aria-expanded="true" aria-controls="libOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#libOne" data-parent="#groupOne" aria-expanded="true" aria-controls="libOne">
                     <div class="card-header" id="itemOne">
                       <h5 class="mb-0">
                         Library Item 1
@@ -122,7 +124,7 @@
                   </button>
                 </div>
                 <div class="card">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#libTwo" aria-expanded="false" aria-controls="libTwo">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#libTwo" data-parent="#groupOne" aria-expanded="false" aria-controls="libTwo">
                     <div class="card-header" id="itemTwo">
                       <h5 class="mb-0">
                         Library Item 2
@@ -130,14 +132,32 @@
                     </div>
                   </button>
                 </div>
+                <div class="card">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#libThree" data-parent="#groupOne" aria-expanded="false" aria-controls="libThree">
+                    <div class="card-header" id="itemTwo">
+                      <h5 class="mb-0">
+                        Library Item 3
+                      </h5>
+                    </div>
+                  </button>
+                </div>
               </div>
-              <div class="card col-sm-9">
+
+              <!--Actual Content of Library-->
+              <div class="accordion-group col-sm-9">
+
                 <div class="collapse show" id="libOne">
                   Content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
+
                 <div class="collapse" id="libTwo">
                   Content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
+
+                <div class="collapse" id="libThree">
+                  Content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
               </div>
             </div>
           </div>

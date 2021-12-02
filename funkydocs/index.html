@@ -31,6 +31,9 @@
   .sticky-offset {
     top: 70px;
   }
+  .header-offset {
+    top: 100px;
+  }
   [data-toggle="collapse"] .fa:before {
     content: "\f068";
   }
@@ -78,7 +81,7 @@
   <div class="container-fluid">
 
     <!--Main Body Container-->
-    <div id="body" class="row">
+    <div id="body" class="row no-gutters">
 
       <!--Table of Contents (Fixed)-->
       <div id="sidebar-container" class="col-md-2">
@@ -101,7 +104,7 @@
       <div class="col-md-10">
 
         <!--Main Header (Jumbotron)-->
-        <div id="header" class="jumbotron">
+        <div id="header" class="header-offset">
           <h3>Funky Trees 1.11.106 Documentation</h3>
           <hr>
           <p>
@@ -111,6 +114,8 @@
           </p>
         </div>
         <!--End of Main Header-->
+
+        <br>
 
         <!--Start of Guide Content-->
         <!--Formatting should be: div, h5 header, hr, p-->

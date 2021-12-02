@@ -76,7 +76,7 @@
   <!--End of Navbar-->
 
   <!--Main Header (Jumbotron)-->
-  <div id="header" class="jumbotron">
+  <div id="header" class="jumbotron sticky-offset">
     <h3>Funky Trees 1.11.106 Documentation</h3>
     <hr>
     <p>
@@ -93,25 +93,22 @@
     <div id="body" class="row">
 
       <!--Table of Contents (Fixed)-->
-      <div id="sidebar-container" class="col-sm-3">
+      <div id="sidebar-container" class="col-md-2">
         <!--Sticky ToC div-->
-        <div class="border p-3 sticky-top sticky-offset">
-          <h5>Contents</h5>
-          <!--Table of Contents-->
-          <ol style="padding-left:1rem">
-            <li>
-              <a href="#placeholder-1">Placeholder 1</a>
-            </li>
-          </ol>
-          <a id="backtotop" href="#header">Back to Top</a>
-          <br>
-          <a id="bugreport" href="mailto:inventor1234567890@gmail.com">Bug/Typo Reports (E-Mail)</a>
-        </div>
+          <ul class="list-group sticky-top sticky-offset">
+            <li class="list-group-item active">Contents</a>
+            <a href="#placeholder-1" class="list-group-item list-group-item-action">Placeholder One</a>
+            <a href="#" class="list-group-item list-group-item-action">Placeholder Two</a>
+            <a href="#" class="list-group-item list-group-item-action">Placeholder Three</a>
+            <li class="list-group-item">Options</li>
+            <a href="#header" class="list-group-item list-group-item-action">Back to Top</a>
+            <a href="mailto:inventor1234567890@gmail.com" class="list-group-item list-group-item-action">Bug/Typo Reports (E-Mail)</a>
+          </ul>
       </div>
       <!--End of Table of Contents-->
 
       <!--Main Body Text-->
-      <div class="col-sm-9">
+      <div class="col-md-10">
 
         <!--Start of Guide Content-->
         <!--Formatting should be: div, h5 header, hr, p-->

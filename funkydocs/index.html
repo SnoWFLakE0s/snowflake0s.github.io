@@ -21,7 +21,7 @@
     align-items: center;
     display: flex;
   }
-  #unlink {
+  .unlink {
     color: inherit;
     text-decoration: none;
   }
@@ -32,7 +32,7 @@
     top: 70px;
   }
   .header-offset {
-    top: 100px;
+    padding-top: 100px;
   }
   [data-toggle="collapse"] .fa:before {
     content: "\f068";
@@ -48,7 +48,7 @@
 </head>
 
 <!--Start of Body-->
-<body>
+<body class="bg-dark">
 
   <!--Navbar-->
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
@@ -78,22 +78,25 @@
   </nav>
   <!--End of Navbar-->
 
-  <div class="container-fluid">
+  <hr>
+
+  <div class="container-fluid bg-dark">
 
     <!--Main Body Container-->
-    <div id="body" class="row no-gutters">
+    <div id="body" class="row">
 
       <!--Table of Contents (Fixed)-->
       <div id="sidebar-container" class="col-md-2">
         <!--Sticky ToC div-->
-          <ul class="list-group list-group-flush sticky-top sticky-offset">
-            <li class="list-group-item active">Contents</li>
-            <a href="#placeholder-1" class="list-group-item list-group-item-action">Placeholder One</a>
-            <a href="#" class="list-group-item list-group-item-action">Placeholder Two</a>
-            <a href="#" class="list-group-item list-group-item-action">Placeholder Three</a>
-            <li class="list-group-item active">Options</li>
-            <a href="#header" class="list-group-item list-group-item-action">Back to Top</a>
-            <a href="mailto:inventor1234567890@gmail.com" class="list-group-item list-group-item-action">Bug/Typo Report</a>
+          <ul class="nav flex-column sticky-top sticky-offset">
+            <li class="nav-item"><b>Contents</b></li>
+            <a href="#placeholder-1" class="nav-link unlink">Placeholder One</a>
+            <a href="#" class="nav-link unlink">Placeholder Two</a>
+            <a href="#" class="nav-link unlink">Placeholder Three</a>
+            <br>
+            <li class="list-group-item"><b>Options</b></li>
+            <a href="#header" class="nav-link unlink">Back to Top</a>
+            <a href="mailto:inventor1234567890@gmail.com" class="list-group-item list-group-item-action">Report a Bug/Typo</a>
           </ul>
       </div>
       <!--End of Table of Contents-->
@@ -104,7 +107,7 @@
       <div class="col-md-10">
 
         <!--Main Header (Jumbotron)-->
-        <div id="header" class="header-offset">
+        <div id="header" class="jumbotron header-offset">
           <h3>Funky Trees 1.11.106 Documentation</h3>
           <hr>
           <p>
@@ -153,7 +156,7 @@
 
 
     <!--Footer Container-->
-    <div class="container-fluid">
+    <div class="container-fluid bg-dark">
       <!-- Footer -->
       <footer class="page-footer font-small">
         <!-- Copyright -->

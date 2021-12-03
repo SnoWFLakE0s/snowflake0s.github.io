@@ -34,6 +34,14 @@
       [data-toggle="collapse"].collapsed .fa:before {
         content: "\f067";
       }
+      <!-- Styling for Formula350
+        Not too sure what I'm doing, but putting this stuff
+        here accomplished what I needed it to! So... huzzah??
+        Bits for the Quote box; clunky, but functional.-->
+      .w3-center .w3-bar-item{text-align:center}
+      .w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+      .w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+      .w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
     </style>
     <!--Google Adsense stuff-->
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101244125);</script>
@@ -75,11 +83,11 @@
 
     <!--Main Header (Jumbotron)-->
     <div id="header" class="jumbotron">
-    	<h3>Dynamic Labels</h3>
+    	<h3>Text Labels</h3>
     	    <hr>
         	<p>
             <i>
-            	Written by Author - Last updated Month, Day, Year
+            	Written by Formula350 and SnoWFLakE0s - Last updated Dec, 1, 2021
            	</i>
           </p>
     </div>
@@ -99,12 +107,12 @@
               <!--Table of Contents-->
               <ol style="padding-left:1rem">
                 <li>
-                  <a href="#sectionOne">Placeholder Section One</a>
+                  <a href="#sectionOne">Introduction</a>
                 </li>
-          			<li>
-                  <a href="#sectionTwo">Placeholder Section Two</a>
+                <li>
+                  <a href="#sectionTwo">The TextMesh Pro System</a>
                 </li>
-          			<li>
+                <li>
                   <a href="#sectionThree">Placeholder Section Three</a>
                   <ol style="padding-left:1rem" type="A">
                     <li>
@@ -115,10 +123,16 @@
                     </li>
                   </ol>
                 </li>
+          			<li>
+                  <a href="#sectionTwo">Dynamic Labels using Funky Trees</a>
+                </li>
+          			<li>
+                  <a href="#sectionTwo">Update Log</a>
+                </li>
               </ol>
               <a id="backtotop" href="#header">Back to Top</a>
               <br>
-              <a id="bugreport" href="mailto:inventor1234567890@gmail.com">Bug/Typo Reports (E-Mail)</a>
+              <a id="bugreport" href="mailto:inventor1234567890@gmail.com&subject=Bug/Typo%20on%20the%20Text%20Labels%20guide">Bug/Typo Reports (E-Mail)</a>
             </div>
         </div>
         <!--End of Table of Contents-->
@@ -131,7 +145,7 @@
             <div class="alert alert-danger alert-dismissible">
             	<button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4>Warning:</h4>
-                <strong>A warning</strong>
+                <strong>Guide Under Construction!</strong>
             </div>
             <br>
             <!--End of Notif Button-->
@@ -145,13 +159,32 @@
                 <div>
                   <h5>
                     <!--This is disgustingly done and should be fixed with a proper solution at some point-->
-                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Placeholder Section One
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Introduction
                   </h5>
                 </div>
                 <hr>
               </a>
                 <div id="sectionOneCollapse" class="collapse show">
-                  <p>Placeholder Text</p>
+                  <p>Thide guide will cover the new (as of v1.11) "Labels" system in Simple Planes. Labels come in two forms: one as the standalone Label part, and the other as a dedicated built-in label on the Switch and Button parts to (optionally) label their function. Regardless of which one you're using, they all are provided through the TextMesh Pro addon for the Unity game engine (which is what powers Simple Planes).</p>
+                  
+                  <p>TextMesh Pro is, on the surface, a means of offering placable 2D Text in the game environment (i.e. Labels), then also provides a lot of "Rich Text" support to format your text. It offers everything from simple things like bold, italics, and underline; as well as the ability to change fonts, apply styling, curve text, individually adjust character placement, and more. That, combined with what Simple Planes already offers, also means that these Labels allow you to place Funky Trees code to be displayed, converting your Label from a once-static text box into a dynamic text-based display!</p>
+                  
+                  <p>Those familiar with HTML/CSS coding, or even older web forums, will already be quite familiar working with these Labels. Rich Text is not too far removed from HTML, and before there was support for shortcuts like Ctrl+B to make your forum post text bold, you had to manually type out the formatting codes in this way. This is similar to the "Markdown" that the Simple Planes website supports, but much easier to understand... albeit at the expense of there being more text (code) to look at.</p>
+                  
+                  <p>Here's how TextMesh Pro explains it <a href="http://digitalnativestudios.com/textmeshpro/docs/rich-text/">in the documentation:</a href>
+                    <div class="w3-container; style="margin-top:-10px">
+                        <div class="w3-panel w3-card-4 w3-center" style="width:75%;margin-left:30px; background:#393939">
+                            <p style="margin-top:11px"><i>You can use rich text tags to alter the appearance and layout of your text. These tags work like HTML or XML tags, but have less strict syntax.
+                            <br><br>
+                            A tag looks like </i><code>&lt;tag&gt;</code><i>. Many tags operate on a scope, which you can end with </i><code>&lt;/tag&gt;</code><i>. Such scopes can be nested, and you don't have to close them in the same order that you started them.
+                            <br><br>
+                            Some tags have values and attributes, like </i><code>&lt;tag=value&gt;</code><i> and </i><code>&lt;tag attribute=value&gt;</code><i>. These arguments are either </i><code>names</code><i> or </i><code>numeric values</code><i>. Numbers are either regular </i><code>decimal</code><i> numbers, pixels like </i><code>1px</code><i>, percentages like </i><code>80%</code><i>, font units like </i><code>1.2em</code><i>, or hexadecimal color values like </i><code>#FF</code><i>. </i><code>Names</code><i> can be either with or without double quotes, but if there are more attributes, it's best to use quotes.
+                            <br><br>
+                            Tags, plus their attributes, can be up to 128 characters total. This limitation shouldn't be an issue, unless you're using very long string attributes.</i></p>
+                        </div>
+                    </div>
+                    <p><i><b>NOTE:</b> As we'll explore in the guide, there <u>are</u> a couple exceptions to certain parts of what they stated.</i></p>
+                   </p>
                 </div>
             </div>
             <br>

@@ -29,7 +29,7 @@
     transition: none;
   }
   .sticky-offset {
-    top: 70px;
+    top: 100px;
   }
   .header-offset {
     padding-top: 100px;
@@ -39,6 +39,9 @@
   }
   [data-toggle="collapse"].collapsed .fa:before {
     content: "\f067";
+  }
+  .sidenav-item {
+    padding-left: 4em;
   }
   </style>
   <!--Google Adsense stuff-->
@@ -51,7 +54,7 @@
 <body class="bg-dark">
 
   <!--Navbar-->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top border-bottom">
     <a id="snowpage" class="navbar-brand" href="/">
       <img src="https://github.com/SnoWFLakE0s/snowflake0s.github.io/blob/master/logo.png?raw=true;" style="height:1em; padding-right:0.5em;">
       SnoWFLakE0s' Page
@@ -78,8 +81,6 @@
   </nav>
   <!--End of Navbar-->
 
-  <hr>
-
   <div class="container-fluid bg-dark">
 
     <!--Main Body Container-->
@@ -88,15 +89,15 @@
       <!--Table of Contents (Fixed)-->
       <div id="sidebar-container" class="col-md-2">
         <!--Sticky ToC div-->
-        <ul class="nav flex-column sticky-top sticky-offset">
-          <li class="nav-item"><b>Contents</b></li>
-          <li class="nav-item"><a href="#placeholder-1" class="unlink">Placeholder One</a></li>
-          <li class="nav-item"><a href="#placeholder-2" class="unlink">Placeholder Two</a></li>
-          <li class="nav-item"><a href="#placeholder-3" class="unlink">Placeholder Three</a></li>
+        <ul class="nav flex-column sticky-top sticky-offset pl-4">
+          <li class="nav-item"><h5><b>Contents</b></h5></li>
+          <li class="nav-item sidenav-item"><a href="#placeholder-1" class="unlink">Placeholder One</a></li>
+          <li class="nav-item sidenav-item"><a href="#placeholder-2" class="unlink">Placeholder Two</a></li>
+          <li class="nav-item sidenav-item"><a href="#placeholder-3" class="unlink">Placeholder Three</a></li>
           <br>
-          <li class="nav-item"><b>Options</b></li>
-          <li class="nav-item"><a href="#header" class="unlink">Back to Top</a></li>
-          <li class="nav-item"><a href="mailto:inventor1234567890@gmail.com" class="unlink">Report a Bug/Typo</a></li>
+          <li class="nav-item"><h5><b>Options</b></h5></li>
+          <li class="nav-item sidenav-item"><a href="#header" class="unlink">Back to Top</a></li>
+          <li class="nav-item sidenav-item"><a href="mailto:inventor1234567890@gmail.com" class="unlink">Report a Bug/Typo</a></li>
         </ul>
       </div>
       <!--End of Table of Contents-->
@@ -123,7 +124,7 @@
         <!--Start of Guide Content-->
         <!--Formatting should be: div, h5 header, hr, p-->
 
-        <div id="placeholder-1" class="px-2">
+        <div id="placeholder-1" class="px-4">
           <h5>Placeholder 1</h5>
           <hr>
           <p>Testing placeholder text.</p>
@@ -138,9 +139,9 @@
             Cras vel nunc faucibus, tempus ipsum quis, tristique erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas at mauris eu est scelerisque vestibulum vitae ut sem. Praesent dui dolor, interdum quis congue mattis, venenatis sed orci. Cras scelerisque quam ut vulputate sodales. Sed sodales turpis elit, ornare venenatis dolor tempus et. Sed aliquet nibh tellus, vitae viverra risus convallis vitae. Nunc laoreet eros eu est venenatis, sit amet aliquet nisl porttitor. Pellentesque sem purus, dapibus quis nibh vel, laoreet eleifend erat. Praesent et felis sed eros dictum posuere.</p>
           </div>
 
-          <hr>
+          <br>
 
-          <div id="placeholder-2" class="px-2">
+          <div id="placeholder-2" class="px-4">
             <h5>Placeholder 2</h5>
             <hr>
             <p>Testing placeholder text.</p>
@@ -155,9 +156,9 @@
               Cras vel nunc faucibus, tempus ipsum quis, tristique erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas at mauris eu est scelerisque vestibulum vitae ut sem. Praesent dui dolor, interdum quis congue mattis, venenatis sed orci. Cras scelerisque quam ut vulputate sodales. Sed sodales turpis elit, ornare venenatis dolor tempus et. Sed aliquet nibh tellus, vitae viverra risus convallis vitae. Nunc laoreet eros eu est venenatis, sit amet aliquet nisl porttitor. Pellentesque sem purus, dapibus quis nibh vel, laoreet eleifend erat. Praesent et felis sed eros dictum posuere.</p>
             </div>
 
-            <hr>
+            <br>
 
-            <div id="placeholder-3" class="px-2">
+            <div id="placeholder-3" class="px-4">
               <h5>Placeholder 3</h5>
               <hr>
               <p>Testing placeholder text.</p>

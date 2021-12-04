@@ -13,7 +13,7 @@
     <!-- TEMPORARILY DISABLING - Just while compiling since there will be lots of page refreshes (to save me precious bandwidth)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
     <!--Font Awesome Stuff-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--Styling for the navbar logo-->
@@ -44,11 +44,13 @@
       .w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
       .w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
     </style>
-    <!-- TEMPORARILY DISABLING - Just while compiling since there will be lots of page refreshes (to save me precious bandwidth)
+
     <!--Google Adsense stuff-->
+    <!-- TEMPORARILY DISABLING - Just while compiling since there will be lots of page refreshes (to save me precious bandwidth)
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101244125);</script>
     <script async src="//static.getclicky.com/js"></script>
     <script data-ad-client="ca-pub-7192130816208439" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+    
   </head>
 
   <!--Start of Body-->
@@ -192,7 +194,6 @@
                 </div>
                 <hr>
               </a>
-                <div id="sectionOneCollapse" class="collapse show">
                   <p>This guide will cover the new (as of v1.11) "Labels" system in Simple Planes. Labels come in two forms: one as the standalone Label part, and the other as a dedicated built-in label on the Switch and Button parts to (optionally) label their function. Regardless of which one you're using, they all are provided through the TextMesh Pro add-on for the Unity game engine (which is what powers Simple Planes).</p>
                   
                   <p>TextMesh Pro is, on the surface, a means of offering placeable 2D Text in the game environment (i.e. Labels), then also provides a lot of "Rich Text" support to format your text. It offers everything from simple things like bold, italics, and underline; as well as the ability to change fonts, apply styling, curve text, individually adjust character placement, and more. That, combined with what Simple Planes already offers, also means that these Labels allow you to place Funky Trees code to be displayed, converting your Label from a once-static text box into a dynamic text-based display!</p>
@@ -214,6 +215,7 @@
                     <p><i><b>NOTE:</b> As we'll explore in the guide, there <u>are</u> a couple exceptions to certain parts of what they stated.</i></p>
                    </p>
                 </div>
+                <div id="sectionOneCollapse" class="collapse show">
             </div>
             <br>
 
@@ -231,6 +233,16 @@
                 <div id="sectionTwoCollapse" class="collapse show">
                   <p>This section will primarily serve to provide you with a rundown of what text formatting you have access to. The majority of it will be no different than the previously mentioned official documentation; however, most sections will include further details or tips for its usage.</p>
                   <p>Currently, there are a few RichText codes that either do not work in SimplePlanes because of a limitation (or Jundroo's choice to disable it), <b><i>or</i></b> due to a lack of understanding on using the code. Over time, as users explore and understand the capabilities, these questions will get answered more definitively. At this moment, any suffixed with an Asterisk (*) are those whose functionality is unknown; therefore, may actually not work in Simple Planes.<p>
+                  <h6><p>A Quick Word About Syntax</h6><br>
+                    These are specific to RichText, albeit similar to that in the Funky Trees Guide; however, when it comes to the inclusion of actual FT code into the Labels, you will need to abide by <i>those</i> Syntax rules as well! They do not cross-over at any point, so when you "exit" the RichText domain and "enter" that Funky Trees domain, that is where the Syntax varies.
+            		</p>
+                    <p>That being said:</p>
+            		<ul>
+            		    <li><strong>Spelling matters</strong>, including spaces and hyphens.</li>
+            		    <li><strong>Case Sensativity:</strong> your choices are <i><code>&lt;lowercase&gt;</code></i> or <i><code>&lt;UPPSERCASE&gt;</code></i>, anything else will not work.</li>
+            		    <li><strong>Tag and Value Separator:</strong> the Equal (=) sign is the only way, a Colon (:) is not allowed; <i><code>&lt;tag&gt;<b>=</b>value</code></i> will work, <i><code>&lt;tag&gt;<b>:</b>value</code></i> will <u>not</u>.</li>
+            		    <li><strong>One small error leads to the entire <i><code>&lt;tag&gt;</code></i> failing and all associated text not being parsed.</strong> Thankfully, this error is easy to spot and easy to address, because everything included with the tag will be displayed in your label. Initially it may be using a Colon in place of the Equals. Or perhaps you wrapped your value in Quotes when that tag does not accept them. <i>Or</i> forgotten the quotes when necessary.</li>
+            		</ul>
                   <p><i>The below list is alphabetized based on their <i><code>&lt;code&gt;</code></i> tag.</p>
                 </div>
             </div>

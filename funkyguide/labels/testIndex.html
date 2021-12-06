@@ -42,10 +42,16 @@
         Not too sure what I'm doing, but putting this stuff
         here accomplished what I needed it to! So... huzzah??
         Bits for the Quote box; clunky, but functional.-->
-      .w3-center .w3-bar-item{text-align:center}
-      .w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+      .w3-center .w3-bar-item{text-align:center;}
+      .w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px;}
       .w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
       .w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+      .in1 {
+        text-indent: 1em;
+      }
+      .in2 {
+        text-indent: 2em;
+      }
     </style>
 
     <!--Google Adsense stuff-->
@@ -211,7 +217,7 @@
                   </p>
                   
                   <p>
-                    Here's how the <a href="http://digitalnativestudios.com/textmeshpro/docs/rich-text/">t<i>official TextMesh Pro documentation</i></a href> explains it 
+                    Here's how the <a href="http://digitalnativestudios.com/textmeshpro/docs/rich-text/"><i>official TextMesh Pro documentation</i></a href> explains it 
                         <div class="w3-container; style="margin-top:-10px">
                             <div class="w3-panel w3-card-4 w3-center" style="width:75%;margin-left:30px; background:#393939">
                                 <p style="margin-top:11px"><i>
@@ -225,9 +231,9 @@
                                 </p>
                             </div>
                         </div>
+                   </p>
                    <p>
                       <i><b>NOTE:</b> As we'll explore in the guide, there <u>are</u> a couple exceptions to certain parts of what they stated.</i>
-                   </p>
                    </p>
                 </div>
             </div>
@@ -239,7 +245,7 @@
                 <div>
                   <h5>
                     <!--This is disgustingly done and should be fixed with a proper solution at some point-->
-                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> RichText Codes
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> RichText Coding
                   </h5>
                 </div>
                 <hr>
@@ -252,22 +258,48 @@
                     Currently, there are a few RichText codes that either do not work in SimplePlanes because of a limitation (or Jundroo's choice to disable it), <b><i>or</i></b> due to a lack of understanding on using the code. Over time, as users explore and understand the capabilities, these questions will get answered more definitively. At this moment, any suffixed with an Asterisk (*) are those whose functionality is unknown; therefore, may actually not work in Simple Planes.
                   </p>
                   <p>
-                    <h6>A Quick Word About Syntax</h6>
+                    <b><i>A Quick Word About Syntax</i></b><br>
                     These are specific to RichText, albeit similar to that in the Funky Trees Guide; however, when it comes to the inclusion of actual FT code into the Labels, you will need to abide by <i>those</i> Syntax rules as well! They do not cross-over at any point, so when you "exit" the RichText domain and "enter" that Funky Trees domain, that is where the Syntax varies.
                   </p>
                   <p>
                     That being said:
                   </p>
-            		<ul>
-            		    <li><strong>Spelling matters</strong>, including spaces and hyphens.</li>
-            		    <li><strong>Case Sensativity:</strong> your choices are <code>&lt;lowercase&gt;</code> or <code>&lt;UPPSERCASE&gt;</code>, anything else will not work.</li>
-            		    <li><strong>Tag and Value Separator:</strong> the Equal (=) sign is the only way, a Colon (:) is not allowed; <code>&lt;tag<b>=</b>value&gt;</code> will work, <code>&lt;tag<b>:</b>value&gt;</code> will <u>not</u>.</li>
-            		    <li><strong>One small error leads to the entire <code>&lt;tag&gt;</code> failing and all associated text not being parsed.</strong> Thankfully, this error is easy to spot and easy to address, because everything included with the tag will be displayed in your label. Initially it may be using a Colon in place of the Equals. Or perhaps you wrapped your value in Quotes when that tag does not accept them. <i>Or</i> forgotten the quotes when necessary.</li>
-            		</ul>
+                    <ul>
+                        <li><strong>Spelling matters</strong>, including spaces and hyphens.</li>
+                        <li><strong>Case Sensativity:</strong> to make life simple, <u>only</u> use <code>&lt;lowercase&gt;</code> within tags <i>(there's an exception, which is really not worth the hassle, but the tag word works as all-uppercase; also the value for <code>&lt;font=&gt;</code> allows mixed-cases but as that tag doesn't work it's irrelevant).</i></li>
+                        <li><strong>Tag and Value Separator:</strong> the Equal (=) sign is the only way, a Colon (:) is not allowed; <code>&lt;tag<b>=</b>value&gt;</code> will work, <code>&lt;tag<b>:</b>value&gt;</code> will <u>not</u>.</li>
+                        <li><strong>One small error leads to the entire <code>&lt;tag&gt;</code> failing and all associated text not being parsed.</strong> Thankfully, this error is easy to spot and easy to address, because everything included with the tag will be displayed in your label. Initially it may be using a Colon in place of the Equals. Perhaps you wrapped your value in Quotes when that tag does not accept them. <i>Or,</i> forgotten the quotes when necessary.</li>
+                    </ul>
                   <p>
-                    <i>The below list is alphabetized based on their <i><code>&lt;code&gt;</code></i> tag.
+                    <i>The below list is alphabetized based on their </i><code>&lt;code&gt;</code><i> tag.</i>
                   </p>
                 </div>
+                    <div>
+                      <a id="unlink" href="#RichTextCollapse" data-toggle="collapse" aria-expanded="true">
+                        <div>
+                          <h6>
+                            <!--This is disgustingly done and should be fixed with a proper solution at some point-->
+                            <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> List of RichText Tags:
+                          </h6>
+                        </div>
+                      </a>
+                        <div id="RichTextCollapse" class="collapse show">
+                          <p><u style="font-size:120%">Value Types and Modifiers:</u><br>
+                            <code>&lt;tag=<u>value</u>&gt;</code><br>
+                                A general tag is formatted as such and the value filled in using Numbers, Words, or <code>{funky expressions}</code>; numbers are whole numbers <i>(1, 2, ..., <b>n</b>)</i> or decimals <i>(1.234)</i>, and positive or negative <i>(- preffixed)</i>.><br>
+                            <!-- I know using <a> is ultra-cheezy, but I'm not a coder and this accomplishes 
+                                 what I need it to do whilst still preserving the font styling that <code> 
+                                 imparts! (someone's turning in their grave due to it, I know... lmao) -->
+                            <code>&lt;tag=<b>#</b><a style="color:LightGray">%|em|e</a>&gt;</code><br>
+                                A tag that accepts Numbers, and any <i>optional</i> modifiers it supports <i>("em" and "e" do the same thing)</i>. If no modifier is used then the number is treated as a Multiplier.<br>
+                            <code>&lt;tag=<a style="color:lightgray">option1|option2|...|option<b><i>n</i></b></a>&gt;</code><br>
+                                A tag that accepts Words, and all the various|choices|...|accepted by that tag; typed as all-lowercase unless otherwise specified.
+                          </p>
+                          <p style="font-size:120%">
+                            <code>&lt;align=center|left|right&gt;</code>
+                          </p>
+                        </div>
+                    </div>
             </div>
             <br>
 
@@ -277,7 +309,7 @@
                 <div>
                   <h5>
                     <!--This is disgustingly done and should be fixed with a proper solution at some point-->
-                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Placeholder Section One
+                    <i class="fa fa-xs" aria-hidden="true" style="padding-right:0.25rem; position:relative; top:-0.09rem"></i> Placeholder Section Three
                   </h5>
                 </div>
                 <hr>
@@ -326,7 +358,7 @@
       <!-- Footer -->
       <footer class="page-footer font-small">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020-2021 Copyright:
+        <div class="footer-copyright text-center py-3">ɠ2020-2021 Copyright:
           <p> Joshua Eah "SnoWFLakE0s"</p>
         </div>
         <!-- End of Copyright -->

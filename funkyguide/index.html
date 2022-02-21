@@ -409,6 +409,15 @@
                       			<b>TL;DR: simply numbers, but everything is unique (requiring special attention from you).</b>
                       			The following is a list of all number type variables and their possible values.
                       		</p>
+                        <p>
+                          Many variables (e.g. Pitch, Roll, Yaw) will be set to their maximum values if a keyboard is used as input. Values in between are obtainable if a controller/joystick is used (including ones on screen).
+                          </p>
+                        <p>
+                          Tiles (~) are used if the variable allows decimals (analog).
+                        </p>
+                        <p>
+                          Unless noted otherwise, values are inclusive.
+                          </p>
                       		<table class="table" style="width:100%">
                       			<tr>
                       				<th>Variable</th>
@@ -418,17 +427,17 @@
                       			<tr>
                       				<td>Pitch</td>
                       				<td>The amount of Pitch input as a proportion</td>
-                      				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+                      				<td>(-1~1)</td>
                       			</tr>
                       			<tr>
                       				<td>Roll</td>
                       				<td>The amount of Roll input as a proportion</td>
-                      				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+                      				<td>(-1~1)</td>
                       			</tr>
                       			<tr>
                       				<td>Yaw</td>
                       				<td>The amount of Yaw input as a proportion</td>
-                      				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+                      				<td>(-1~1)</td>
                       			</tr>
                       			<tr>
                       				<td>Trim</td>
@@ -547,8 +556,8 @@
                       			</tr>
                             <tr>
                       				<td>Brake</td>
-                      				<td>Whether or not Brake is pressed</td>
-                      				<td><code>0</code> / <code>1</code></td>
+                      				<td>Whether or not Brake is pressed. Analogue if using controller/joystick.</td>
+                      				<td>(0~1)</td>
                       			</tr>
                             <tr>
                       				<td>TargetHeading</td>
@@ -589,7 +598,7 @@
                       			</tr>
                       			<tr>
                       				<td>GearDown</td>
-                      				<td>Whether or not landing gear is on or off</td>
+                      				<td>Whether or not landing gear is deployed or not</td>
                       				<td><code>true</code> / <code>false</code></td>
                       			</tr>
                       			<tr>

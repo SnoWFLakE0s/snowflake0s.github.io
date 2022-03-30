@@ -82,7 +82,7 @@
     	    <hr>
         	<p>
             <i>
-            	Written by SnoWFLakE0s - Last updated Nov 07, 2021
+            	Written by SnoWFLakE0s - Last updated March 30, 2022
            	</i>
           </p>
     </div>
@@ -116,9 +116,21 @@
                     <li>
                       <a href="#sectiontwoa">Section 2A</a>
                       <ol style="padding-left:1rem" type="1">
-                        <li><a href="#numbvar">Number-type Variables</a></li>
-                        <li><a href="#boolvar">Boolean-type Variables</a></li>
-                        <li><a href="#stringvar">String-type Variables</a></li>
+                        <li>
+                          <a href="#sectiontwoaone">Input Variables</a>
+                          <ol style="padding-left:1rem;">
+                            <li><a href="#numbvar">Number-type Variables</a></li>
+                            <li><a href="#boolvar">Boolean-type Variables</a></li>
+                            <li><a href="#stringvar">String-type Variables</a></li>
+                          </ol>
+                        </li>
+                        <li>
+                          <a href="#sectiontwoatwo">Custom Variables</a>
+                          <ol style="padding-left:1rem;">
+                            <li><a href="#settervariables">Setter Variables</a></li>
+                            <li><a href="#partvariables">Part Variables</a></li>
+                          </ol>
+                        </li>
                       </ol>
                     </li>
                     <li>
@@ -322,360 +334,446 @@
                 <br>
                 <!--Varables Explanation-->
                 <div id="sectiontwoa">
-                	<h5>Section 2A: Variables</h5>
+                	<h5>Section 2.A: Variables</h5>
                 	<hr>
                 		<p>
-                			I first want to make sure that you understand what variables are in Funky Trees. <b>Variables</b> are special words that have a special value in Funky Trees. They <i>contain</i> data. The data type organization, in other words, is a way of organizing these variables into different types. The following is a list of all input variables. Don't panic, this is simply for reference.
+                			I first want to make sure that you understand what variables are in Funky Trees. Simply put, <b>variables</b> are special words that have a special value in Funky Trees. They <i>contain</i> data. The data type organization, in other words, is a way of organizing these variables (among other things) into different types. 
                     </p>
-                				<table style="width:100%">
-                					<tr>
-                						<td>Pitch</td>
-                						<td>Roll</td>
-                						<td>Yaw</td>
-                						<td>Throttle</td>
-                						<td>Brake</td>
-                					</tr>
-                					<tr>
-                						<td>Trim</td>
-                						<td>VTOL</td>
-                						<td>LandingGear</td>
-                						<td>GearDown</td>
-                						<td>FireGuns</td>
-                					</tr>
-                					<tr>
-                						<td>FireWeapons</td>
-                						<td>LaunchCountermeasures</td>
-                						<td>Activate1</td>
-                						<td>Activate2</td>
-                						<td>Activate3</td>
-                					</tr>
-                					<tr>
-                						<td>Activate4</td>
-                						<td>Activate5</td>
-                						<td>Activate6</td>
-                						<td>Activate7</td>
-                						<td>Activate8</td>
-                					</tr>
-                					<tr>
-                						<td>Altitude</td>
-                						<td>AltitudeAgl</td>
-                						<td>GS</td>
-                						<td>IAS</td>
-                						<td>TAS</td>
-                					</tr>
-                					<tr>
-                						<td>Fuel</td>
-                						<td>AngleOfAttack</td>
-                						<td>AngleOfSlip</td>
-                						<td>PitchAngle</td>
-                						<td>RollAngle</td>
-                					</tr>
-                					<tr>
-                						<td>Heading</td>
-                						<td>Time</td>
-                						<td>GForce</td>
-                						<td>VerticalG</td>
-                						<td>SelectedWeapon</td>
-                					</tr>
-                					<tr>
-                						<td>Latitude</td>
-                						<td>Longitude</td>
-                						<td>PitchRate</td>
-                						<td>RollRate</td>
-                						<td>YawRate</td>
-                					</tr>
+
+                    <div id="sectiontwoaone">
+                      <h5>Section 2.A.1: Input Variables</h5>
+                      <hr>
+                        <p>
+                          There are largely two different kinds of variables available to you in Funky Trees. The first are the "original" variety and the ones that have been here since the beginning of Funky Trees: "input variables". These variables contain various kinds of data that are related to the current state of the game, including (but not limited to) things like the speed of the current aircraft, the time elapsed since the beginning of the sandbox session, and so on and so forth. These are given to you by default, and can be accessed at any time without any other procedures aside from just writing them in your code.
+                        </p>
+                        <p>
+                          The following is a list of all input variables. It most certainly looks quite daunting, but don't panic: this is simply for reference.
+                        </p>
+                        <table style="width:100%">
+                          <tr>
+                            <td>Pitch</td>
+                            <td>Roll</td>
+                            <td>Yaw</td>
+                            <td>Throttle</td>
+                            <td>Brake</td>
+                          </tr>
+                          <tr>
+                            <td>Trim</td>
+                            <td>VTOL</td>
+                            <td>LandingGear</td>
+                            <td>GearDown</td>
+                            <td>FireGuns</td>
+                          </tr>
+                          <tr>
+                            <td>FireWeapons</td>
+                            <td>LaunchCountermeasures</td>
+                            <td>Activate1</td>
+                            <td>Activate2</td>
+                            <td>Activate3</td>
+                          </tr>
+                          <tr>
+                            <td>Activate4</td>
+                            <td>Activate5</td>
+                            <td>Activate6</td>
+                            <td>Activate7</td>
+                            <td>Activate8</td>
+                          </tr>
+                          <tr>
+                            <td>Altitude</td>
+                            <td>AltitudeAgl</td>
+                            <td>GS</td>
+                            <td>IAS</td>
+                            <td>TAS</td>
+                          </tr>
+                          <tr>
+                            <td>Fuel</td>
+                            <td>AngleOfAttack</td>
+                            <td>AngleOfSlip</td>
+                            <td>PitchAngle</td>
+                            <td>RollAngle</td>
+                          </tr>
+                          <tr>
+                            <td>Heading</td>
+                            <td>Time</td>
+                            <td>GForce</td>
+                            <td>VerticalG</td>
+                            <td>SelectedWeapon</td>
+                          </tr>
+                          <tr>
+                            <td>Latitude</td>
+                            <td>Longitude</td>
+                            <td>PitchRate</td>
+                            <td>RollRate</td>
+                            <td>YawRate</td>
+                          </tr>
                           <tr>
                             <td>TargetSelected</td>
                             <td>TargetHeading</td>
                             <td>TargetElevation</td>
                             <td>TargetDistance</td>
                           </tr>
-                				</table>
+                        </table>
+                      <br>
                       <p>
-                				We can now categorize these variables based on their data category (their possible values included in parentheses).
-                		</p>
+                        We can now categorize these variables based on their data category (with their possible range of values included in parentheses).
+                      </p>
+                      <br>
+                      <!--Input Variables Explanation List-->
+                      <ol style="list-style-type:none;">
+                        
+                        <!--Number Variables-->
+                        <li>
+                        <div id="numbvar">
+                          <h5>1. Number-type Input Variables</h5>
+                          <hr>
+                            <p>
+                              By far the most numerous, the numbers datatype contains variables that equate to the <code>number</code> class of variables. They’re conceptually easy to manipulate, but there are a great variety of number type variables and each has a unique range of values.
+                              <b>TL;DR: simply numbers, but everything is unique (requiring special attention from you).</b>
+                              The following is a list of all number type variables and their possible values.
+                            </p>
+                            <table class="table" style="width:100%">
+                              <tr>
+                                <th>Variable</th>
+                                <th>Variable Description</th>
+                                <th>Range of Values</th>
+                              </tr>
+                              <tr>
+                                <td>Pitch</td>
+                                <td>The amount of Pitch input as a proportion</td>
+                                <td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+                              </tr>
+                              <tr>
+                                <td>Roll</td>
+                                <td>The amount of Roll input as a proportion</td>
+                                <td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+                              </tr>
+                              <tr>
+                                <td>Yaw</td>
+                                <td>The amount of Yaw input as a proportion</td>
+                                <td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
+                              </tr>
+                              <tr>
+                                <td>Trim</td>
+                                <td>The amount of Trim input as a proportion</td>
+                                <td>(-1~1)</td>
+                              </tr>
+                              <tr>
+                                <td>VTOL</td>
+                                <td>The amount of VTOL input as a proportion</td>
+                                <td>(-1~1)</td>
+                              </tr>
+                              <tr>
+                                <td>Throttle</td>
+                                <td>The amount of Throttle input as a proportion</td>
+                                <td>(0~1)</td>
+                              </tr>
+                              <tr>
+                                <td>Altitude</td>
+                                <td>Aircraft's altitude in meters</td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>AltitudeAgl</td>
+                                <td>Aircraft's altitude above ground level in meters </td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>GS</td>
+                                <td>The speed relative to the ground (m/s)</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>IAS</td>
+                                <td>The speed relative to the air (m/s)</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>TAS</td>
+                                <td>The speed relative to the air, adjusted for the density of the air (m/s)</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>Fuel</td>
+                                <td>The amount of fuel remaining as a proportion of capacity</td>
+                                <td>(0~1)</td>
+                              </tr>
+                              <tr>
+                                <td>AngleOfAttack</td>
+                                <td>The angle of attack (angle airflow vertically meets the boresight) in degrees</td>
+                                <td>(-180~180)</td>
+                              </tr>
+                              <tr>
+                                <td>AngleOfSlip</td>
+                                <td>The horizontal equivalent of angle of attack (degrees)</td>
+                                <td>(-180~180)</td>
+                              </tr>
+                              <tr>
+                                <td>PitchAngle</td>
+                                <td>The pitch of the aircraft (degrees)</td>
+                                <td>(-90~90)</td>
+                              </tr>
+                              <tr>
+                                <td>RollAngle</td>
+                                <td>The roll of the aircraft (degrees)</td>
+                                <td>(-180~180)</td>
+                              </tr>
+                              <tr>
+                                <td>Heading</td>
+                                <td>The heading of the aircraft (degrees)</td>
+                                <td>(-180~180)</td>
+                              </tr>
+                              <tr>
+                                <td>Time</td>
+                                <td>The time since the level loaded (seconds)</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>GForce</td>
+                                <td>(omnidirectional "force" acting on the pilot, in g)</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>VerticalG</td>
+                                <td>G-force (vertical component of G-force)</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>Latitude</td>
+                                <td>The y-position of the craft in the sandbox map</td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>Longitude</td>
+                                <td>The x-position of the craft in the sandbox map</td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>PitchRate</td>
+                                <td>The rate at which the aircraft pitches (deg/s)</td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>RollRate</td>
+                                <td>The rate at which the aircraft rolls (deg/s)</td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>YawRate</td>
+                                <td>The rate at which the aricraft yaws (deg/s)</td>
+                                <td>(-inf~inf)</td>
+                              </tr>
+                              <tr>
+                                <td>LandingGear</td>
+                                <td>Archaic FT input type. Use <code>GearDown</code> instead when making FT inputs.</td>
+                                <td>(0, 1)</td>
+                              </tr>
+                              <tr>
+                                <td>Brake</td>
+                                <td>Whether or not Brake is pressed</td>
+                                <td><code>0</code> / <code>1</code></td>
+                              </tr>
+                              <tr>
+                                <td>TargetHeading</td>
+                                <td>Returns the heading of the selected target, relative to the position of your cockpit, in bearing (degrees). Note that this is <b>global</b>, meaning that it is not relative to your current heading. <a href="https://i.imgur.com/z6Xf4Qt.png">View an explanatory diagram here.</a></td>
+                                <td>(0~360)</td>
+                              </tr>
+                              <tr>
+                                <td>TargetElevation</td>
+                                <td>Returns the line-of-sight angle to the selected target, relative to the position of your cockpit, in degrees. Note that this is <b>global</b>, meaning that it is not relative to your PitchAngle. <a href="https://i.imgur.com/AxpEbG4.png">View an explanatory diagram here.</a></td>
+                                <td>(-90~90)</td>
+                              </tr>
+                              <tr>
+                                <td>TargetDistance</td>
+                                <td>Returns the line-of-sight distance to the selected target, relative to the position of your cockpit, in meters.</td>
+                                <td>(0~inf)</td>
+                              </tr>
+                            </table>
+                        </div>
+                        </li>
 
-                		<br>
+                        <!--Boolean Variables-->
+                        <li>
+                        <div id="boolvar">
+                          <h5>2. Boolean-type Input Variables</h5>
+                          <hr>
+                            <p>
+                              Booleans were previously inconsistent in Funky Trees due to a couple errors. The system has been revamped completely, removing the root source of that error. Now, if you only use boolean statements independent of other data types, you will get the value <code>true</code> or <code>false</code>. If you use booleans in conjunction with the number data type, they will automatically convert to 1 or -1 (true or false respectively). That also means, in the table down below, all the booleans can also be considered to have a possible range of values of -1 or 1.
+                              <b>TL;DR: All boolean data type variables return either true or false, or 1 or -1 depending on its usage. This makes these logically consistent. </b>
+                              The following is a list of all number type variables and their possible values.
+                            </p>
+                            <table class="table" style="width:100%">
+                              <tr>
+                                <th>Variable</th>
+                                <th>Variable Description</th>
+                                <th>Range of Values</th>
+                              </tr>
+                              <tr>
+                                <td>GearDown</td>
+                                <td>Whether or not landing gear is on or off</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>FireGuns</td>
+                                <td>Whether or not guns button is pressed</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>FireWeapons</td>
+                                <td>Whether or not fire ordnance button is pressed</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>LaunchCountermeasures</td>
+                                <td>Whether or not launch countermeasures button is pressed</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate1</td>
+                                <td>Whether or not activation group 1 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate2</td>
+                                <td>Whether or not activation group 2 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate3</td>
+                                <td>Whether or not activation group 3 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate4</td>
+                                <td>Whether or not activation group 4 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate5</td>
+                                <td>Whether or not activation group 5 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate6</td>
+                                <td>Whether or not activation group 6 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate7</td>
+                                <td>Whether or not activation group 7 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>Activate8</td>
+                                <td>Whether or not activation group 8 is on</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                              <tr>
+                                <td>TargetSelected</td>
+                                <td>Whether or not a target is selected</td>
+                                <td><code>true</code> / <code>false</code></td>
+                              </tr>
+                            </table>
+                        </div>
+                        </li>
+                        
+                        <!--String variables-->
+                        <li>
+                        <div id="stringvar">
+                          <h5>3. String-type Input Variables</h5>
+                          <hr>
+                            <p>
+                              Simply put, strings are just lines of text, like "text". The number of actual strings datatype <b>variables</b> is technically only one as of the time of writing. However, whatever you make your string- be it “this string” or “that string”- are all valid strings. Strings don't really have a large variety of applications right now, but they can be useful.
+                            </p>
+                            <table class="table" style="width:100%">
+                              <tr>
+                                <th>Variable</th>
+                                <th>Variable Description</th>
+                              </tr>
+                              <tr>
+                                <td>SelectedWeapon</td>
+                                <td>Outputs the name of the selected weapon in the weapons drawer as a string, e.g. "Boom 50", "Cannon"</td>
+                              </tr>
+                            </table>
+                        </div>
+                        </li>
+                        
+                      </ol>
+                    </div>
+                    
+                    <div id="sectiontwoatwo">
+                      <h5>Section 2.A.2: Custom Variables</h5>
+                      <hr>
+                      <p>
+                        Now for the second type of variables available to you in Funky Trees--custom variables. A recent addition to the growing abilities of Funky Trees, custom variables were introduced in version 1.11 of SimplePlanes. Custom variables are special because you can create them (and thus are not available by default). There are two sub-categories of custom variables, the first and most common kind being setter variables, and the second and less-used variety being part variables.
+                      </p>
+                      <p>
+                        Variables allow for some powerful methods of Funky Trees coding not previously available, and also greatly simplifies certain tasks that lead to long, complicated, and unreadable Funky Trees code prior to their introduction. <i>However, you <b>do not need to use them for basic snippets of Funky Trees code!</b></i> Do not make things more complex than they need to be--this is a common mistake for beginning programmers. That being said, let's begin with setter variables.
+                      </p>
+                      <ol style="list-style-type: none;">
+                        <li>
+                          <div id="settervariables">
+                            <h5>1. Setter variables</h5>
+                            <hr>
+                            <p>
+                              Setter variables are the kind of variables you will use the most. First, to access these and begin writing into them, you must open the "variable setters" menu next to the "start sandbox" menu, indicated by an icon that looks like an "x": <img src="/funkyguide/images/variablesetters.png" alt="variablesettermenu" height="18em">
+                            </p>
+                            <p>
+                              Once opened, you will see the "Variable Setters" window open:
+                            </p>
+                            <hr>
+                            <img src="/funkyguide/images/settermenu.png" alt="settermenu" height="250em">
+                            <hr>
+                            <p>
+                              You can then press "Add Variable" to create a new "variable setter".
+                            </p>
+                            <hr>
+                            <img src="/funkyguide/images/newvariable.png" alt="newvariable" height="250em">
+                            <hr>
+                            <p>
+                              This creates a new "variable setter", the namesake of which comes from the fact that SimplePlanes will use this in order to constantly set the custom variable with the name in the "Variable Name" field with the Funky Trees code in the "Expression" field. Do precisely that, simply writing any custom variable name (that is not already reserved by the Input Variables). For example, we'll use <kbd>x</kbd> as our variable name, with the expression <kbd>Throttle</kbd> as our value. If you now use the variable <kbd>x</kbd> in any of your code, it will hold the value <kbd>Throttle</kbd>. This can be extrapolated to any reasonable extent, which is great when you have large, repeating sections of your code, say for example, an expression that calculates the number of shots you have fired with your cannon. This can make your Funky Trees code more compact, modular and easily readable and modifiable without having to worry that you misspelled a part of that long repeating section. If you want to delete your variable, simply press the <img src="/funkyguide/images/delete.png" alt="delete" height="16em"> button at any time to remove it.
+                            </p>
+                            <p>
+                              Setter variables also have additional attributes accessible by the small dropdown button <img src="/funkyguide/images/dropdown.png" alt="dropdown" height="16em"> to the left of the delete button. This reveals some new options, named "Priority" and "Activator":
+                            </p>
+                            <hr>
+                            <img src="/funkyguide/images/variableoptions.png" alt="options" height="250em">
+                            <hr>
+                            <p>
+                              It is convinient to think of the variable setters as a "list". That is because SimplePlanes will calculate the value of variables in order from top to bottom as shown in your variable setters menu. You can change the order of that list by moving a setter up and down with those buttons in the dropdown menu. Now, if you have multiple variable setters with the same variable name, normally the last setter will determine the final value of the variable. You may test this by creating two setters for a variable <kbd>x</kbd>, the first with any value, and second with value <kbd>0</kbd>. If you check the value of the variable in the sandbox, you will find that <kbd>x</kbd> always evaluates to 0. Now, the <b>priority</b> of a variable can alter this behavior by determining which "gets the final say" in the determination of the final value of a variable. The priority is by default 0, but can be set to any whole number (even negative numbers). However, it is good practice to just use positive integers. A setter with <i>higher postive priority</i> will determine the final value of the variable, meaning that in the previous example, if you set your first setter with priority <kbd>1</kbd> and the second left at 0, the variable <kbd>x</kbd> will no longer evaluate to 0 but instead whichever value you set it to.
+                            </p>
+                            <p>
+                              Activators are what they sound like--they either enable or disable the functioning of the its respective variable setter. An activator must be a boolean value (refer to the relevant section for information). If the value is "true", the variable setter will function normally. If the activator is "false" however, the variable setter will not function: <b>the variable's value will no longer be changed by that variable setter</b>. This is an important distinction from "the variable is disabled", because once created the variable always exists and holds a value. You can still use the variable in your code, but the if the setter is disabled it will no longer update that variable's value. A common application for this can be to store values in memory. As a quick note, if a variable is created but is disabled by default, it will by default have value 0. There is no "null" value for variables.  
+                            </p>
+                            <p>
+                              What makes these setter variables so powerful is that when their nature of being evalulated in steps, the priority feature, and activators are combined, they can do incredibly useful logical processing, such as even program games like <a href="https://www.simpleplanes.com/a/GhY3Qy/Snek-Game">Snake</a> or <a href="https://www.simpleplanes.com/a/20Dqur/TETRIS">Tetris</a>. 
+                            </p>
+                          </div>
+                        </li>
 
-                        <!--Variables Explanation List-->
-                		<ol style="list-style-type:none;">
-                			<li>
-                			<!--Number Variables-->
-                      <div id="numbvar">
-                      	<h5>1. Number-type Variables</h5>
-                      	<hr>
-                      		<p>
-                      			By far the most numerous, the numbers datatype contains variables that equate to the <code>number</code> class of variables. They’re conceptually easy to manipulate, but there are a great variety of number type variables and each has a unique range of values.
-                      			<b>TL;DR: simply numbers, but everything is unique (requiring special attention from you).</b>
-                      			The following is a list of all number type variables and their possible values.
-                      		</p>
-                      		<table class="table" style="width:100%">
-                      			<tr>
-                      				<th>Variable</th>
-                      				<th>Variable Description</th>
-                      				<th>Range of Values</th>
-                      			</tr>
-                      			<tr>
-                      				<td>Pitch</td>
-                      				<td>The amount of Pitch input as a proportion</td>
-                      				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Roll</td>
-                      				<td>The amount of Roll input as a proportion</td>
-                      				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Yaw</td>
-                      				<td>The amount of Yaw input as a proportion</td>
-                      				<td>(-1, 0, 1) / alternatively (-1~1) if joystick</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Trim</td>
-                      				<td>The amount of Trim input as a proportion</td>
-                      				<td>(-1~1)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>VTOL</td>
-                      				<td>The amount of VTOL input as a proportion</td>
-                      				<td>(-1~1)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Throttle</td>
-                      				<td>The amount of Throttle input as a proportion</td>
-                      				<td>(0~1)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Altitude</td>
-                      				<td>Aircraft's altitude in meters</td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>AltitudeAgl</td>
-                      				<td>Aircraft's altitude above ground level in meters </td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>GS</td>
-                      				<td>The speed relative to the ground (m/s)</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>IAS</td>
-                      				<td>The speed relative to the air (m/s)</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>TAS</td>
-                      				<td>The speed relative to the air, adjusted for the density of the air (m/s)</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Fuel</td>
-                      				<td>The amount of fuel remaining as a proportion of capacity</td>
-                      				<td>(0~1)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>AngleOfAttack</td>
-                      				<td>The angle of attack (angle airflow vertically meets the boresight) in degrees</td>
-                      				<td>(-180~180)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>AngleOfSlip</td>
-                      				<td>The horizontal equivalent of angle of attack (degrees)</td>
-                      				<td>(-180~180)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>PitchAngle</td>
-                      				<td>The pitch of the aircraft (degrees)</td>
-                      				<td>(-90~90)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>RollAngle</td>
-                      				<td>The roll of the aircraft (degrees)</td>
-                      				<td>(-180~180)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Heading</td>
-                      				<td>The heading of the aircraft (degrees)</td>
-                      				<td>(-180~180)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Time</td>
-                      				<td>The time since the level loaded (seconds)</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>GForce</td>
-                      				<td>(omnidirectional "force" acting on the pilot, in g)</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>VerticalG</td>
-                      				<td>G-force (vertical component of G-force)</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Latitude</td>
-                      				<td>The y-position of the craft in the sandbox map</td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>Longitude</td>
-                      				<td>The x-position of the craft in the sandbox map</td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>PitchRate</td>
-                      				<td>The rate at which the aircraft pitches (deg/s)</td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>RollRate</td>
-                      				<td>The rate at which the aircraft rolls (deg/s)</td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>YawRate</td>
-                      				<td>The rate at which the aricraft yaws (deg/s)</td>
-                      				<td>(-inf~inf)</td>
-                      			</tr>
-                      			<tr>
-                      				<td>LandingGear</td>
-                      				<td>Archaic FT input type. Use <code>GearDown</code> instead when making FT inputs.</td>
-                      				<td>(0, 1)</td>
-                      			</tr>
-                            <tr>
-                      				<td>Brake</td>
-                      				<td>Whether or not Brake is pressed</td>
-                      				<td><code>0</code> / <code>1</code></td>
-                      			</tr>
-                            <tr>
-                      				<td>TargetHeading</td>
-                      				<td>Returns the heading of the selected target, relative to the position of your cockpit, in bearing (degrees). Note that this is <b>global</b>, meaning that it is not relative to your current heading. <a href="https://i.imgur.com/z6Xf4Qt.png">View an explanatory diagram here.</a></td>
-                      				<td>(0~360)</td>
-                      			</tr>
-                            <tr>
-                      				<td>TargetElevation</td>
-                      				<td>Returns the line-of-sight angle to the selected target, relative to the position of your cockpit, in degrees. Note that this is <b>global</b>, meaning that it is not relative to your PitchAngle. <a href="https://i.imgur.com/AxpEbG4.png">View an explanatory diagram here.</a></td>
-                      				<td>(-90~90)</td>
-                      			</tr>
-                            <tr>
-                      				<td>TargetDistance</td>
-                      				<td>Returns the line-of-sight distance to the selected target, relative to the position of your cockpit, in meters.</td>
-                      				<td>(0~inf)</td>
-                      			</tr>
-                      		</table>
-                      </div>
-                			</li>
-
-                            <br>
-
-                            <!--Boolean Variables-->
-                            <li>
-                			<div id="boolvar">
-                      	<h5>2. Boolean-type Variables</h5>
-                      	<hr>
-                      		<p>
-                      			Booleans were previously inconsistent in Funky Trees due to a couple errors. The system has been revamped completely, removing the root source of that error. Now, if you only use boolean statements independent of other data types, you will get the value <code>true</code> or <code>false</code>. If you use booleans in conjunction with the number data type, they will automatically convert to 1 or -1 (true or false respectively). That also means, in the table down below, all the booleans can also be considered to have a possible range of values of -1 or 1.
-                      			<b>TL;DR: All boolean data type variables return either true or false, or 1 or -1 depending on its usage. This makes these logically consistent. </b>
-                      			The following is a list of all number type variables and their possible values.
-                      		</p>
-                      		<table class="table" style="width:100%">
-                      			<tr>
-                      				<th>Variable</th>
-                      				<th>Variable Description</th>
-                      				<th>Range of Values</th>
-                      			</tr>
-                      			<tr>
-                      				<td>GearDown</td>
-                      				<td>Whether or not landing gear is on or off</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>FireGuns</td>
-                      				<td>Whether or not guns button is pressed</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>FireWeapons</td>
-                      				<td>Whether or not fire ordnance button is pressed</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>LaunchCountermeasures</td>
-                      				<td>Whether or not launch countermeasures button is pressed</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate1</td>
-                      				<td>Whether or not activation group 1 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate2</td>
-                      				<td>Whether or not activation group 2 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate3</td>
-                      				<td>Whether or not activation group 3 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate4</td>
-                      				<td>Whether or not activation group 4 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate5</td>
-                      				<td>Whether or not activation group 5 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate6</td>
-                      				<td>Whether or not activation group 6 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate7</td>
-                      				<td>Whether or not activation group 7 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                      			<tr>
-                      				<td>Activate8</td>
-                      				<td>Whether or not activation group 8 is on</td>
-                      				<td><code>true</code> / <code>false</code></td>
-                      			</tr>
-                            <tr>
-                              <td>TargetSelected</td>
-                              <td>Whether or not a target is selected</td>
-                              <td><code>true</code> / <code>false</code></td>
-                            </tr>
-                      		</table>
-                      </div>
-                			</li>
-                			<li>
-                			<!--String variables-->
-                			<div id="stringvar">
-                				<h5>3. String-type Variables</h5>
-                      	<hr>
-                      		<p>
-                      			Simply put, strings are just lines of text, like "text". The number of actual strings datatype <b>variables</b> is technically only one as of the time of writing. However, whatever you make your string- be it “this string” or “that string”- are all valid strings. Strings don't really have a large variety of applications right now, but they can be useful.
-                      		</p>
-                      		<table class="table" style="width:100%">
-                      			<tr>
-                      				<th>Variable</th>
-                      				<th>Variable Description</th>
-                      			</tr>
-                      			<tr>
-                      				<td>SelectedWeapon</td>
-                      				<td>Outputs the name of the selected weapon in the weapons drawer as a string, e.g. "Boom 50", "Cannon"</td>
-                      			</tr>
-                      		</table>
-                			</div>
-                			</li>
-                		</ol>
+                        <li>
+                          <div id="partvariables">
+                            <h5>2. Part Variables</h5>
+                            <hr>
+                            <p>
+                              Part variables are arguably less useful, but can prove crucial when you have various components of your craft doing different things, or want special kinds of data available to you. You can access them by first selecting a part in the editor, pressing the edit button <img src="/funkyguide/images/edit.png" alt="edit" height="16em">, then the part variables button <img src="/funkyguide/images/variablesetters.png" alt="variablebutton" height="16em">, which looks identical to its normal setter counterpart. Open it, and you will see the following kind of menu appear: 
+                            </p>
+                            <hr>
+                            <img src="/funkyguide/images/partvariables.png" alt="partvariablesmenu" height="250em">
+                            <hr>
+                            <p>
+                              The labels indicate what kind of data that setter represents, but the method for using these setters are identical to the normal ones described earlier. For example, for the cockpit part, if you use the setter for "Altitude" and call it <kbd>x</kbd>, <kbd>x</kbd> will now hold the value of that cockpit part's altitude. These also have the same priority and activator options like their normal brethren. Now, not all kinds of parts have part variables, and each type of part typically has different types of data accessible. As a quick note, from empirical testing, it has been found that without any priority or activator modifications, any part variables are evaluted last, after your normal setters are finished calculating.
+                            </p>
+                            <p>
+                              For a quick overview of which parts have what kinds of part variables that can be set, refer to the graphic below. This graphic is not exhaustive and you should check for yourself to see what part variables are available for any given part.
+                            </p>
+                            <hr>
+                            <img src="/funkyguide/images/PartOuptuts.png" alt="PartOuptuts" height="250em">
+                            <hr>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                    
                 </div>
                 <br>
 
@@ -1310,7 +1408,7 @@
       <!-- Footer -->
       <footer class="page-footer font-small">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020-2021 Copyright:
+        <div class="footer-copyright text-center py-3">© 2020-2022 Copyright:
           <p> Joshua Eah "SnoWFLakE0s"</p>
         </div>
         <!-- End of Copyright -->

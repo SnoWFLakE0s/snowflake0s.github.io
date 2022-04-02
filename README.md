@@ -19,5 +19,4 @@ Website went through a full renovation on March 23 2020, in order to create a FT
 
 <h2>To-do</h2>
 
-* Update for update 1.11 (add information on labels in section 4"C").
 * Currently adding a separate documentation page on labels.

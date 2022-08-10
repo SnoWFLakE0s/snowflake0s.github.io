@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Tab Name-->
+  <title>Funky Trees - Tutorial</title>
+  <!--Website Description-->
+  <meta name="description" content="The ultimate reference resource for Funky Trees">
+  <!--meta info-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/logo.png" type="image/x-icon">
+  <!--BootStrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Web Theme-->
+  <link rel="stylesheet" href="/bootstrap.css">
+  <!--Font Awesome Kit-->
+  <script src="https://kit.fontawesome.com/d2c4222f7a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Navigation Bar-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/images/logo.png" alt="Snow's Logo" style="height:1.5em; padding-right:0.25em; position:relative; top:-0.1em;"> SnoWFLakE0s' Page
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Funky
+              Trees </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/funkytrees/docs/"><b>Documentation</b></a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/funkytrees/docs/reference/">FT Reference</a></li>
+              <li><a class="dropdown-item" href="/funkytrees/docs/tutorial/">FT Tutorial</a></li>
+              <li><a class="dropdown-item" href="/funkytrees/docs/tutorial/">FT Library</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#"><b>Resources</b></a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/funkytrees/programs/">FT Apps</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <!--Mobile Offcanvas Open Button-->
+    <div class="fixed-bottom" style="position: fixed; bottom: 1em; left: 0em;">
+      <button class="btn btn-light d-md-none mobile-offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i
+           class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <div class="row pt-4">
+      <!--Mobile Offcanvas Sidenav-->
+      <div class="d-md-none">
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="mobileNav">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav flex-column pl-4">
+              <li class="nav-item">
+                <h5><b>Contents</b></h5>
+              </li>
+              <li class="nav-item sidenav-item"><a href="#header" class="unlink">2. Using the Input Dialog or the Console Debugger</a>
+              </li>
+              <li class="nav-item sidenav-item"><a href="#inputdialog" class="unlink">2.A. Using the input Dialog</a></li>
+              <li class="nav-item sidenav-item"><a href="#debugger" class="unlink">2.B. Using the Console Debugger</a></li>
+              <br>
+              <li class="nav-item">
+                <h5><b>Navigation</b></h5>
+              </li>
+              <li class="nav-item sidenav-item"><a href="/funkytrees/docs/tutorial/" class="unlink">Tutorial Home</a></li>
+              <li class="nav-item sidenav-item"><a href="/funkytrees/docs/tutorial/introduction/" class="unlink">Previous Section</a>
+              </li>
+              <li class="nav-item sidenav-item"><a href="/funkytrees/docs/tutorial/syntax/" class="unlink">Next Section</a></li>
+              <br>
+              <li class="nav-item">
+                <h5><b>Options</b></h5>
+              </li>
+              <li class="nav-item sidenav-item"><a href="/funkytrees/docs/" class="unlink">Docs Home</a></li>
+              <li class="nav-item sidenav-item"><a href="#" class="unlink">Back to Top</a></li>
+              <li class="nav-item sidenav-item"><a href="mailto:inventor1234567890@gmail.com" class="unlink">Report an Issue</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Table of Contents (Desktop)-->
+      <div class="col-sm-2 d-none d-md-block">
+        <ul class="nav flex-column sticky-top pl-4" style="top: 7.5em;">
+          <li class="nav-item">
+            <h5><b>Contents</b></h5>
+          </li>
+          <li class="nav-item sidenav-item"><a href="#header" class="unlink">2. Using the Input Dialog or the Console Debugger</a></li>
+          <li class="nav-item sidenav-item"><a href="#inputdialog" class="unlink">2.A. Using the input Dialog</a></li>
+          <li class="nav-item sidenav-item"><a href="#debugger" class="unlink">2.B. Using the Console Debugger</a></li>
+          <br>
+          <li class="nav-item">
+            <h5><b>Navigation</b></h5>
+          </li>
+          <li class="nav-item sidenav-item"><a href="/funkytrees/docs/tutorial/" class="unlink">Tutorial Home</a></li>
+          <li class="nav-item sidenav-item"><a href="/funkytrees/docs/tutorial/introduction/" class="unlink">Previous Section</a></li>
+          <li class="nav-item sidenav-item"><a href="/funkytrees/docs/tutorial/syntax/" class="unlink">Next Section</a></li>
+          <br>
+          <li class="nav-item">
+            <h5><b>Options</b></h5>
+          </li>
+          <li class="nav-item sidenav-item"><a href="/funkytrees/docs/" class="unlink">Docs Home</a></li>
+          <li class="nav-item sidenav-item"><a href="#" class="unlink">Back to Top</a></li>
+          <li class="nav-item sidenav-item"><a href="mailto:inventor1234567890@gmail.com" class="unlink">Report an Issue</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="col-sm-10">
+        <div id="header" class="px-4">
+          <h4>2. Using the Input Dialog / Debugger</h4>
+          <p><a href="/funkytrees/docs/">docs</a> / <a href="/funkytrees/docs/tutorial/">tutorial</a> / <a
+               href="/funkytrees/docs/tutorial/console/">console</a> /</p>
+          <p><small><i>Written by SnoWFLakE0s</i></small></p>
+          <hr>
+          <p> As it would most certainly be beneficial to know <i>where</i> to even write Funky Trees code, this section will walk you through the
+            various means of accessing the places that Funky Trees code can be written. There largely are two types of interfaces you can use: the
+            input interface, and the console debugger. The input dialog is used to actually execute and control a part with your code, while the
+            debugger allows you to very easily see and experiment with Funky Trees code without actually having to have any physical parts. </p>
+        </div>
+        <div id="inputdialog" class="px-4 pt-4">
+          <h5>A. Using the <code>input</code> Dialog</h5>
+          <hr>
+          <p> The <kbd>input</kbd> property is an attribute that controls the behavior of the vast majority of dynamic SimplePlanes parts. As an
+            XML property, it can be accessed through three standard ways: </p>
+          <ul class="list">
+            <li>Part properties menu</li>
+            <li>Overload editor mod</li>
+            <li>Direct XML editing</li>
+          </ul>
+          <p> Any of these three methods are reliable and will give you the same results, but with differing degrees of ease-of-use. The part
+            properties menu is the easiest to access (and is also the newest method of access on this list). Simply select the part you want
+            to program, and click the part properties icon: <img src="./images/partproperties.png" alt="part-properties" style="height: 1em;"></p>
+          <p> This will bring up a sidebar menu, from which you can find the <code>inputController</code> dialog, which will look like the below: <a
+               href="#input-controller" data-bs-toggle="collapse">[Show image]</a></p>
+          <div id="input-controller" class="collapse text-center my-1"><img src="./images/inputcontroller.png" alt="input-controller"
+                 style="height: 10em;"></div>
+          <p> Now simply <kbd>Ctrl + Click</kbd> on the <code>input</code> field to open up the input property editor, to which you can write Funky
+            Trees code. <a href="#input-editor" data-bs-toggle="collapse">[Show image]</a></p>
+          <div id="input-editor" class="collapse text-center my-1"><img src="./images/inputeditor.png" alt="input-editor" style="height: 20em;">
+          </div>
+          <p> If you wish to utilize the Overload XML editor mod, you can do so by simply opening SimplePlanes, pressing the <kbd>MODS</kbd> tab, and
+            enabling <kbd>OVERLOAD</kbd>. You can then enter the designer, from which you will be able to see the Overload icon: <img
+                 src="./images/overload.png" alt="overload" style="height: 1em;"></p>
+          <p> Now select the part you wish to program, click the open the menu and select the <code>inputController</code> group. The
+            <code>input</code> attribute should be visible. You can insert/write your code into the value field and click the check button to save your
+            changes. </p>
+          <p> As this tutorial is not meant to be a general XML editing tutorial, the procedure for editing raw aircraft XML files will not be
+            covered. However, the procedure remains identical: find the part you wish to program, find the <code>inputController</code> group of
+            attributes, and edit the value of the <code>input</code> property. Any general purpose text editor program can be used for this task.</p>
+          <p> Regardless of the method used to input code into a part, once it is saved with code, SimplePlanes will attempt to control the part
+            according to the code inside as soon as the level is loaded. There is no manual execution needed to "start" code execution within a
+            component. </p>
+          <p> To see for yourself how the input dialog works, use any of the methods above to create a rotator with the <code>input</code> of
+            <code>Time</code>. Once loaded in the level, you will be able to see the rotator continually rotates. </p>
+        </div>
+        <div id="debugger" class="px-4 pt-4">
+          <h5>B. Using the Console Debugger</h5>
+          <hr>
+          <script>
+            var timerVariable = setInterval(countUpTimer, 1);
+            var milliSeconds = 0;
+
+            function countUpTimer() {
+              milliSeconds = milliSeconds + 4;
+              if (milliSeconds > 300000) {
+                timerVariable = clearInterval(timerVariable);
+              }
+              var seconds = milliSeconds / 1000;
+              var secondsAdd = seconds + 4;
+              var finalResult = seconds / secondsAdd;
+              document.getElementById("timeDisplay").innerHTML = "Time: " + seconds.toFixed(3);
+              document.getElementById("operand_1").innerHTML = "(Time): " + seconds.toFixed(3);
+              document.getElementById("operand_2").innerHTML = "(Time + 4): " + secondsAdd.toFixed(3);
+              document.getElementById("mathResult").innerHTML = "(Time)/(Time + 4): " + finalResult.toFixed(3);
+            }
+          </script>
+          <p> The <i>console debugger</i> is a little display item you can generate via the <kbd>DebugExpression</kbd> command. It is well-suited for
+            testing new Funky Trees code, testing parts of existing code, or even doing some basic telemetry without setting up other measuring devices.
+          </p>
+          <p> To use the console debugger, you must first open the console, which you can do by pressing the tilde key [<kbd>`</kbd>] on
+            Windows/macOS. For mobile platforms, you must first enable the console by going to the Settings tab in the main menu, and tapping the word
+            <kbd>SETTINGS</kbd> 5 times. Then, you can open the console at any time by tapping the screen with three fingers. Whichever method is
+            used, opening the console will bring up a input field that accepts text inputs. Type the command <code>DebugExpression</code>, add a
+            space, and open with a double quotation. Now write any Funky Trees code you wish to test, and close with another double quotation.
+            Finally, press enter to execute the console command. </p>
+          <p> As an example, let's try the expression <code>Time</code> in order to check the elapsed simulation time. As with standard written
+            programming notation, a command is indicated by three preceding greater-than signs: <kbd>>>></kbd>, and the results of the command is
+            displayed on the next line.</p>
+          <ul class="list-group py-1">
+            <li class="list-group-item">>>> <kbd>DebugExpression "Time"</kbd><br><code id="timeDisplay">Time: 0.000</code></li>
+          </ul>
+          <br>
+          <p> If you did all of this properly, you should be able to see a small window in the top-left corner of the screen with the expression and
+            the value of the expression. Note, this window is only visible while in the sandbox and not in the designer or otherwise. The console
+            debugger is incredibly useful as it not only allows you to easily check that your code is written to standard, it also allows you to
+            directly view the value your expression will evaluate to. </p>
+          <p> By looking at the actual value of the code, it becomes clear why a rotator with this code will continually rotate--the value of <code>Time</code>
+            simply keeps increasing. When you build more complex code, for example if we were to do some math with our <code>Time</code> value, the
+            console debugger can even be used to break down a larger expression into subcomponents to get a better idea of what each part of the
+            entire expression is doing. </p>
+          <p> For this example, let's try adding 4 to our original <code>Time</code> value, then dividing <code>Time</code> by this new added value.
+            That will give us the expression <code>(Time)/(Time + 4)</code>. We will use the console debugger on each part of the division to see what
+            each is doing, and the actual full expression. </p>
+          <ul class="list-group py-1">
+            <li class="list-group-item">>>> <kbd>DebugExpression "(Time)"</kbd><br><code id="operand_1">(Time): 0.000</code></li>
+            <li class="list-group-item">>>> <kbd>DebugExpression "(Time + 4)"</kbd><br><code id="operand_2">(Time + 4): 0.000</code></li>
+            <li class="list-group-item">>>> <kbd>DebugExpression "(Time)/(Time + 4)"</kbd><br><code id="mathResult">(Time)/(Time + 4): 0.000</code>
+            </li>
+          </ul>
+          <br>
+          <p> Throughout this tutorial the proper usage of both <code>input</code> and the console debugger is recommended. Now you are well equipped
+            to not only try the various examples available, but also actually begin programming in Funky Trees! </p>
+        </div>
+        <!--Adsense-->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+             data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
+        </ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!--End of Adsense-->
+      </div>
+    </div>
+  </div>
+  <!--Footer Container-->
+  <div class="container-fluid">
+    <!-- Footer -->
+    <footer class="page-footer font-small">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020-2022 Copyright: <p> Joshua Eah "SnoWFLakE0s"</p>
+      </div>
+      <!-- End of Copyright -->
+    </footer>
+    <!-- End of Footer -->
+  </div>
+  <!--End of Footer Container-->
+</body>
+
+</html>

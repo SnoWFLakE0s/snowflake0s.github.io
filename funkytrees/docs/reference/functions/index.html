@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Tab Name-->
+    <title>Funky Trees Docs - Functions</title>
+    <!--Website Description-->
+    <meta name="description" content="The ultimate reference resource for Funky Trees">
+    <!--meta info-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <!--BootStrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Web Theme-->
+    <link rel="stylesheet" href="/bootstrap.css">
+    <!--Font Awesome Kit-->
+    <script src="https://kit.fontawesome.com/d2c4222f7a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/logo.png" alt="Snow's Logo" style="height:1.5em; padding-right:0.25em; position:relative; top:-0.1em;"> SnoWFLakE0s'
+                Page </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto my-2 my-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false"> Funky Trees </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/funkytrees/docs/"><b>Documentation</b></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/funkytrees/docs/reference/">FT Reference</a></li>
+                            <li><a class="dropdown-item" href="/funkytrees/docs/tutorial/">FT Tutorial</a></li>
+                            <li><a class="dropdown-item" href="/funkytrees/docs/tutorial/">FT Library</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><b>Resources</b></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/funkytrees/programs/">FT Apps</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!--Mobile Offcanvas Open Button-->
+        <div class="fixed-bottom" style="position: fixed; bottom: 1em; left: 0em;">
+            <button class="btn btn-light d-md-none mobile-offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i
+                   class="fa-solid fa-angle-right"></i></button>
+        </div>
+        <div class="row pt-4">
+            <!--Mobile Offcanvas Sidenav-->
+            <div class="d-md-none">
+                <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="mobileNav">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="nav flex-column pl-4">
+                            <li class="nav-item">
+                                <h5><b>Contents</b></h5>
+                            </li>
+                            <li class="nav-item sidenav-item"><a href="#parts" class="unlink">Table of Contents</a></li>
+                            <li class="nav-item sidenav-item"><a href="#about" class="unlink">About</a></li>
+                            <br>
+                            <li class="nav-item">
+                                <h5><b>Options</b></h5>
+                            </li>
+                            <li class="nav-item sidenav-item"><a href="#" class="unlink">Back to top</a></li>
+                            <li class="nav-item sidenav-item"><a href="mailto:inventor1234567890@gmail.com" class="unlink">Report an issue</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--Table of Contents (Desktop)-->
+            <div class="col-sm-2 d-none d-md-block">
+                <ul class="nav flex-column sticky-top pl-4" style="top: 7.5em;">
+                    <li class="nav-item">
+                        <h5><b>Contents</b></h5>
+                    </li>
+                    <li class="nav-item sidenav-item"><a href="#parts" class="unlink">Table of Contents</a></li>
+                    <li class="nav-item sidenav-item"><a href="#about" class="unlink">About</a></li>
+                    <br>
+                    <li class="nav-item">
+                        <h5><b>Options</b></h5>
+                    </li>
+                    <li class="nav-item sidenav-item"><a href="#" class="unlink">Back to top</a></li>
+                    <li class="nav-item sidenav-item"><a href="mailto:inventor1234567890@gmail.com" class="unlink">Report an issue</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10">
+                <div id="about" class="px-4">
+                    <h4>Funky Trees Functions</h4>
+                    <p><a href="/funkytrees/docs/">docs</a> / <a href="/funkytrees/docs/reference/">reference</a> / <a
+                           href="/funkytrees/docs/reference/functions/">functions</a> /</p>
+                    <hr>
+                    <p> Now is the time to jog your brain for actual school math: remember functions? All that f(x) and g(x) and stuff? Well, now it's
+                        in SimplePlanes, and you can use it to do cool stuff. Functions are special objects that take in <code>inputs</code> and
+                        return an <code>output</code>, each depending on what the function does. Functions, in Funky Trees, are designed like so: </p>
+                    <div class="text-center">
+                        <p>function(input)</p>
+                    </div>
+                    <p> Functions are defined to the system by the function name- in the example, the word <code>'function'</code>. Functions also
+                        have one more crucial attribute: they also have an <code>'input'</code> within the parentheses following the function name.
+                        Some functions take more than one input, for example, the <code>clamp</code> function takes inputs in the form of
+                        <code>clamp(x, a, b)</code>. Functions can only take specific datatypes as inputs (which is why I previously covered the data
+                        types)- there are functions that only accept <code>string</code>-type data as inputs, like the <code>ammo</code> function. The
+                        following is a list of all available functions as of game version 1.9.205. The following is simply for reference. </p>
+                    <!--Reference Functions List-->
+                    <table class="table-borderless text-center" style="width:100%">
+                        <tr>
+                            <td>abs()</td>
+                            <td>ceil()</td>
+                            <td>clamp()</td>
+                            <td>deltaangle()</td>
+                            <td>exp()</td>
+                            <td>floor()</td>
+                            <td>inverselerp()</td>
+                            <td>lerp()</td>
+                            <td>lerpangle()</td>
+                            <td>lerpunclamped()</td>
+                        </tr>
+                        <tr>
+                            <td>log()</td>
+                            <td>log10()</td>
+                            <td>pingpong()</td>
+                            <td>max()</td>
+                            <td>min()</td>
+                            <td>pow()</td>
+                            <td>repeat()</td>
+                            <td>round()</td>
+                            <td>sign()</td>
+                            <td>smoothstep()</td>
+                        </tr>
+                        <tr>
+                            <td>sqrt()</td>
+                            <td>sin()</td>
+                            <td>cos()</td>
+                            <td>tan()</td>
+                            <td>asin()</td>
+                            <td>acos()</td>
+                            <td>atan()</td>
+                            <td>rate()</td>
+                            <td>sum()</td>
+                            <td>smooth()</td>
+                        </tr>
+                        <tr>
+                            <td>PID()</td>
+                            <td>ammo()</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p> Moreover, each function acts in unique ways, which is how they are classified in the following few subsections. </p>
+                    <br>
+                    <!--Function Subsections-->
+                    <div id="collapsibleSections" class="accordion accordion-flush">
+                        <div id="functions-numbers" class="accordion-item">
+                            <h5 id="functions-numbers-heading" class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#functions-numbers-collapse">
+                                    Number-based Functions </button>
+                            </h5>
+                            <div id="functions-numbers-collapse" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p> Number based functions are the most conceptually simple. It takes inputs that would be classified under the
+                                        ‘number’ data type, and outputs a ‘number’ data type. However, if you recall Section 2A, it was mentioned that
+                                        booleans can be converted to a number of 1 or -1 (true or false)- this means that number based functions
+                                        <em>can</em> take boolean inputs, but note that the number function is taking not the boolean themselves as
+                                        input, but only the number-converted boolean. A number function will not take a string input, like the string
+                                        <code>"thisstring"</code>. They will also only ouput a number, i.e. a number function might take the value 1
+                                        and output 0.2. </p>
+                                    <p> The following table organizes all the number based functions, their input syntax, and their usage. </p>
+                                    <table class="table" id="numberfunctionstable" style="width:100%">
+                                        <tr>
+                                            <th>Function Name/Syntax</th>
+                                            <th>Usage</th>
+                                        </tr>
+                                        <tr>
+                                            <td>abs(x)</td>
+                                            <td>The absolute (positive) value of x.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ceil(x)</td>
+                                            <td>x rounded up to an integer. Note that ceil() always rounds <i>away</i> from zero for positive numbers,
+                                                but <i>towards</i> zero for negative numbers.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>clamp(x, min, max)</td>
+                                            <td>x clamped between min and max.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>clamp01(x)</td>
+                                            <td>x clamped between 0 and 1. Equivalent to clamp(x, 0, 1)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>deltaangle(a, b)</td>
+                                            <td>The smallest angle delta between angles a and b in degrees.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>exp(x)</td>
+                                            <td>Returns e raised to the power of x.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>floor(x)</td>
+                                            <td>x rounded down to an integer. floor() always rounds <i>towards</i> zero for positive numbers, but
+                                                <i>away</i> from zero for negative numbers.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>inverselerp(a, b, x)</td>
+                                            <td>Calculates the linear parameter t that produces the interpolant value within the range [a, b].</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lerp(a, b, t)</td>
+                                            <td>Linearly interpolates between a and b, by a proportion of t.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lerpangle(a, b, t)</td>
+                                            <td>Similar to lerp, but interpolates correctly when values pass 360 degrees.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lerpunclamped(a, b, t)</td>
+                                            <td>Similar to lerp, but doesn't clamp the value between a and b.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>log(x, p)</td>
+                                            <td>The logarithm of x in base p.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>log10(x)</td>
+                                            <td>Equivalent to log(x, 10).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pingpong(x, l)</td>
+                                            <td>"Ping-pongs" the value x so it is never larger than l and never less than 0.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>max(a, b)</td>
+                                            <td>The largest value between a and b.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>min(a, b)</td>
+                                            <td>The smallest value between a and b.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pow(x, p)</td>
+                                            <td>x raised to the power of p.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>repeat(x, l)</td>
+                                            <td>Loops the value x so it is never larger than l and never less than 0. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>round(x)</td>
+                                            <td>Rounds x to the nearest integer.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sign(x)</td>
+                                            <td>The sign of x (1 if x positive, -1 if x negative)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>smoothstep(a, b, t)</td>
+                                            <td>Similar to lerp, but with smoothing at the ends.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sqrt(x)</td>
+                                            <td>The square root of x.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sin(x)</td>
+                                            <td>The sine of x (degrees)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cos(x)</td>
+                                            <td>The cosine of x (degrees)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tan(x)</td>
+                                            <td>The tangent of x (degrees)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>asin(x)</td>
+                                            <td>The arc-sine of x (degrees)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>acos(x)</td>
+                                            <td>The arc-cosine of x (degrees)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>atan(x)</td>
+                                            <td>The arc-tangent of x (degrees)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="functions-time" class="accordion-item">
+                            <h5 id="functions-time-heading" class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#functions-time-collapse">
+                                    Time-based Functions </button>
+                            </h5>
+                            <div id="functions-time-collapse" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p> These functions were added in game version 1.9.2. These are functions that measure things with respect to
+                                        time. In particular, the rate and sum functions are the FT equivalent of derivatives (d/dx) and integrals
+                                        (&#8747;dx), which enables the creation of far advanced inputs. These functions can be greatly useful but most
+                                        things can be done without them, so do not fret- if your math is on the level to understand derivatives and
+                                        integrals, then you don’t really need much explanation on what these will do. We're not working with variable
+                                        expressions, so more of the academic calculus like the power rule is pretty much useless- you will really only
+                                        be utilizing the practical application of them. </p>
+                                    <table class="table" id="timefunctionstable" style="width:100%">
+                                        <tr>
+                                            <th>Function Name/Syntax</th>
+                                            <th>Usage</th>
+                                        </tr>
+                                        <tr>
+                                            <td>rate(x)</td>
+                                            <td>The rate of change of x.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sum(x)</td>
+                                            <td>The integration of x over time. Time starts from level load (no integration bounds can be specified).
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>smooth(x, rate)</td>
+                                            <td>The output follows x, but only at a maximum speed of <code>rate</code> units per second. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>PID(target, current, p, i, d)</td>
+                                            <td>A PID controller with the parameters p, i and d. <a
+                                                   href="https://en.wikipedia.org/wiki/PID_controller">Read more about PID controllers on
+                                                    Wikipedia.</a> <a href="/funkyguide/pidtuning/">Read a quick beginner's guide on tuning PIDs.</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="functions-strings" class="accordion-item">
+                            <h5 id="functions-strings-heading" class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#functions-strings-collapse">
+                                    String-based Functions </button>
+                            </h5>
+                            <div id="functions-strings-collapse" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p> There's currently only one string-based function as of version 1.1.104- it’s the <code>ammo()</code> function.
+                                        Since it takes a string as input, that also means that the input the ammo function can be a string-type
+                                        variable- i.e. the <code>SelectedWeapon</code> variable. </p>
+                                    <table class="table" id="stringfunctionstable">
+                                        <tr>
+                                            <th>Function Name/Syntax</th>
+                                            <th>Usage</th>
+                                        </tr>
+                                        <tr>
+                                            <td>ammo("string")</td>
+                                            <td>The amount of ammo left for the weapon “someweaponname”. That is, whatever the name of your weapon is,
+                                                is the string you want to input into “string”, to which the function will return the amount of
+                                                remaining ammo.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Adsense-->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+                     data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
+                </ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <!--End of Adsense-->
+            </div>
+        </div>
+    </div>
+    <!--Footer Container-->
+    <div class="container-fluid">
+        <!-- Footer -->
+        <footer class="page-footer font-small">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020-2022 Copyright: <p> Joshua Eah "SnoWFLakE0s"</p>
+            </div>
+            <!-- End of Copyright -->
+        </footer>
+        <!-- End of Footer -->
+    </div>
+    <!--End of Footer Container-->
+</body>
+
+</html>

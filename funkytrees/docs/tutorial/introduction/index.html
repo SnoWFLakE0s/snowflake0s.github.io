@@ -29,7 +29,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar">
+      <div class="collapse navbar-collapse" id="navbar" style="z-index: 10000;">
         <ul class="navbar-nav me-auto my-2 my-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Funky
@@ -56,11 +56,10 @@
       </div>
     </div>
   </nav>
-  <div class="container">
+  <div class="container-fluid" style="padding-left: 3em;">
     <!--Mobile Offcanvas Open Button-->
     <div class="fixed-bottom" style="position: fixed; bottom: 1em; left: 0em;">
-      <button class="btn btn-light d-md-none mobile-offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i
-           class="fa-solid fa-angle-right"></i></button>
+      <button class="btn btn-light d-md-none mobile-offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i class="fa-solid fa-angle-right"></i></button>
     </div>
     <div class="row pt-4">
       <!--Mobile Offcanvas Sidenav-->
@@ -75,7 +74,7 @@
               <li class="nav-item">
                 <h5><b>Contents</b></h5>
               </li>
-              <li class="nav-item sidenav-item"><a href="#introduction" class="unlink">Introduction</a></li>
+              <li class="nav-item sidenav-item"><a href="#introduction" class="unlink">1. Introduction</a></li>
               <br>
               <li class="nav-item">
                 <h5><b>Navigation</b></h5>
@@ -95,11 +94,11 @@
       </div>
       <!--Table of Contents (Desktop)-->
       <div class="col-sm-2 d-none d-md-block">
-        <ul class="nav flex-column sticky-top pl-4" style="top: 7.5em;">
+        <ul class="nav flex-column sticky-top pl-4" style="top: 6em; z-index: 1;">
           <li class="nav-item">
             <h5><b>Contents</b></h5>
           </li>
-          <li class="nav-item sidenav-item"><a href="#introduction" class="unlink">Introduction</a></li>
+          <li class="nav-item sidenav-item"><a href="#introduction" class="unlink">1. Introduction</a></li>
           <br>
           <li class="nav-item">
             <h5><b>Navigation</b></h5>
@@ -119,68 +118,42 @@
       <div class="col-sm-10">
         <div id="introduction" class="px-4">
           <h4>1. Introduction</h4>
-          <p><a href="/funkytrees/docs/">docs</a> / <a href="/funkytrees/docs/tutorial/">tutorial</a> / <a
-               href="/funkytrees/docs/tutorial/introduction/">introduction</a> /</p>
+          <p><a href="/funkytrees/docs/">docs</a> / <a href="/funkytrees/docs/tutorial/">tutorial</a> / <a href="/funkytrees/docs/tutorial/introduction/">introduction</a> /</p>
           <p><small><i>Written by SnoWFLakE0s</i></small></p>
           <hr>
-          <p> If you're an avid SimplePlanes builder, eventually you find there exists some task you’d like to automate. For example, you may wish to
-            have a sequence of rotators move in a programmed sequence, or activate certain parts of your craft for a set of precisely defined
-            conditions. Perhaps you’d like to store some data for avionics and telemetry, or a specialized HUD for your cockpit, or even a simple game.
+          <p> If you're an avid SimplePlanes builder, eventually you find there exists some task you'd like to automate. For example, you may wish to have a sequence of rotators move in a programmed sequence, or activate certain parts of your craft for a set of precisely defined conditions. Perhaps you'd like to store some data for avionics and telemetry, or a specialized HUD for your cockpit, or even a simple game.
           </p>
           <p> Funky Trees is just what you need. </p>
-          <p> You could use a complex mechanism like a group of rotators, linkages and pistons to perform some of these tasks, but physical mechanisms
-            are best suited for interaction with the environment, and not well-suited for inter-craft control or precision operation. You could try
-            and go through with such a design, but it can take a lot of development time to get even a working system. Funky Trees is simpler to use,
-            available on all platforms, and will help you get the job done more quickly and accurately. </p>
-          <p> Funky Trees is simple in design, but it is a real programming language, offering much more structure and support for large programs than
-            simple input controlling (v1.7-style technology) can offer. On the other hand, Funky Trees is very different from anything else in
-            SimplePlanes, and will take some getting used to—but allows you to rapidly change and modify behaviors of parts however you wish with a
-            couple extra words: a far more modular and scalable approach than physical mechanisms. </p>
-          <p> One could label Funky Trees as an expression-oriented programming language, in which every (or nearly every) construction is an
-            expression and thus yields a value. The console debugger can be used without having any actual code built inside your craft, which makes
-            it easy to experiment with features of the language, to test segments of a larger program, or to get quick telemetry for your craft’s
-            performance. It is also a handy calculator for in-sandbox usage. </p>
-          <p> Funky Trees is very portable: once you program a part with some Funky Trees code, that code stays within the part, and can easily be
-            saved as a subassembly for repeated deployment across multiple builds. If you’re looking to compress your long expressions, variables can
-            make code modular and compact. Once you are really hooked, you can even use variable based logic to do recursive processing for
-            higher-level data manipulation. </p>
-          <p> By the way, the language was primarily built by WNP78, one of SimplePlanes’ developers, and named Funky Trees after lead developer
-            Andrew Garrison decided so. He likely was referring to how FT was initially conceived, in the form of various connected nodes in the
-            manner of a tree. What makes it “funky” we don’t quite know yet, but you are free to make your Funky Trees as funky as needed. </p>
-          <p> Now that you are all excited about Funky Trees, you’ll want to examine it in some more detail. Since the best way to learn a language is
-            to use it, this tutorial invites you to play with the debugger/inputController as you read. </p>
-          <p> In the next chapter, the mechanics of using the console debugger and the inputController interface are explained. This is rather mundane
-            information, but essential for trying out the examples shown later. </p>
-          <p> The rest of the tutorial introduces various features of the Funky Trees language and system through examples, beginning with simple
-            expressions, statements and data types, through functions, and finally touching upon advanced concepts like hardware interfacing and
-            dynamic control. </p>
+          <p> You could use a complex mechanism like a group of rotators, linkages and pistons to perform some of these tasks, but physical mechanisms are best suited for interaction with the environment, and not well-suited for inter-craft control or precision operation. You could try and go through with such a design, but it can take a lot of development time to get even a working system. Funky Trees is simpler to use, available on all platforms, and will help you get the job done more quickly and accurately. </p>
+          <p> Funky Trees is simple in design, but it is a real programming language, offering much more structure and support for large programs than simple input controlling (v1.7-style technology) can offer. On the other hand, Funky Trees is very different from anything else in SimplePlanes, and will take some getting used to—but allows you to rapidly change and modify behaviors of parts however you wish with a couple extra words: a far more modular and scalable approach than physical mechanisms. </p>
+          <p> One could label Funky Trees as an expression-oriented programming language, in which every (or nearly every) construction is an expression and thus yields a value. The console debugger can be used without having any actual code built inside your craft, which makes it easy to experiment with features of the language, to test segments of a larger program, or to get quick telemetry for your craft's performance. It is also a handy calculator for in-sandbox usage. </p>
+          <p> Funky Trees is very portable: once you program a part with some Funky Trees code, that code stays within the part, and can easily be saved as a subassembly for repeated deployment across multiple builds. If you're looking to compress your long expressions, variables can make code modular and compact. Once you are really hooked, you can even use variable based logic to do recursive processing for higher-level data manipulation. </p>
+          <p> By the way, the language was primarily built by WNP78, one of SimplePlanes' developers, and named Funky Trees after lead developer Andrew Garrison decided so. He likely was referring to how FT was initially conceived, in the form of various connected nodes in the manner of a tree. What makes it “funky” we don't quite know yet, but you are free to make your Funky Trees as funky as needed. </p>
+          <p> Now that you are all excited about Funky Trees, you'll want to examine it in some more detail. Since the best way to learn a language is to use it, this tutorial invites you to play with the debugger/inputController as you read. </p>
+          <p> In the next chapter, the mechanics of using the console debugger and the inputController interface are explained. This is rather mundane information, but essential for trying out the examples shown later. </p>
+          <p> The rest of the tutorial introduces various features of the Funky Trees language and system through examples, beginning with simple expressions, statements and data types, through functions, and finally touching upon advanced concepts like hardware interfacing and dynamic control. </p>
           <hr>
           <p><small><i>This page draws significiant inspiration from the Python 3 Documentation.</i></small></p>
         </div>
         <!--Adsense-->
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
-             data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
         </ins>
         <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         <!--End of Adsense-->
+        <!-- Footer -->
+        <footer class="page-footer font-small">
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2020-2022 Copyright: <p> Joshua Eah "SnoWFLakE0s"</p>
+          </div>
+          <!-- End of Copyright -->
+        </footer>
+        <!-- End of Footer -->
       </div>
     </div>
   </div>
-  <!--Footer Container-->
-  <div class="container-fluid">
-    <!-- Footer -->
-    <footer class="page-footer font-small">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020-2022 Copyright: <p> Joshua Eah "SnoWFLakE0s"</p>
-      </div>
-      <!-- End of Copyright -->
-    </footer>
-    <!-- End of Footer -->
-  </div>
-  <!--End of Footer Container-->
 </body>
 
 </html>

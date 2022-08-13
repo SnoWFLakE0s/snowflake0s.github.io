@@ -24,16 +24,14 @@
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
-        <img src="/images/logo.png" alt="Snow's Logo" style="height:1.5em; padding-right:0.25em; position:relative; top:-0.1em;"> SnoWFLakE0s' Page
-      </a>
+        <img src="/images/logo.png" alt="Snow's Logo" style="height:1.5em; padding-right:0.25em; position:relative; top:-0.1em;"> SnoWFLakE0s' Page </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar">
+      <div class="collapse navbar-collapse" id="navbar" style="z-index: 10000;">
         <ul class="navbar-nav me-auto my-2 my-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Funky
-              Trees </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Funky Trees </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/funkytrees/docs/"><b>Documentation</b></a></li>
               <li>
@@ -56,11 +54,10 @@
       </div>
     </div>
   </nav>
-  <div class="container">
+  <div class="container-fluid" style="padding-left: 3em;">
     <!--Mobile Offcanvas Open Button-->
     <div class="fixed-bottom" style="position: fixed; bottom: 1em; left: 0em;">
-      <button class="btn btn-light d-md-none mobile-offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i
-           class="fa-solid fa-angle-right"></i></button>
+      <button class="btn btn-light d-md-none mobile-offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i class="fa-solid fa-angle-right"></i></button>
     </div>
     <div class="row pt-4">
       <!--Mobile Offcanvas Sidenav-->
@@ -98,7 +95,7 @@
       </div>
       <!--Table of Contents (Desktop)-->
       <div class="col-sm-2 d-none d-md-block">
-        <ul class="nav flex-column sticky-top pl-4" style="top: 7.5em;">
+        <ul class="nav flex-column sticky-top pl-4" style="top: 6em; z-index: 1;">
           <li class="nav-item">
             <h5><b>Contents</b></h5>
           </li>
@@ -124,8 +121,7 @@
       <div class="col-sm-10">
         <div id="header" class="px-4">
           <h4>3. General Rules for Writing Code</h4>
-          <p><a href="/funkytrees/docs/">docs</a> / <a href="/funkytrees/docs/tutorial/">tutorial</a> / <a
-               href="/funkytrees/docs/tutorial/syntax/">syntax</a> /</p>
+          <p><a href="/funkytrees/docs/">docs</a> / <a href="/funkytrees/docs/tutorial/">tutorial</a> / <a href="/funkytrees/docs/tutorial/syntax/">syntax</a> /</p>
           <p><small><i>Written by SnoWFLakE0s</i></small></p>
           <hr>
           <p> Programming is a fairly precise operation, and there are certain rules that must be adhered to if code is to behave in the manner
@@ -165,7 +161,8 @@
           <br>
           <p>Any misspellings or capitalization errors will fail in returning any value, with the error message shown below. If this is forced onto a
             part input, the console will return an error message with the form: <code>Invalid expression on part [partId]</code>, where
-            <code>[partId]</code> will be the part ID of the part in which the invalid expression has been entered.</p>
+            <code>[partId]</code> will be the part ID of the part in which the invalid expression has been entered.
+          </p>
           <ul class="list-group py-1">
             <li class="list-group-item">>>> <kbd>DebugExpression "time"</kbd><br><code>Name not defined: time</code></li>
             <li class="list-group-item">>>> <kbd>DebugExpression "Tim"</kbd><br><code>Name not defined: Tim</code></li>
@@ -188,33 +185,27 @@
           <br>
           <p>Notice that the grouping of parentheses changes the order of operations (and therefore the final result).</p>
           <p>These rules are not fully exhaustive. For example, there are certain quirks with how certain special operations are handled, but these
-            are not relevant to the general use case of a new Funky Trees programmer. For more in-depth information, the <a
-               href="/funkytrees/docs/reference/">reference documentation</a> should be consulted.</p>
+            are not relevant to the general use case of a new Funky Trees programmer. For more in-depth information, the <a href="/funkytrees/docs/reference/">reference documentation</a> should be consulted.</p>
         </div>
         <!--Adsense-->
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
-             data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
         </ins>
         <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         <!--End of Adsense-->
+        <!-- Footer -->
+        <footer class="page-footer font-small">
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2020-2022 Copyright: <p> Joshua Eah "SnoWFLakE0s"</p>
+          </div>
+          <!-- End of Copyright -->
+        </footer>
+        <!-- End of Footer -->
       </div>
     </div>
   </div>
-  <!--Footer Container-->
-  <div class="container-fluid">
-    <!-- Footer -->
-    <footer class="page-footer font-small">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020-2022 Copyright: <p> Joshua Eah "SnoWFLakE0s"</p>
-      </div>
-      <!-- End of Copyright -->
-    </footer>
-    <!-- End of Footer -->
-  </div>
-  <!--End of Footer Container-->
 </body>
 
 </html>

@@ -126,10 +126,10 @@
           <p><small><i>Written by SnoWFLakE0s</i></small></p>
           <hr>
           <p>
-            At a fundamental level, programming deals with the manipulation of data. In doing this, we come to realize that there is more than one type of data. In programming, this is commonly referred to as simply “datatypes”. Anything you can consider a form of information in your code will have a datatype associated with it, be it an altitude value, whether or not your landing gear is deployed, the name of your weapon, etc... Or even arbitrary values that you generate through a series of calculations. In this section of the tutorial, we will cover the three types of data available for use in the Funky Trees language, how they interact, and the precautions that must be taken to obtain the desired result.
+            At a fundamental level, programming deals with the manipulation of data. In doing this, we come to realize there is more than one type of data. In programming, this is commonly referred to as simply “datatypes”. Anything you can consider a form of information in your code will have a datatype associated with it, be it an altitude value, whether or not your landing gear is deployed, the name of your weapon, etc... Or even arbitrary values you generate through a series of calculations. In this section of the tutorial, we will cover the three types of data available for use in the Funky Trees language, how they interact, and the precautions that must be taken to obtain the desired result.
           </p>
           <p>
-            Before explaining each datatype, it is important that you understand why datatypes are important. Like how you can't mix water with oil, datatypes cannot be mixed without special procedures. By first understanding what datatypes you are working with and what datatypes an operation will result in, you can efficiently manage your programming and prevent causing errors that will cost you time and energy trying to solve.
+            Before explaining each datatype, it is important that you understand why datatypes are important. Just like how you can't mix water with oil, datatypes cannot be mixed without special procedures. By first understanding what datatypes you are working with and what datatypes an operation will result in, you can efficiently manage your programming and prevent causing errors that will cost you time and energy trying to solve.
           </p>
         </div>
         <div id="numbers" class="px-4 pt-4">
@@ -137,10 +137,10 @@
           <hr>
           <p>
             The first datatype we will cover is the most commonly used datatype in Funky Trees. Numbers, or
-            to be more technical, floats, are one of the three datatypes in Funky Trees. They are what they sound like, a numeric value. However, one distinction you should note is that all numbers in Funky Trees have a decimal portion attached to them (at least implicitly). If you do a calculation in Funky Trees like <kbd>1+1</kbd>, the internal processing will treat them as <kbd>1.0000... + 1.0000...</kbd>. This distinction is important to make, as certain popular programming practices rely on data that is strictly integer-based (that is to say, no decimals attached).
+            to be more technical, floats, are one of the three datatypes in Funky Trees. They are what they sound like, a numeric value. One distinction you should note, however, is that all numbers in Funky Trees have a decimal portion attached to them (at least implicitly). If you do a calculation in Funky Trees like <kbd>1+1</kbd>, the internal processing will treat them as <kbd>1.0000... + 1.0000...</kbd>. This distinction is important to make, as certain popular programming practices rely on data that is strictly integer-based (that is to say, no decimals attached).
           </p>
           <p>
-            However, for the beginning Funky Trees programmer there is no need to fret about such details. Simply put, this actually enables you to perform any standard math operation within your Funky Trees code without any hiccups. That said, it is important to know what Funky Trees will try to do with your code in order for you to instruct it to have the desired behavior.
+            However, for the beginning Funky Trees programmer there is no need to fret about such details. Simply put, this actually enables you to perform any standard math operation within your Funky Trees code without any hiccups. With that said, it is important to know what Funky Trees will try to do with your code in order for you to instruct it to have the desired behavior.
           </p>
           <p>
             Here are some generic examples of data that are considered to be a <code>number</code> by Funky Trees.
@@ -157,7 +157,7 @@
           <h5>B. Booleans</h5>
           <hr>
           <p>
-            Booleans sound alien and scary to those uninitiated but it's actually a concept so simple and common that you'd be baffled that this is a data type at all. Booleans are the data type regarding whether or not something is true, or to be more technical, the literal state of being true or false. Hey, you just saw the keywords that are booleans themselves. In fact, the words <code>true</code> and <code>false</code> are booleans representing their respective states in Funky Trees. That is all there is to booleans, as there is nothing outside of a true or a false.
+            Booleans sound alien and scary to those uninitiated but it's actually a concept so simple and common, you'd be baffled that this is a data type at all. Booleans are the data type regarding whether or not something is true, or to be more technical, the literal state of being true or false. Hey, you just saw the keywords that are booleans themselves. In fact, the words <code>true</code> and <code>false</code> are booleans representing their respective states in Funky Trees. That is all there is to booleans, as there is nothing outside of a true or a false.
           </p>
           <p>
             A little extra about booleans is that you can also perform math on them like you can with numbers. Funky Trees will automatically convert <code>true</code> to <code>1</code> and <code>false</code> to <code>-1</code>. How this happens and why this might be useful to you will be covered in the next section.

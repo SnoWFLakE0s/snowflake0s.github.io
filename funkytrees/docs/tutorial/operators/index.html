@@ -13,6 +13,8 @@
   <!--BootStrap 5-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Popper-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <!--Web Theme-->
   <link rel="stylesheet" href="/bootstrap.css">
   <!--Font Awesome Kit-->
@@ -132,62 +134,216 @@
             In this section of the tutorial, we will cover the two types of operators in Funky Trees.
           </p>
         </div>
+
         <div id="math" class="px-4">
-          <h4>A. Math Operators</h4>
+          <h5>A. Math Operators</h5>
           <hr>
           <p>
             The first type of operator we will discuss are math operators. 
-            Math operators are conceptually very simple, and will be obvious to anyone who's been through basic algebra in school. 
-            They perform basic algebraic calculations. The following table lists all available math operators, their usage, and examples. 
-            Take <kbd>a</kbd>, <kbd>b</kbd>, <kbd>c</kbd> as other expressions or constants.
-
+            Math operators are conceptually very simple, and will be obvious to anyone who's been through basic algebra in school: they perform basic algebraic calculations. The following table lists all available math operators, their function, general forms, and basic examples. 
+            Assume that <code>a</code>, <code>b</code>, and <code>c</code> are other expressions or constants<sup><code data-bs-toggle="tooltip" data-placement="auto" title="Like numbers or other values.">[?]</code></sup>.
+          </p>
+          <p>
+            While spaces around operator symbols are not required, sometimes no spacing can cause errors in how your expression is evaluated. For the sake of consistency, it is recommended you put spaces around an operator.
+          </p>
+          
+          <div class="table-responsive-lg">
             <table class="table">
               <tr>
                   <th>Symbol</th>
-                  <th>Usage</th>
-                  <th>Example</th>
+                  <th>Function</th>
+                  <th class="text-nowrap">General Form</th>
                   <th>Explanation</th>
+                  <th>Example</th>
               </tr>
               <tr>
                   <td><code>+</code></td>
                   <td>Addition</td>
                   <td><code>a + b</code></td>
-                  <td>Yields the value <code>a + b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator. Additionally, <strong>strings can be concatenated through the addition operator.</strong> For example, the statement <code>"He" + "llo"</code> will yield the resulting string <code>"Hello"</code>.</td>
+                  <td>
+                    Yields the value <code>a + b</code>. Additionally, strings can be concatenated<sup><a href="https://en.wikipedia.org/wiki/Concatenation" data-bs-toggle="tooltip" data-placement="auto" title="Means to put together (in a programming context).">[?]</a></sup> through the addition operator. For example, the statement <code>"He" + "llo"</code> will yield the resulting string <code>"Hello"</code>.</td>
+                  <td>
+                    <ul class="list-group py-1 text-nowrap">
+                      <li class="list-group-item">>>> <kbd>DebugExpression "1 + 1"</kbd><br><code>1 + 1: 2</code></li>
+                    </ul>
+                  </td>
               </tr>
               <tr>
                   <td><code>-</code></td>
-                  <td>Subtraction or Negative sign</td>
-                  <td><code>a - b</code> or <code>-c</code></td>
-                  <td>Yields the value <code>a - b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                  <td>Subtraction, Negative sign</td>
+                  <td><code>a - b</code> <br>or <code>-c</code></td>
+                  <td>Yields the value <code>a - b</code>, or the value <code>-c</code>. Take caution to ensure that <code>-c</code> is written when needing the negative of <code>c</code>, as in a real-world environment writing <code>- c</code> can result in subtracting <code>c</code> from what precedes it.</td>
+                  <td>
+                    <ul class="list-group py-1 text-nowrap">
+                      <li class="list-group-item">>>> <kbd>DebugExpression "2 - 1"</kbd><br><code>2 - 1: 1</code></li>
+                    </ul>
+                  </td>
               </tr>
               <tr>
                   <td><code>*</code></td>
                   <td>Multiplication</td>
                   <td><code>a * b</code></td>
-                  <td>Yield the value <code>a * b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                  <td>Yields the value <code>a * b</code>.</td>
+                  <td>
+                    <ul class="list-group py-1 text-nowrap">
+                      <li class="list-group-item">>>> <kbd>DebugExpression "10 * 10"</kbd><br><code>10 * 10: 100</code></li>
+                    </ul>
+                  </td>
               </tr>
               <tr>
                   <td><code>/</code></td>
                   <td>Division</td>
                   <td><code>a / b</code></td>
-                  <td>Yield the value <code>a / b</code>. While spaces may not be required, sometimes no spacing can cause errors. For the sake of consistency, it is highly advised you put single spaces around the operator.</td>
+                  <td>Yields the value <code>a / b</code>.</td>
+                  <td>
+                    <ul class="list-group py-1 text-nowrap">
+                      <li class="list-group-item">>>> <kbd>DebugExpression "6 / 3"</kbd><br><code>6 / 3: 2</code></li>
+                    </ul>
+                  </td>
               </tr>
               <tr>
                   <td><code>()</code></td>
-                  <td>Parentheses to group statements</td>
+                  <td>Parentheses (group)</td>
                   <td><code>(a + b) * c</code></td>
-                  <td>Groups statements. In this example, the operation <code>a + b</code> is done <b>before</b> <code>c</code> is multiplied. Note: implied multiplication, like in the form of <code>(a)(b)</code>, is <b>not supported</b>. To do this, you must use the multiplication operator.</td>
+                  <td>
+                    Groups statements. In this example, the operation <code>a + b</code> is done <b>before</b> <code>c</code> is multiplied. Note: implied multiplication, like in the form of <code>(a)(b)</code>, is <b>not supported</b>. To do this, you must use the multiplication operator, that is, <code>(a)*(b)</code>.
+                  </td>
+                  <td>
+                    <ul class="list-group py-1 text-nowrap">
+                      <li class="list-group-item">>>> <kbd>DebugExpression "7 - 1 / 3"</kbd><br><code>7 - 1 / 3: 6.666666666</code></li>
+                      <li class="list-group-item">>>> <kbd>DebugExpression "(7 - 1) / 3"</kbd><br><code>(7 - 1) / 3: 2</code></li>
+                    </ul>
+                  </td>
               </tr>
-          </table>
-          </p>
+            </table>
+          </div>
         </div>
+        <br>
         <div id="logic" class="px-4">
-          <h4>B. Logic Operators</h4>
+          <h5>B. Logic Operators</h5>
           <hr>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, mollitia reprehenderit? Eum nesciunt quod mollitia enim nobis asperiores nemo deleniti quo dicta, dolorem iusto, voluptatem quaerat consequuntur vero placeat velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores assumenda ut, consequuntur fugit ipsa a doloremque nostrum magni dicta voluptates adipisci, explicabo libero magnam fuga reiciendis saepe unde nemo.
+            Logic operators are conceptually more abstract, as they rely on boolean logic instead of simple algebra. They always output a boolean value as the ouput- either <code>true</code> or <code>false</code>. There are three types of operators- comparison, boolean, and selection operators. Each is explained below. For some operators, a <a href="https://en.wikipedia.org/wiki/Truth_table">truth table</a> is also included for reference.
           </p>
+          <br>
+          <!--Subcategory List-->
+          <ul style="list-style-type:none;">
+
+          <!--Comparison Operators-->
+          <li id="compop">
+            <h5>1. Comparison Operators</h5>
+            <hr>
+            <p>
+              Comparison operators are very conceptually simple. They compare the two values on each side of the operator and output the result as a boolean. Comparison operators only take numbers as input (or number-converted booleans).
+            </p>
+            <table class="table">
+                <tr>
+                    <th>Symbol</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td><code>=</code></td>
+                    <td>Equality</td>
+                    <td><code>a = b</code></td>
+                    <td>Checks if <code>a = b</code>. If <code>a</code> is equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
+                </tr>
+                <tr>
+                    <td><code>!=</code></td>
+                    <td>Nonequality (NOT)</td>
+                    <td><code>a != b</code></td>
+                    <td>Checks if <code>a != b</code>. If <code>a</code> is NOT equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
+                </tr>
+                <tr>
+                    <td><code>></code></td>
+                    <td>Greater than</td>
+                    <td><code>a > b</code></td>
+                    <td>Checks if <code>a > b</code>. If <code>a</code> is greater than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code><</code></td>
+                    <td>Less than</td>
+                    <td><code>a < b</code></td>
+                    <td>Checks if <code>a < b</code>. If <code>a</code> is less than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>>=</code></td>
+                    <td>Greater than or equal to</td>
+                    <td><code>a >= b</code></td>
+                    <td>Checks if <code>a >= b</code>. If <code>a</code> is greater than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code><=</code></td>
+                    <td>Less than or equal to</td>
+                    <td><code>a <= b</code></td>
+                    <td>Checks if <code>a <= b</code>. If <code>a</code> is less than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                </tr>
+            </table>
+          </li>
+          <br>
+
+          <!--Boolean Operators-->
+          <li id="boolop">
+            <h5>2. Boolean Operators</h5>
+            <hr>
+            <p>
+              Boolean, or logic operators operate based on booleans, that is, the values <code>true</code> or <code>false</code>. This also means <b>they only take boolean</b> operands.</b>
+            </p>
+            <table class="table">
+                <tr>
+                    <th>Symbol</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td><code>&</code></td>
+                    <td>Boolean AND</td>
+                    <td><code>a & b</code></td>
+                    <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>false</code></b>, the expression will output <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>|</code></td>
+                    <td>Boolean OR</td>
+                    <td><code>a | b</code></td>
+                    <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>true</code></b>, expression will output <code>true</code>. This operator only ouputs <code>false</code> if both operands are <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>!</code></td>
+                    <td>Boolean Invert</td>
+                    <td><code>!a</code></td>
+                    <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
+                </tr>
+            </table>
+            </li>
+          <br>
+
+          <!--Selection Operators-->
+          <li id="selectop">
+            <h5>3. Selection Operators</h5>
+            <hr>
+            <p>
+              Selection operators output one of the two expressions as output depending on the value of the initial condition.
+            </p>
+            <table class="table">
+                <tr>
+                    <th>Symbol</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td><code>? :</code></td>
+                    <td>IF (ternary selection)</td>
+                    <td><code>a ? b : c</code></td>
+                    <td>Checks if <code>a</code> is <code>true</code> or <code>false</code>. If <code>a</code> is <code>true</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>false</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
+                </tr>
+            </table>
+          </li>
+          </ul>
         </div>
+
         <!--Adsense-->
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7192130816208439" data-ad-slot="5384863783">
@@ -207,6 +363,14 @@
       </div>
     </div>
   </div>
-</body>
 
+<!--Tooltip Toggle-->
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+
+</body>
 </html>

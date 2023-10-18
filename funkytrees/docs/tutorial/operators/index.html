@@ -217,130 +217,157 @@
               </tr>
             </table>
           </div>
+          <script>
+            var timerVariable = setInterval(countUpTimer, 1);
+            var milliSeconds = 0;
+
+            function countUpTimer() {
+              milliSeconds = milliSeconds + 4;
+              if (milliSeconds > 300000) {
+                timerVariable = clearInterval(timerVariable);
+              }
+              var seconds = milliSeconds / 1000;
+              var minutes = seconds / 60;
+              document.getElementById("timeDisplay").innerHTML = "Time: " + seconds.toFixed(3);
+              document.getElementById("timeDisplayMinutes").innerHTML = "Time / 60: " + minutes.toFixed(3);
+            }
+          </script>
+          <p>
+            The whole point of math operators is to enable you to figure out how to take data and manipulate it in a way that is useful to you.
+            For example, the input variable <code>Time</code> tells you the number of seconds that have passed since the sandbox was loaded.
+            If you wanted to find the number of minutes that have passed instead, this is obvious to anyone who knows how to tell the time--simply divide by 60.
+            We can do exactly that:
+          </p>
+          <ul class="list-group py-1">
+            <li class="list-group-item">>>> <kbd>DebugExpression "Time"</kbd><br><code id="timeDisplay">Time: 0.000</code></li>
+            <li class="list-group-item">>>> <kbd>DebugExpression "Time / 60"</kbd><br><code id="timeDisplayMinutes">Time: 0.000</code></li>
+          </ul>
         </div>
         <br>
         <div id="logic" class="px-4">
           <h5>B. Logic Operators</h5>
           <hr>
           <p>
-            Logic operators are conceptually more abstract, as they rely on boolean logic instead of simple algebra. They always output a boolean value as the ouput- either <code>true</code> or <code>false</code>. There are three types of operators- comparison, boolean, and selection operators. Each is explained below. For some operators, a <a href="https://en.wikipedia.org/wiki/Truth_table">truth table</a> is also included for reference.
+            The second type of operator are called logic operators.
+            They are conceptually more abstract, as they rely on boolean logic instead of simple algebra.
+            That being said, they are as simple as math operators once you understand how they function.
+            They always output a boolean value as the ouput- either <code>true</code> or <code>false</code>.
+            The three types of logic operators- comparison, boolean, and selection operators are explained below.
+            For some operators, a <a href="https://en.wikipedia.org/wiki/Truth_table">truth table</a> is also included for reference.
           </p>
           <br>
           <!--Subcategory List-->
           <ul style="list-style-type:none;">
-
-          <!--Comparison Operators-->
-          <li id="compop">
-            <h5>1. Comparison Operators</h5>
-            <hr>
-            <p>
-              Comparison operators are very conceptually simple. They compare the two values on each side of the operator and output the result as a boolean. Comparison operators only take numbers as input (or number-converted booleans).
-            </p>
-            <table class="table">
-                <tr>
-                    <th>Symbol</th>
-                    <th>Usage</th>
-                    <th>Example</th>
-                    <th>Explanation</th>
-                </tr>
-                <tr>
-                    <td><code>=</code></td>
-                    <td>Equality</td>
-                    <td><code>a = b</code></td>
-                    <td>Checks if <code>a = b</code>. If <code>a</code> is equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
-                </tr>
-                <tr>
-                    <td><code>!=</code></td>
-                    <td>Nonequality (NOT)</td>
-                    <td><code>a != b</code></td>
-                    <td>Checks if <code>a != b</code>. If <code>a</code> is NOT equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
-                </tr>
-                <tr>
-                    <td><code>></code></td>
-                    <td>Greater than</td>
-                    <td><code>a > b</code></td>
-                    <td>Checks if <code>a > b</code>. If <code>a</code> is greater than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
-                </tr>
-                <tr>
-                    <td><code><</code></td>
-                    <td>Less than</td>
-                    <td><code>a < b</code></td>
-                    <td>Checks if <code>a < b</code>. If <code>a</code> is less than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
-                </tr>
-                <tr>
-                    <td><code>>=</code></td>
-                    <td>Greater than or equal to</td>
-                    <td><code>a >= b</code></td>
-                    <td>Checks if <code>a >= b</code>. If <code>a</code> is greater than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
-                </tr>
-                <tr>
-                    <td><code><=</code></td>
-                    <td>Less than or equal to</td>
-                    <td><code>a <= b</code></td>
-                    <td>Checks if <code>a <= b</code>. If <code>a</code> is less than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
-                </tr>
-            </table>
-          </li>
-          <br>
-
-          <!--Boolean Operators-->
-          <li id="boolop">
-            <h5>2. Boolean Operators</h5>
-            <hr>
-            <p>
-              Boolean, or logic operators operate based on booleans, that is, the values <code>true</code> or <code>false</code>. This also means <b>they only take boolean</b> operands.</b>
-            </p>
-            <table class="table">
-                <tr>
-                    <th>Symbol</th>
-                    <th>Usage</th>
-                    <th>Example</th>
-                    <th>Explanation</th>
-                </tr>
-                <tr>
-                    <td><code>&</code></td>
-                    <td>Boolean AND</td>
-                    <td><code>a & b</code></td>
-                    <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>false</code></b>, the expression will output <code>false</code>.</td>
-                </tr>
-                <tr>
-                    <td><code>|</code></td>
-                    <td>Boolean OR</td>
-                    <td><code>a | b</code></td>
-                    <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>true</code></b>, expression will output <code>true</code>. This operator only ouputs <code>false</code> if both operands are <code>false</code>.</td>
-                </tr>
-                <tr>
-                    <td><code>!</code></td>
-                    <td>Boolean Invert</td>
-                    <td><code>!a</code></td>
-                    <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
-                </tr>
-            </table>
+            <!--Comparison Operators-->
+            <li id="compop">
+              <h5>1. Comparison Operators</h5>
+              <hr>
+              <p>
+                Comparison operators are very conceptually simple. They compare the two values on each side of the operator and output the result as a boolean. Comparison operators only take numbers as input (or number-converted booleans).
+              </p>
+              <table class="table">
+                  <tr>
+                      <th>Symbol</th>
+                      <th>Usage</th>
+                      <th>Example</th>
+                      <th>Explanation</th>
+                  </tr>
+                  <tr>
+                      <td><code>=</code></td>
+                      <td>Equality</td>
+                      <td><code>a = b</code></td>
+                      <td>Checks if <code>a = b</code>. If <code>a</code> is equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
+                  </tr>
+                  <tr>
+                      <td><code>!=</code></td>
+                      <td>Nonequality (NOT)</td>
+                      <td><code>a != b</code></td>
+                      <td>Checks if <code>a != b</code>. If <code>a</code> is NOT equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
+                  </tr>
+                  <tr>
+                      <td><code>></code></td>
+                      <td>Greater than</td>
+                      <td><code>a > b</code></td>
+                      <td>Checks if <code>a > b</code>. If <code>a</code> is greater than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                  </tr>
+                  <tr>
+                      <td><code><</code></td>
+                      <td>Less than</td>
+                      <td><code>a < b</code></td>
+                      <td>Checks if <code>a < b</code>. If <code>a</code> is less than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                  </tr>
+                  <tr>
+                      <td><code>>=</code></td>
+                      <td>Greater than or equal to</td>
+                      <td><code>a >= b</code></td>
+                      <td>Checks if <code>a >= b</code>. If <code>a</code> is greater than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                  </tr>
+                  <tr>
+                      <td><code><=</code></td>
+                      <td>Less than or equal to</td>
+                      <td><code>a <= b</code></td>
+                      <td>Checks if <code>a <= b</code>. If <code>a</code> is less than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                  </tr>
+              </table>
             </li>
-          <br>
-
-          <!--Selection Operators-->
-          <li id="selectop">
-            <h5>3. Selection Operators</h5>
-            <hr>
-            <p>
-              Selection operators output one of the two expressions as output depending on the value of the initial condition.
-            </p>
-            <table class="table">
-                <tr>
-                    <th>Symbol</th>
-                    <th>Usage</th>
-                    <th>Example</th>
-                    <th>Explanation</th>
-                </tr>
-                <tr>
-                    <td><code>? :</code></td>
-                    <td>IF (ternary selection)</td>
-                    <td><code>a ? b : c</code></td>
-                    <td>Checks if <code>a</code> is <code>true</code> or <code>false</code>. If <code>a</code> is <code>true</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>false</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
-                </tr>
-            </table>
-          </li>
+            <br>
+            <!--Boolean Operators-->
+            <li id="boolop">
+              <h5>2. Boolean Operators</h5>
+              <hr>
+              <p>
+                Boolean, or logic operators operate based on booleans, that is, the values <code>true</code> or <code>false</code>. This also means <b>they only take boolean</b> operands.</b>
+              </p>
+              <table class="table">
+                  <tr>
+                      <th>Symbol</th>
+                      <th>Usage</th>
+                      <th>Example</th>
+                      <th>Explanation</th>
+                  </tr>
+                  <tr>
+                      <td><code>&</code></td>
+                      <td>Boolean AND</td>
+                      <td><code>a & b</code></td>
+                      <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>false</code></b>, the expression will output <code>false</code>.</td>
+                  </tr>
+                  <tr>
+                      <td><code>|</code></td>
+                      <td>Boolean OR</td>
+                      <td><code>a | b</code></td>
+                      <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>true</code></b>, expression will output <code>true</code>. This operator only ouputs <code>false</code> if both operands are <code>false</code>.</td>
+                  </tr>
+                  <tr>
+                      <td><code>!</code></td>
+                      <td>Boolean Invert</td>
+                      <td><code>!a</code></td>
+                      <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
+                  </tr>
+              </table>
+              </li>
+            <br>
+            <!--Selection Operators-->
+            <li id="selectop">
+              <h5>3. Selection Operators</h5>
+              <hr>
+              <p>
+                Selection operators output one of the two expressions as output depending on the value of the initial condition.
+              </p>
+              <table class="table">
+                  <tr>
+                      <th>Symbol</th>
+                      <th>Usage</th>
+                      <th>Example</th>
+                      <th>Explanation</th>
+                  </tr>
+                  <tr>
+                      <td><code>? :</code></td>
+                      <td>IF (ternary selection)</td>
+                      <td><code>a ? b : c</code></td>
+                      <td>Checks if <code>a</code> is <code>true</code> or <code>false</code>. If <code>a</code> is <code>true</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>false</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
+                  </tr>
+              </table>
+            </li>
           </ul>
         </div>
 

@@ -242,18 +242,26 @@
             <li class="list-group-item">>>> <kbd>DebugExpression "Time"</kbd><br><code id="timeDisplay">Time: 0.000</code></li>
             <li class="list-group-item">>>> <kbd>DebugExpression "Time / 60"</kbd><br><code id="timeDisplayMinutes">Time: 0.000</code></li>
           </ul>
+          <br>
+          <p>
+            Math operators are really the basis upon which practically any sort of Funky Trees code is built on. 
+            You can apply them in countless ways to do really anything in SimplePlanes, so it is important to understand how you can use them.
+          </p>
         </div>
         <br>
         <div id="logic" class="px-4">
           <h5>B. Logic Operators</h5>
           <hr>
           <p>
-            The second type of operator are called logic operators.
-            They are conceptually more abstract, as they rely on boolean logic instead of simple algebra.
-            That being said, they are as simple as math operators once you understand how they function.
-            They always output a boolean value as the ouput- either <code>true</code> or <code>false</code>.
-            The three types of logic operators- comparison, boolean, and selection operators are explained below.
-            For some operators, a <a href="https://en.wikipedia.org/wiki/Truth_table">truth table</a> is also included for reference.
+            The second type of operators are called logic operators.
+            They may seem confusing at first, especially for those just learning how to code, as they rely on something called boolean logic instead of simple algebra.
+            There is no need to worry, they are as simple as math operators once you understand how they work.
+          </p>
+          <p>
+            The result of doing a logic operation is always one of two things. 
+            They always output something known as a boolean value as the ouput, either <code>True</code> or <code>False</code>.
+            There are three types of logic operators in Funky Trees: comparison, boolean, and selection operators. 
+            This section will cover how all three of them work, and how you may use them to code in Funky Trees.
           </p>
           <br>
           <!--Subcategory List-->
@@ -263,50 +271,114 @@
               <h5>1. Comparison Operators</h5>
               <hr>
               <p>
-                Comparison operators are very conceptually simple. They compare the two values on each side of the operator and output the result as a boolean. Comparison operators only take numbers as input (or number-converted booleans).
+                Comparison operators perform comparison operations.
               </p>
+              <p>
+                All comparison operators do is compare two values and tell you something about the relation between those values.
+                Comparison operators only take numbers as inputs.
+                You may have already seen these symbols back in school: 
+              </p>
+              <p>
+                <code>4 < 6</code> is <code>True</code>. 
+                <br>
+                <code>4 > 6</code> is <code>False</code>.
+                <br>
+                <code>1 = 1</code> is <code>True</code>.
+              </p>
+              <p>
+                This is all there is to it, really. 
+                What makes this a little more complicated is if you start adding extra things, like the math operators from earlier:
+              </p>
+              <p>
+                <code>1 + 1 = 2</code> is <code>True</code>.
+                <br>
+                <code>1 + 1 < 0</code> is <code>False</code>.
+              </p>
+              <p>
+                Funky Trees is really about not how you use these operators one-on-one, but how you take these basic building blocks to create a longer piece of code that will perform an advanced, higher level functions not possible by other "normal" means. The table below lists all the comparison operators available to you in Funky Trees and how to use them.
+              </p>
+              
               <table class="table">
                   <tr>
                       <th>Symbol</th>
                       <th>Usage</th>
-                      <th>Example</th>
+                      <th class="text-nowrap">General Form</th>
                       <th>Explanation</th>
+                      <th>Example</th>
                   </tr>
                   <tr>
                       <td><code>=</code></td>
                       <td>Equality</td>
                       <td><code>a = b</code></td>
-                      <td>Checks if <code>a = b</code>. If <code>a</code> is equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
+                      <td>Checks if <code>a = b</code>. If <code>a</code> is equal to <code>b</code>, the output will be <code>True</code>. In any other case, it will be <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "(2 + 2) = 4"</kbd><br><code>(2 + 2) = 4: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "4 = 2"</kbd><br><code>4 = 2: False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code>!=</code></td>
                       <td>Nonequality (NOT)</td>
                       <td><code>a != b</code></td>
-                      <td>Checks if <code>a != b</code>. If <code>a</code> is NOT equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>. This operator can take numerical input.</td>
+                      <td>Checks if <code>a != b</code>. If <code>a</code> is NOT equal to <code>b</code>, the output will be <code>True</code>. In any other case, it will be <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "4 != 2"</kbd><br><code>4 != 2: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "(2 + 2) != 4"</kbd><br><code>(2 + 2) != 4: False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code>></code></td>
                       <td>Greater than</td>
                       <td><code>a > b</code></td>
-                      <td>Checks if <code>a > b</code>. If <code>a</code> is greater than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                      <td>Checks if <code>a > b</code>. If <code>a</code> is greater than <code>b</code>, the output will be <code>True</code>. In any other case, it will be <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "2 > 1"</kbd><br><code>2 > 1: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "(2 + 1) > 4"</kbd><br><code>(2 + 1) > 4: False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code><</code></td>
                       <td>Less than</td>
                       <td><code>a < b</code></td>
-                      <td>Checks if <code>a < b</code>. If <code>a</code> is less than <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                      <td>Checks if <code>a < b</code>. If <code>a</code> is less than <code>b</code>, the output will be <code>True</code>. In any other case, it will be <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "1 < 2"</kbd><br><code>1 < 2: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "4 < (1 + 1)"</kbd><br><code>4 < (1 + 1): False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code>>=</code></td>
                       <td>Greater than or equal to</td>
                       <td><code>a >= b</code></td>
-                      <td>Checks if <code>a >= b</code>. If <code>a</code> is greater than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                      <td>Checks if <code>a >= b</code>. If <code>a</code> is greater than, or equal to <code>b</code>, the output will be <code>True</code>. In any other case, it will be <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "3 >= 2"</kbd><br><code>3 >= 2: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "2 >= 2"</kbd><br><code>2 >= 2: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "(2 - 1) >= 2"</kbd><br><code>(2 - 1) >= 2: False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code><=</code></td>
                       <td>Less than or equal to</td>
                       <td><code>a <= b</code></td>
-                      <td>Checks if <code>a <= b</code>. If <code>a</code> is less than, or equal to <code>b</code>, the output will be <code>true</code>. In any other case, it will be <code>false</code>.</td>
+                      <td>Checks if <code>a <= b</code>. If <code>a</code> is less than, or equal to <code>b</code>, the output will be <code>True</code>. In any other case, it will be <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "1 <= 10"</kbd><br><code>1 <= 10: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "(5 + 5) <= 10"</kbd><br><code>(5 + 5) <= 10: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "(2 + 1) <= (2 * 1)"</kbd><br><code>(2 + 1) <= (2 * 1): False</code></li>
+                        </ul>
+                      </td>
                   </tr>
               </table>
             </li>
@@ -316,7 +388,7 @@
               <h5>2. Boolean Operators</h5>
               <hr>
               <p>
-                Boolean, or logic operators operate based on booleans, that is, the values <code>true</code> or <code>false</code>. This also means <b>they only take boolean</b> operands.</b>
+                Boolean, or logic operators operate based on booleans, that is, the values <code>True</code> or <code>False</code>. This also means <b>they only take boolean</b> operands.</b>
               </p>
               <table class="table">
                   <tr>
@@ -329,19 +401,19 @@
                       <td><code>&</code></td>
                       <td>Boolean AND</td>
                       <td><code>a & b</code></td>
-                      <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>false</code></b>, the expression will output <code>false</code>.</td>
+                      <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>True</code>. If <b>any one of the two operands are <code>False</code></b>, the expression will output <code>False</code>.</td>
                   </tr>
                   <tr>
                       <td><code>|</code></td>
                       <td>Boolean OR</td>
                       <td><code>a | b</code></td>
-                      <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>true</code>. If <b>any one of the two operands are <code>true</code></b>, expression will output <code>true</code>. This operator only ouputs <code>false</code> if both operands are <code>false</code>.</td>
+                      <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>True</code>. If <b>any one of the two operands are <code>True</code></b>, expression will output <code>True</code>. This operator only ouputs <code>False</code> if both operands are <code>False</code>.</td>
                   </tr>
                   <tr>
                       <td><code>!</code></td>
                       <td>Boolean Invert</td>
                       <td><code>!a</code></td>
-                      <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
+                      <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>False</code>, and <code>!false</code> is <code>True</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
                   </tr>
               </table>
               </li>
@@ -364,7 +436,7 @@
                       <td><code>? :</code></td>
                       <td>IF (ternary selection)</td>
                       <td><code>a ? b : c</code></td>
-                      <td>Checks if <code>a</code> is <code>true</code> or <code>false</code>. If <code>a</code> is <code>true</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>false</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
+                      <td>Checks if <code>a</code> is <code>True</code> or <code>False</code>. If <code>a</code> is <code>True</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>False</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
                   </tr>
               </table>
             </li>

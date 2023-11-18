@@ -151,10 +151,10 @@
             <table class="table">
               <tr>
                   <th>Symbol</th>
-                  <th>Function</th>
+                  <th>Usage</th>
                   <th class="text-nowrap">General Form</th>
                   <th>Explanation</th>
-                  <th>Example</th>
+                  <th>Examples</th>
               </tr>
               <tr>
                   <td><code>+</code></td>
@@ -228,8 +228,22 @@
               }
               var seconds = milliSeconds / 1000;
               var minutes = seconds / 60;
+              var timeBracket = "";
+              var timerText = "";
+
+              if (1 <= minutes && minutes < 30) {
+                var timeBracket = "True";
+                var timerText = "Time is within 1 to 30 minutes";
+              } else {
+                var timeBracket = "False";
+                var timerText = "Time is outside 1 to 30 minutes";
+              }
+
               document.getElementById("timeDisplay").innerHTML = "Time: " + seconds.toFixed(3);
               document.getElementById("timeDisplayMinutes").innerHTML = "Time / 60: " + minutes.toFixed(3);
+              document.getElementById("timeDisplayMinutesRef").innerHTML = "Time / 60: " + minutes.toFixed(3);
+              document.getElementById("timeBracketTruth").innerHTML = timeBracket;
+              document.getElementById("timeBracketText").innerHTML = timerText;
             }
           </script>
           <p>
@@ -240,7 +254,7 @@
           </p>
           <ul class="list-group py-1">
             <li class="list-group-item">>>> <kbd>DebugExpression "Time"</kbd><br><code id="timeDisplay">Time: 0.000</code></li>
-            <li class="list-group-item">>>> <kbd>DebugExpression "Time / 60"</kbd><br><code id="timeDisplayMinutes">Time: 0.000</code></li>
+            <li class="list-group-item">>>> <kbd>DebugExpression "Time / 60"</kbd><br><code id="timeDisplayMinutes">Time / 60: 0.000</code></li>
           </ul>
           <br>
           <p>
@@ -275,7 +289,7 @@
               </p>
               <p>
                 All comparison operators do is compare two values and tell you something about the relation between those values.
-                Comparison operators only take numbers as inputs.
+                Comparison operators only take <i><b>numbers as inputs</b></i>, and only output <i><b>booleans as outputs</b></i>.
                 You may have already seen these symbols back in school: 
               </p>
               <p>
@@ -297,14 +311,13 @@
               <p>
                 Funky Trees is really about not how you use these operators one-on-one, but how you take these basic building blocks to create a longer piece of code that will perform an advanced, higher level functions not possible by other "normal" means. The table below lists all the comparison operators available to you in Funky Trees and how to use them.
               </p>
-              
               <table class="table">
                   <tr>
                       <th>Symbol</th>
                       <th>Usage</th>
                       <th class="text-nowrap">General Form</th>
                       <th>Explanation</th>
-                      <th>Example</th>
+                      <th>Examples</th>
                   </tr>
                   <tr>
                       <td><code>=</code></td>
@@ -381,6 +394,35 @@
                       </td>
                   </tr>
               </table>
+              <p>
+                As some of the examples above show, it is possible to combine usage of the math operators discussed earlier in the section with comparison operators to perform more advanced arithmetic. Let's say we want to write some code that allows us to figure out if 5238 times 23 subtracted by 42069 is larger than 6969. How would we approach this problem?
+              </p>
+              <p>
+                First, you must use math operators to do the math before we see if that number we calculate is larger than 6969. This is easy: just take 5238 and multiply by 23:
+                <br>
+                <code>5239 * 23</code>
+              </p>
+              <p>
+                We then subtract 42069:
+                <br>
+                <code>5239 * 23 - 42069</code>
+              </p>
+              <p>
+                Then finally, we group this statement to ensure Funky Trees isn't confused about what number it's trying to compare to 6969:
+                <br>
+                <code>(5239 * 23 - 42069)</code>
+              </p>
+              <p>
+                All we now do is compare:
+                <br>
+                <code>(5239 * 23 - 42069) > 6969</code>
+                <ul class="list-group py-1 text-nowrap">
+                  <li class="list-group-item">>>> <kbd>DebugExpression "(5239 * 23 - 42069) > 6969"</kbd><br><code>(5239 * 23 - 42069) > 6969: True</code></li>
+                </ul>
+              </p>
+              <p>
+                Congratulations! You just successfully calculated a result and performed a logic operation on it to learn a new fact.
+              </p>
             </li>
             <br>
             <!--Boolean Operators-->
@@ -388,35 +430,89 @@
               <h5>2. Boolean Operators</h5>
               <hr>
               <p>
-                Boolean, or logic operators operate based on booleans, that is, the values <code>True</code> or <code>False</code>. This also means <b>they only take boolean</b> operands.</b>
+                Boolean operators perform boolean logic operations.
+              </p>
+              <p>
+                Boolean operators will compare boolean values<sup><code data-bs-toggle="tooltip" data-placement="auto" title="The values True or False. Refer to Section 4.">[?]</code></sup> and tell you something about the relationship between those boolean values.  Boolean operators will only take <b><i>booleans as inputs</i></b>, and only output <b><i>booleans as outputs</i></b>. The word boolean may throw new programmers off, but once you understand that booleans are literally only either <code>True</code> or <code>False</code> this makes them one of the most simple kinds of data to operate with.
               </p>
               <table class="table">
                   <tr>
                       <th>Symbol</th>
                       <th>Usage</th>
-                      <th>Example</th>
+                      <th class="text-nowrap">General Form</th>
                       <th>Explanation</th>
+                      <th>Examples</th>
                   </tr>
                   <tr>
                       <td><code>&</code></td>
                       <td>Boolean AND</td>
                       <td><code>a & b</code></td>
-                      <td>Checks if <b>both</b> <code>a</code> and <code>b</code> are <code>True</code>. If <b>any one of the two operands are <code>False</code></b>, the expression will output <code>False</code>.</td>
+                      <td>Checks if <b><i>both</i></b> <code>a</code> and <code>b</code> are <code>True</code>. If both operands aren't <code>True</code>, the result will be <code>False</code>, that is, if <b>any one</b> of the two operands are <code>False</code>, the expression will output <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "True & True"</kbd><br><code>True & True: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "True & False"</kbd><br><code>True & False: False</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "False & False"</kbd><br><code>False & False: False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code>|</code></td>
                       <td>Boolean OR</td>
                       <td><code>a | b</code></td>
-                      <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>True</code>. If <b>any one of the two operands are <code>True</code></b>, expression will output <code>True</code>. This operator only ouputs <code>False</code> if both operands are <code>False</code>.</td>
+                      <td>Checks if <b>either one</b> of <code>a</code> and <code>b</code> are <code>True</code>. Only one of the two operands need to be <code>True</code> for the operation to output <code>True</code>. This operator only ouputs <code>False</code> if both operands are <code>False</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "True | True"</kbd><br><code>True | True: True</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "True | False"</kbd><br><code>True | False: False</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "False | False"</kbd><br><code>False | False: False</code></li>
+                        </ul>
+                      </td>
                   </tr>
                   <tr>
                       <td><code>!</code></td>
                       <td>Boolean Invert</td>
                       <td><code>!a</code></td>
-                      <td>This operator inverts the value of a boolean. That is, <code>!true</code> is <code>False</code>, and <code>!false</code> is <code>True</code>. This effectively is the same as doing <code>-a</code>, where <code>a</code> is a boolean, but only works for unary (booleans), while <code>-</code> (the negative sign) can work on both unary and binary (booleans and numbers). </td>
+                      <td>This operator inverts the value of a boolean. That is, <code>!True</code> is <code>False</code>, and <code>!False</code> is <code>True</code>.</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "!True"</kbd><br><code>!True: False</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "!False"</kbd><br><code>!False: True</code></li>
+                        </ul>
+                      </td>
                   </tr>
               </table>
-              </li>
+              <p>
+                Say you want to compare two statements and ensure both are true. A common example would be finding a timeframe, like figuring out if we are at least a minute into entering the sandbox, but also under 30 minutes since entering the sandbox. How do you approach this problem?
+              </p>
+              <p>
+                We can reuse the Time example from earlier in the section to first figure out the number of minutes that have passed since starting the sandbox:
+                <br>
+                <code>Time / 60</code>
+              </p>
+              <p>
+                Now figure out if the number of minutes have passed <i>at least</i> one minute using comparison operators:
+                <br>
+                <code>(Time / 60) >= 1</code> 
+              </p>
+              <p>
+                Do the same, but for under 30 minutes:
+                <br>
+                <code>(Time / 60) < 30</code> 
+              </p>
+              <p>
+                For the sandbox uptime to be both above at least 1 minute and under 30 minutes, both of the code snippets we just wrote need to be <code>True</code>. The AND boolean operator is perfect for this task, and we arrange the snippets to check if both are <code>True</code>:
+                <br>
+                <code>((Time / 60) >= 1) & ((Time / 60) < 30)</code>
+                <ul class="list-group py-1">
+                  <li class="list-group-item">>>> <kbd>DebugExpression "Time / 60"</kbd><br><code id="timeDisplayMinutesRef">Time / 60: 0.000</code></li>
+                  <li class="list-group-item">>>> <kbd>DebugExpression "((Time / 60) >= 1) & ((Time / 60) < 30)"</kbd><br><code id="timeBracketTruth">False</code></li>
+                </ul>
+              </p>
+              <p>
+                Congratulations! This is actually a fairly common type of code that is used for a variety of applications for many SimplePlanes creations.
+              </p>
+            </li>
             <br>
             <!--Selection Operators-->
             <li id="selectop">
@@ -425,20 +521,46 @@
               <p>
                 Selection operators output one of the two expressions as output depending on the value of the initial condition.
               </p>
+              <p>
+                Selection operators are one of a kind in Funky Trees. They are versatile because they allow you to switch things on and off using the conditional operand. To put this into context, every other logic operator can only <b><i>output</i></b> booleans as you saw above; selection operators can do a lot more than that, as you will see below.
+              </p>
               <table class="table">
                   <tr>
                       <th>Symbol</th>
                       <th>Usage</th>
-                      <th>Example</th>
+                      <th class="text-nowrap">General Form</th>
                       <th>Explanation</th>
+                      <th>Examples</th>
                   </tr>
                   <tr>
                       <td><code>? :</code></td>
                       <td>IF (ternary selection)</td>
                       <td><code>a ? b : c</code></td>
-                      <td>Checks if <code>a</code> is <code>True</code> or <code>False</code>. If <code>a</code> is <code>True</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>False</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of types of outputs (but <code>a</code> must be a boolean value).</td>
+                      <td>Checks if <code>a</code> is <code>True</code> or <code>False</code>. If <code>a</code> is <code>True</code>, the operator outputs the value <code>b</code>. If <code>a</code> is <code>False</code>, the operator outputs the value <code>c</code>. This also means the selection operator can have a variety of datatypes for outputs (but <code>a</code> must be a boolean value).</td>
+                      <td>
+                        <ul class="list-group py-1 text-nowrap">
+                          <li class="list-group-item">>>> <kbd>DebugExpression "True ? 1 : 2"</kbd><br><code>True ? 1 : 2: 1</code></li>
+                          <li class="list-group-item">>>> <kbd>DebugExpression "False ? 1 : #This is a String#"</kbd><br><code>False ? 1 : "This is a String": This is a String</code></li>
+                        </ul>
+                      </td>
                   </tr>
               </table>
+              <p>
+                We can use the selection operator to spice up the timeframe example from earlier. Instead of just reading True or False, let's have it read out a sentence depending on the time. The code we wrote earlier already outputs a boolean as a result, so all we need to do is use it as the boolean condition for the selection operator. Let's write a couple strings that will say "Time is (outside/within) 1 to 30 minutes":
+                <br>
+                <code>((Time / 60) >= 1) & ((Time / 60) < 30) ? "Time is within 1 to 30 minutes" : "Time is outside 1 to 30 minutes"</code>
+              </p>
+              <p>
+                In the console debugger:
+                <ul class="list-group py-1">
+                  <li class="list-group-item">>>> <kbd>DebugExpression "((Time / 60) >= 1) & ((Time / 60) < 30) ? #Time is within 1 to 30 minutes# : #Time is outside 1 to 30 minutes#"</kbd><br>
+                    <code>((Time / 60) >= 1) & ((Time / 60) < 30) ? "Time is within 1 to 30 minutes": </code>
+                    <code id="timeBracketText">"Time is outside 1 to 30 minutes"</code></li>
+                </ul>
+              </p>
+              <p>
+                If you were unable to witness this code in action, try reloading the page and wait a minute.
+              </p>
             </li>
           </ul>
         </div>
